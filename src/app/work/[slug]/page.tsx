@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { projects, getProjectBySlug } from '@/data/projects';
-import { ProjectGallery } from '@/components/project/project-gallery';
-import { ProjectHero } from '@/components/project/project-hero';
-import { ProjectStory } from '@/components/project/project-story';
+import {
+  projects,
+  getProjectBySlug,
+  ProjectGallery,
+  ProjectHero,
+  ProjectStory,
+} from '@/features/project';
 
 type ProjectPageProps = {
   params: Promise<{
@@ -43,7 +46,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <main>
       <Link
         href="/work"
-        className="mb-lg inline-flex font-bold text-muted transition-colors hover:text-ink"
+        className="text-muted hover:text-ink mb-9 inline-flex font-bold transition-colors"
       >
         ← Back to work
       </Link>

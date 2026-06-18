@@ -8,17 +8,17 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 mb-lg grid grid-cols-[1fr_auto_1fr] items-center gap-md bg-gradient-to-b from-page/95 via-page/80 to-transparent pb-lg pt-sm backdrop-blur-xl max-lg:grid-cols-[1fr_auto] max-lg:pb-md">
+    <header className="from-page/95 via-page/80 sticky top-0 z-40 mb-14 grid grid-cols-[1fr_auto_1fr] items-center gap-6 bg-gradient-to-b to-transparent pt-4 pb-8 backdrop-blur-xl max-lg:grid-cols-[1fr_auto] max-lg:pb-6">
       <Link href="/" className="text-base font-bold tracking-[-0.035em]">
         Vladimir Petrov
       </Link>
 
-      <nav className="flex items-center gap-lg max-lg:order-3 max-lg:col-span-2 max-lg:justify-center max-sm:gap-md">
+      <nav className="flex items-center gap-7 max-lg:order-3 max-lg:col-span-2 max-lg:justify-center max-sm:gap-5">
         {navItems.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className="text-sm font-semibold text-ink/60 transition-colors hover:text-ink"
+            className="text-ink/60 hover:text-ink text-sm font-semibold transition-colors"
           >
             {item.label}
           </Link>

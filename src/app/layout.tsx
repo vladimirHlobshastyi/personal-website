@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { SiteHeader } from '@/components/layout/site-header';
-import { SiteFooter } from '@/components/layout/site-footer';
+import { SiteHeader, SiteFooter } from '@/layout';
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],
@@ -24,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans">
-        <div className="mx-auto w-[min(73.75rem,calc(100%-3rem))] py-lg max-sm:w-[min(100%-1.75rem,73.75rem)]">
+        <div className="mx-auto w-[min(73.75rem,calc(100%-3rem))] py-8 max-sm:w-[min(100%-1.75rem,73.75rem)]">
           <SiteHeader />
           {children}
           <SiteFooter />

@@ -1,26 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
+@theme {
+  /* Font */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Colors */
   --color-ink: #11100f;
   --color-muted: #68615a;
   --color-quiet: #9a928a;
   --color-surface: #fffdf9;
   --color-page: #f7f5f1;
   --color-accent: #7a523b;
-  --color-white: #ffffff;
+  --color-dark: #141210;
 
+  /* Shadows */
   --shadow-soft: 0 1rem 2.8125rem rgba(40, 28, 20, 0.055);
   --shadow-elevated: 0 1.5rem 4.375rem rgba(40, 28, 20, 0.09);
   --shadow-subtle: 0 0.875rem 2.375rem rgba(40, 28, 20, 0.035);
   --shadow-button: 0 1rem 2.375rem rgba(17, 16, 15, 0.16);
 
-  font-size: 16px;
+  /* Letter spacing */
+  --tracking-tighter-x: -0.085em;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -35,5 +40,5 @@ body {
 
 ::selection {
   background: var(--color-ink);
-  color: var(--color-white);
+  color: #fff;
 }
