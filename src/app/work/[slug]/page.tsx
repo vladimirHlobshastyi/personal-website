@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   }
 
   return {
-    title: `${project.title} — Vladimir Petrov`,
+    title: `${project.title} — Vladimir Hlobchastyi`,
     description: project.shortDescription,
   };
 }

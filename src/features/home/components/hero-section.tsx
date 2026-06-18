@@ -17,51 +17,51 @@ export function HeroSection() {
         className="shadow-elevated relative min-h-[41.25rem] overflow-hidden bg-cover bg-center max-lg:min-h-[35rem] max-sm:min-h-[26.875rem]"
         style={{
           backgroundImage:
-            "linear-gradient(180deg,rgba(17,16,15,.02),rgba(17,16,15,.24)), url('/images/main_photo.png')",
+            "linear-gradient(180deg,rgba(17,16,15,.02),rgba(17,16,15,.28)), url('/images/main_photo.png')",
         }}
       >
-        <div className="absolute bottom-6 left-6 text-white">
-          <strong className="block text-xl font-semibold tracking-[-0.035em]">
-            Vladimir Petrov
+        <div className="absolute bottom-7 left-7">
+          <strong className="block text-lg font-semibold tracking-[-0.02em] text-white">
+            Vladimir Hlobchastyi
           </strong>
-          <span className="text-sm text-white/70">Full-stack Developer</span>
+          <span className="text-[0.8125rem] font-medium text-white/60">Software Engineer</span>
         </div>
       </div>
 
       <div>
-        <div className="text-accent before:bg-accent mb-7 inline-flex items-center gap-3 text-xs font-extrabold tracking-[.12em] uppercase before:block before:h-px before:w-10 before:opacity-50">
-          Software Engineer
+        <div className="mb-7 inline-flex items-center gap-3 text-[0.6875rem] font-bold tracking-[.14em] text-accent uppercase before:block before:h-px before:w-10 before:bg-accent/40">
+          Available for work
         </div>
 
-        <h1 className="tracking-tighter-x text-[clamp(3.625rem,8.2vw,6.75rem)] leading-[.88] font-semibold">
-          Clean product interfaces for web and mobile.
+        <h1 className="tracking-tighter-x text-[clamp(3.25rem,8vw,6.5rem)] leading-[.88] font-semibold">
+          Building polished product interfaces.
         </h1>
 
-        <p className="text-muted mt-8 max-w-2xl text-xl leading-8">
-          I build React, Next.js, React Native and Ionic applications with focus on product logic,
-          maintainable architecture, performance and polished user experience.
+        <p className="mt-7 max-w-[34rem] text-[1.0625rem] leading-[1.7] text-muted">
+          I design and build React, Next.js, React Native and Ionic applications with focus on
+          product logic, scalable architecture and user experience that feels right.
         </p>
 
         <div className="mt-10 flex flex-wrap gap-3">
           <Link
             href="/work"
-            className="bg-ink shadow-button px-5 py-4 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
+            className="bg-ink shadow-button px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] text-white transition-transform hover:-translate-y-0.5"
           >
             View all work
           </Link>
           <Link
             href="/contact"
-            className="text-ink shadow-soft bg-white/60 px-5 py-4 text-sm font-bold transition-transform hover:-translate-y-0.5"
+            className="text-ink shadow-soft bg-white/60 px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] transition-transform hover:-translate-y-0.5"
           >
             Contact me
           </Link>
         </div>
 
-        <div className="mt-9 flex flex-wrap gap-2.5">
+        <div className="mt-10 flex flex-wrap gap-2">
           {stack.map((item) => (
             <span
               key={item}
-              className="text-quiet shadow-subtle bg-white/60 px-3 py-2 text-sm font-semibold"
+              className="shadow-subtle bg-white/55 px-3.5 py-[0.4375rem] text-[0.8125rem] font-medium text-quiet"
             >
               {item}
             </span>

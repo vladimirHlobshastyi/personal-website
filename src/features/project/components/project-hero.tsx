@@ -20,7 +20,21 @@ export function ProjectHero({ project }: ProjectHeroProps) {
 
         <div className="grid gap-3">
           <ProjectMeta label="Role" value={project.role} />
-          <ProjectMeta label="Stack" value={project.stack.join(', ')} />
+          <div className="shadow-subtle bg-white/55 p-5">
+            <strong className="mb-3 block text-xs font-extrabold tracking-[.08em] uppercase">
+              Stack
+            </strong>
+            <div className="flex flex-wrap gap-2">
+              {project.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="bg-page px-3 py-1.5 text-[0.8125rem] font-medium text-muted"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
           <ProjectMeta label="Focus" value={project.focus} />
         </div>
       </div>

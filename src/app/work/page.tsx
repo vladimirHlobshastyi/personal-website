@@ -1,8 +1,8 @@
 import { WorkGallery } from '@/features/work';
 
 export const metadata = {
-  title: 'Work — Vladimir Petrov',
-  description: 'Selected software engineering projects by Vladimir Petrov.',
+  title: 'Work — Vladimir Hlobchastyi',
+  description: 'Selected software engineering projects by Vladimir Hlobchastyi.',
 };
 
 export default function WorkPage() {

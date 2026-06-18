@@ -10,11 +10,23 @@ export const projects: Project[] = [
     subtitle:
       'Real estate platform for property discovery, project presentation and map-based search.',
     role: 'Frontend Engineer',
-    stack: ['Next.js', 'TypeScript', 'Tailwind', 'shadcn/ui', 'React Hook Form', 'Mapbox'],
+    stack: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'React Hook Form',
+      'Zod',
+      'Mapbox GL',
+      'Zustand',
+      'Framer Motion',
+      'Vercel',
+    ],
     focus:
       'Product logic, UI architecture, reusable components, responsive behaviour and implementation quality.',
     image:
       'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop',
+    images: [],
     overview:
       'Homfinity is a real estate product where the frontend has to do more than render pages. The interface combines property discovery, project presentation, interactive map behaviour, filtering, forms and responsive layouts. The main value of the work is a clean product flow: users can explore properties visually, understand the object context and move through the platform without friction.',
     challenge:
@@ -47,11 +59,23 @@ export const projects: Project[] = [
       'Clinical education platform with roles, logs, review screens and location verification.',
     subtitle: 'Clinical education platform for students, preceptors and admins.',
     role: 'Frontend Engineer',
-    stack: ['React', 'TypeScript', 'React Hook Form', 'Zod', 'Zustand', 'RBAC'],
+    stack: [
+      'React',
+      'TypeScript',
+      'React Hook Form',
+      'Zod',
+      'Zustand',
+      'RBAC',
+      'React Router',
+      'Axios',
+      'date-fns',
+      'Tailwind CSS',
+    ],
     focus:
       'Dynamic forms, role-based interfaces, review flows, validation and predictable user states.',
     image:
       'https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=1600&auto=format&fit=crop',
+    images: [],
     overview:
       'Clinical Logs is a role-based web platform for clinical education workflows. Students create logs, preceptors review submitted work, and admins manage structured operational flows. The frontend has to support serious usage: clear forms, strict validation, status visibility, review screens and predictable navigation.',
     challenge:
@@ -83,11 +107,22 @@ export const projects: Project[] = [
     shortDescription: 'Mobile-first Ionic React application with GraphQL-driven product logic.',
     subtitle: 'Mobile-first application with structured GraphQL-driven product logic.',
     role: 'Frontend / Mobile Engineer',
-    stack: ['Ionic React', 'TypeScript', 'Apollo GraphQL', 'Capacitor'],
+    stack: [
+      'Ionic React',
+      'TypeScript',
+      'Apollo GraphQL',
+      'Capacitor',
+      'React Router',
+      'Formik',
+      'CSS Modules',
+      'iOS',
+      'Android',
+    ],
     focus:
       'Mobile UX, GraphQL state handling, screen flows, loading states and app-like interactions.',
     image:
       'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600&auto=format&fit=crop',
+    images: [],
     overview:
       'CIQ Mobile is a mobile-first application where the frontend experience depends on clear flows, fast feedback and correct data handling. The product combines mobile UX constraints with a GraphQL data layer and app-like interaction patterns.',
     challenge:
@@ -120,11 +155,21 @@ export const projects: Project[] = [
     subtitle:
       'Realtime pet communication concept with authentication, storage and websocket features.',
     role: 'Frontend Engineer',
-    stack: ['React', 'TypeScript', 'Supabase', 'WebSocket', 'Tailwind'],
+    stack: [
+      'React',
+      'TypeScript',
+      'Supabase',
+      'WebSocket',
+      'Tailwind CSS',
+      'React Router',
+      'Zustand',
+      'Framer Motion',
+    ],
     focus:
       'Authentication, realtime communication, user flows, storage and product-oriented frontend structure.',
     image:
       'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1600&auto=format&fit=crop',
+    images: [],
     overview:
       'FlyChat is a realtime communication concept focused on pet-related social interaction. It includes authentication, profile-like flows, storage and websocket-based messaging behaviour. The project is useful for showing full product thinking, not just isolated UI screens.',
     challenge:

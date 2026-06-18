@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Contact — Vladimir Petrov',
-  description: 'Contact Vladimir Petrov for software engineering work.',
+  title: 'Contact — Vladimir Hlobchastyi',
+  description: 'Contact Vladimir Hlobchastyi for software engineering work.',
 };
 
 export default function ContactPage() {

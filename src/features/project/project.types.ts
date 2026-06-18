@@ -8,6 +8,7 @@ export type Project = {
   stack: string[];
   focus: string;
   image: string;
+  images: string[];
   overview: string;
   challenge: string;
   outcome: string;

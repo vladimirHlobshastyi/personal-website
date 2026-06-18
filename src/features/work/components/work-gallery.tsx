@@ -31,7 +31,7 @@ export function WorkGallery() {
             </h3>
             <p className="mb-5 max-w-xl leading-7 text-white/75">{project.shortDescription}</p>
             <div className="flex flex-wrap gap-2">
-              {project.stack.slice(0, 3).map((tag) => (
+              {project.stack.slice(0, 5).map((tag) => (
                 <span
                   key={tag}
                   className="bg-white/15 px-3 py-2 text-xs font-semibold text-white/85 backdrop-blur"
