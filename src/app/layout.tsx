@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans">
-        <div className="mx-auto w-[min(1180px,calc(100%-48px))] py-8 max-sm:w-[min(100%-28px,1180px)]">
+        <div className="mx-auto w-[min(73.75rem,calc(100%-3rem))] py-lg max-sm:w-[min(100%-1.75rem,73.75rem)]">
           <SiteHeader />
           {children}
           <SiteFooter />

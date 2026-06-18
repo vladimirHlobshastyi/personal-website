@@ -41,7 +41,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <main>
-      <Link href="/work" className="mb-9 inline-flex font-bold text-muted transition-colors hover:text-ink">
+      <Link
+        href="/work"
+        className="mb-lg inline-flex font-bold text-muted transition-colors hover:text-ink"
+      >
         ← Back to work
       </Link>
 

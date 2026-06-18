@@ -8,12 +8,12 @@ const navItems = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 mb-14 grid grid-cols-[1fr_auto_1fr] items-center gap-6 bg-gradient-to-b from-page/95 via-page/80 to-transparent pb-8 pt-4 backdrop-blur-xl max-lg:grid-cols-[1fr_auto] max-lg:pb-6">
+    <header className="sticky top-0 z-40 mb-lg grid grid-cols-[1fr_auto_1fr] items-center gap-md bg-gradient-to-b from-page/95 via-page/80 to-transparent pb-lg pt-sm backdrop-blur-xl max-lg:grid-cols-[1fr_auto] max-lg:pb-md">
       <Link href="/" className="text-base font-bold tracking-[-0.035em]">
         Vladimir Petrov
       </Link>
 
-      <nav className="flex items-center gap-7 max-lg:order-3 max-lg:col-span-2 max-lg:justify-center max-sm:gap-5">
+      <nav className="flex items-center gap-lg max-lg:order-3 max-lg:col-span-2 max-lg:justify-center max-sm:gap-md">
         {navItems.map((item) => (
           <Link
             key={item.href}
@@ -29,7 +29,7 @@ export function SiteHeader() {
         href="mailto:vladimirp300@gmail.com"
         className="justify-self-end text-sm font-bold max-lg:hidden"
       >
-        Let’s talk
+        {"Let's talk"}
       </a>
     </header>
   );

@@ -3,7 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --page-bg: #f7f5f1;
+  --color-ink: #11100f;
+  --color-muted: #68615a;
+  --color-quiet: #9a928a;
+  --color-surface: #fffdf9;
+  --color-page: #f7f5f1;
+  --color-accent: #7a523b;
+  --color-white: #ffffff;
+
+  --shadow-soft: 0 1rem 2.8125rem rgba(40, 28, 20, 0.055);
+  --shadow-elevated: 0 1.5rem 4.375rem rgba(40, 28, 20, 0.09);
+  --shadow-subtle: 0 0.875rem 2.375rem rgba(40, 28, 20, 0.035);
+  --shadow-button: 0 1rem 2.375rem rgba(17, 16, 15, 0.16);
+
+  font-size: 16px;
 }
 
 html {
@@ -11,16 +24,16 @@ html {
 }
 
 body {
-  color: #11100f;
+  color: var(--color-ink);
   background:
-    linear-gradient(180deg, rgba(255,255,255,.68), rgba(255,255,255,0) 32%),
-    radial-gradient(circle at 16% 0%, rgba(217,200,184,.42), transparent 28vw),
-    var(--page-bg);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0) 32%),
+    radial-gradient(circle at 16% 0%, rgba(217, 200, 184, 0.42), transparent 28vw),
+    var(--color-page);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #11100f;
-  color: white;
+  background: var(--color-ink);
+  color: var(--color-white);
 }

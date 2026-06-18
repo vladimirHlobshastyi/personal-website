@@ -7,13 +7,13 @@ const metrics = [
 
 export function MetricsSection() {
   return (
-    <section className="mt-28 grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
+    <section className="mt-xl grid grid-cols-4 gap-sm max-lg:grid-cols-2 max-sm:grid-cols-1">
       {metrics.map(([value, label]) => (
-        <div key={value} className="bg-white/50 p-7 shadow-[0_14px_38px_rgba(40,28,20,.035)]">
-          <strong className="mb-2 block text-4xl font-semibold tracking-[-0.055em]">
+        <div key={value} className="bg-white/50 p-lg shadow-subtle">
+          <strong className="mb-sm block text-2xl font-semibold tracking-[-0.055em]">
             {value}
           </strong>
-          <span className="text-[15px] leading-7 text-muted">{label}</span>
+          <span className="text-sm leading-7 text-muted">{label}</span>
         </div>
       ))}
     </section>

@@ -45,8 +45,7 @@ export const projects: Project[] = [
     eyebrow: 'Healthcare Education',
     shortDescription:
       'Clinical education platform with roles, logs, review screens and location verification.',
-    subtitle:
-      'Clinical education platform for students, preceptors and admins.',
+    subtitle: 'Clinical education platform for students, preceptors and admins.',
     role: 'Frontend Engineer',
     stack: ['React', 'TypeScript', 'React Hook Form', 'Zod', 'Zustand', 'RBAC'],
     focus:
@@ -81,10 +80,8 @@ export const projects: Project[] = [
     slug: 'ciq-mobile',
     title: 'CIQ Mobile',
     eyebrow: 'Mobile Application',
-    shortDescription:
-      'Mobile-first Ionic React application with GraphQL-driven product logic.',
-    subtitle:
-      'Mobile-first application with structured GraphQL-driven product logic.',
+    shortDescription: 'Mobile-first Ionic React application with GraphQL-driven product logic.',
+    subtitle: 'Mobile-first application with structured GraphQL-driven product logic.',
     role: 'Frontend / Mobile Engineer',
     stack: ['Ionic React', 'TypeScript', 'Apollo GraphQL', 'Capacitor'],
     focus:
@@ -105,8 +102,7 @@ export const projects: Project[] = [
       },
       {
         title: 'GraphQL integration',
-        description:
-          'Handled query and mutation states through Apollo-driven UI logic.',
+        description: 'Handled query and mutation states through Apollo-driven UI logic.',
       },
       {
         title: 'Production states',
@@ -138,13 +134,11 @@ export const projects: Project[] = [
     responsibilities: [
       {
         title: 'Realtime communication',
-        description:
-          'Structured message-related UI states and websocket-driven updates.',
+        description: 'Structured message-related UI states and websocket-driven updates.',
       },
       {
         title: 'Auth and storage',
-        description:
-          'Integrated authentication and storage flows into the product experience.',
+        description: 'Integrated authentication and storage flows into the product experience.',
       },
       {
         title: 'Product UI',
