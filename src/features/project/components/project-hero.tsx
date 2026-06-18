@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+import Image from 'next/image';
 import type { Project } from '../project.types';
 
 type ProjectHeroProps = {
@@ -5,6 +9,13 @@ type ProjectHeroProps = {
 };
 
 export function ProjectHero({ project }: ProjectHeroProps) {
+  const allImages = project.images.length > 0 ? project.images : [project.image];
+  const [active, setActive] = useState(0);
+
+  const goTo = (index: number) => setActive(index);
+  const prev = () => setActive((s) => (s === 0 ? allImages.length - 1 : s - 1));
+  const next = () => setActive((s) => (s === allImages.length - 1 ? 0 : s + 1));
+
   return (
     <>
       <div className="mb-14 grid grid-cols-[.98fr_1.02fr] items-end gap-14 max-lg:grid-cols-1">
@@ -39,13 +50,53 @@ export function ProjectHero({ project }: ProjectHeroProps) {
         </div>
       </div>
 
-      <div
-        className="shadow-elevated relative min-h-[34.6875rem] overflow-hidden bg-cover bg-center max-sm:min-h-[24.0625rem]"
-        style={{
-          backgroundImage: `linear-gradient(180deg, rgba(17,16,15,.06), rgba(17,16,15,.48)), url(${project.image})`,
-        }}
-      >
-        <div className="absolute right-[9%] bottom-[9%] left-[9%] h-24 bg-white/15 shadow-[0_1.25rem_4.375rem_rgba(0,0,0,.13)] backdrop-blur" />
+      <div className="group relative overflow-hidden rounded-sm bg-[#1a1816]">
+        <div className="relative aspect-[16/9]">
+          {allImages.map((img, i) => (
+            <Image
+              key={img}
+              src={img}
+              alt={`${project.title} — screenshot ${i + 1}`}
+              fill
+              className={`object-contain transition-opacity duration-500 ${
+                i === active ? 'opacity-100' : 'opacity-0'
+              }`}
+              sizes="(max-width: 1024px) 100vw, 1180px"
+              priority={i === 0}
+            />
+          ))}
+
+          {allImages.length > 1 && (
+            <>
+              <button
+                onClick={prev}
+                className="absolute top-1/2 left-5 z-10 grid h-10 w-10 -translate-y-1/2 place-items-center bg-white/10 text-white/70 opacity-0 backdrop-blur-md transition-all hover:bg-white/20 hover:text-white group-hover:opacity-100"
+              >
+                ←
+              </button>
+              <button
+                onClick={next}
+                className="absolute top-1/2 right-5 z-10 grid h-10 w-10 -translate-y-1/2 place-items-center bg-white/10 text-white/70 opacity-0 backdrop-blur-md transition-all hover:bg-white/20 hover:text-white group-hover:opacity-100"
+              >
+                →
+              </button>
+            </>
+          )}
+        </div>
+
+        {allImages.length > 1 && (
+          <div className="flex items-center justify-center gap-2 py-4">
+            {allImages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goTo(i)}
+                className={`h-1.5 rounded-full transition-all ${
+                  i === active ? 'w-6 bg-white/70' : 'w-1.5 bg-white/25 hover:bg-white/40'
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </>
   );

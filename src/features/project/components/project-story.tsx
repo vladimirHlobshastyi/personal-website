@@ -28,19 +28,14 @@ export function ProjectStory({ project }: ProjectStoryProps) {
         <p className="text-muted text-[1.0625rem] leading-8">{project.outcome}</p>
       </article>
 
-      <article className="shadow-soft col-span-2 grid grid-cols-[.82fr_1.18fr] gap-10 bg-white/55 p-8 max-lg:col-span-1 max-lg:grid-cols-1 max-sm:p-6">
-        <h2 className="text-[1.875rem] leading-none font-semibold tracking-[-0.045em]">
-          What I worked on
-        </h2>
-        <div className="grid gap-3">
-          {project.responsibilities.map((item) => (
-            <div key={item.title} className="shadow-subtle bg-white/55 p-5">
-              <strong className="mb-1.5 block">{item.title}</strong>
-              <span className="text-muted text-[0.9375rem] leading-7">{item.description}</span>
-            </div>
-          ))}
-        </div>
-      </article>
+      {project.responsibilities.map((item) => (
+        <article key={item.title} className="shadow-soft bg-white/55 p-8 max-sm:p-6">
+          <h2 className="mb-4 text-[1.875rem] leading-none font-semibold tracking-[-0.045em]">
+            {item.title}
+          </h2>
+          <p className="text-muted text-[1.0625rem] leading-8">{item.description}</p>
+        </article>
+      ))}
     </section>
   );
 }

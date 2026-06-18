@@ -2,52 +2,65 @@ import type { Project } from './project.types';
 
 export const projects: Project[] = [
   {
-    slug: 'homfinity',
-    title: 'Homfinity',
-    eyebrow: 'Real Estate Platform',
+    slug: 'truckrates',
+    title: 'TruckRates.ai',
+    eyebrow: 'Logistics SaaS',
     shortDescription:
-      'Property discovery platform with interactive maps, project pages and multi-step user flows.',
+      'AI-powered drayage pricing platform with instant carrier rates, route mapping and booking workflows.',
     subtitle:
-      'Real estate platform for property discovery, project presentation and map-based search.',
+      'SaaS platform for instant drayage carrier pricing, rate comparison and shipment booking.',
     role: 'Frontend Engineer',
     stack: [
       'Next.js',
       'TypeScript',
       'Tailwind CSS',
-      'shadcn/ui',
       'React Hook Form',
       'Zod',
       'Mapbox GL',
+      'Recharts',
       'Zustand',
-      'Framer Motion',
+      'NextAuth.js',
       'Vercel',
     ],
     focus:
-      'Product logic, UI architecture, reusable components, responsive behaviour and implementation quality.',
-    image:
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600&auto=format&fit=crop',
-    images: [],
+      'Product dashboard, rate search flows, carrier comparison tables, route visualization and role-based access.',
+    image: '/images/truckrates_3.png',
+    images: [
+      '/images/truckrates_3.png',
+      '/images/truckrates_1.png',
+      '/images/truckrates_2.png',
+    ],
     overview:
-      'Homfinity is a real estate product where the frontend has to do more than render pages. The interface combines property discovery, project presentation, interactive map behaviour, filtering, forms and responsive layouts. The main value of the work is a clean product flow: users can explore properties visually, understand the object context and move through the platform without friction.',
+      'TruckRates.ai is an AI-driven logistics platform that provides instant drayage carrier pricing. The product allows shippers and brokers to search rates by route, compare carriers side by side, view distance and pricing on a map, and book shipments directly. The frontend handles complex search flows, real-time rate tables, accessorial charge breakdowns and a content-driven blog section.',
     challenge:
-      'The technically sensitive part is keeping the UI predictable while many states change at once: search filters, map movement, selected objects, loading states, form steps and responsive layouts. The implementation needs stable state boundaries, reusable sections and a component structure that does not collapse when the product grows.',
+      'The main complexity is presenting dense logistics data in a way that feels simple: carrier tables with pricing tiers, route maps with distance overlays, multi-step booking flows and role-based dashboards for different user types. Search filters, rate history and RFQ management all need to stay responsive and predictable under real production data volumes.',
     outcome:
-      'The result is a product-oriented frontend foundation: reusable UI blocks, clearer user journeys, polished visual hierarchy and map-based interaction that feels integrated into the product instead of being a separate technical widget.',
+      'The result is a clean, product-grade logistics dashboard: intuitive rate search, visual route comparison, carrier booking in fewer clicks and a content section that drives organic traffic. The interface handles the density of logistics data without overwhelming the user.',
     responsibilities: [
       {
-        title: 'Map-based product experience',
+        title: 'Rate search engine',
         description:
-          'Implemented UI flows around property discovery, selected map objects and location-driven browsing.',
+          'Designed and implemented the full rate search flow from scratch: route input with autocomplete, carrier result tables with sortable columns, average rate aggregation, roundtrip distance calculations and paginated search history. Handled complex filter combinations and ensured the interface remains fast under thousands of carrier records.',
       },
       {
-        title: 'Reusable interface sections',
+        title: 'Interactive route mapping',
         description:
-          'Built repeatable UI blocks for project pages, search results, forms and content-heavy layouts.',
+          'Integrated Mapbox GL to render pickup-to-delivery routes with real-time distance overlays, waypoint markers and pricing annotations. Built a reusable map component that adapts to different route types and viewport sizes while maintaining smooth pan and zoom performance.',
       },
       {
-        title: 'Responsive product layout',
+        title: 'Carrier management and RFQ',
         description:
-          'Adjusted hierarchy and spacing across desktop, tablet and mobile breakpoints.',
+          'Built the carrier directory with contact details, service areas and pricing tiers. Implemented the RFQ (Request for Quote) workflow: multi-step forms with validation, status tracking and notification states. Connected carrier data to the rate comparison engine for instant pricing lookups.',
+      },
+      {
+        title: 'Dashboard architecture',
+        description:
+          'Structured the authenticated dashboard with persistent sidebar navigation, role-based screen access, user management and application settings. Implemented search history with saved routes, bookmarked carriers and export capabilities. Ensured consistent layout behaviour across all dashboard sections.',
+      },
+      {
+        title: 'Content and SEO platform',
+        description:
+          'Built the public-facing blog and knowledge base sections: article listing with category filters, individual article pages with structured content, accessorial charges reference and SEO-optimized meta tags. Created reusable content components for consistent typography and layout across editorial pages.',
       },
     ],
   },
