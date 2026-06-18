@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --page-bg: #f7f5f1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #11100f;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.68), rgba(255,255,255,0) 32%),
+    radial-gradient(circle at 16% 0%, rgba(217,200,184,.42), transparent 28vw),
+    var(--page-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #11100f;
+  color: white;
+}
