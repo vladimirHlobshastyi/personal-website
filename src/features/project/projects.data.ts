@@ -2,6 +2,61 @@ import type { Project } from './project.types';
 
 export const projects: Project[] = [
   {
+    slug: 'miidba',
+    title: 'MIIDBA',
+    eyebrow: 'Admin Dashboard',
+    shortDescription:
+      'Internal dashboard for managing SQL backups, instances, organizations, users and access settings.',
+    subtitle:
+      'Administrative web application for database operations, backups and account management.',
+    role: 'Frontend Engineer',
+    stack: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'React Router',
+      'Zustand',
+      'React Query',
+      'Axios',
+      'MUI',
+      'Zod',
+      'React Hook Form',
+      'Sass',
+    ],
+    focus:
+      'Auth flows, admin screens, tabular data, forms, backup analytics and reusable dashboard UI.',
+    image: '/images/miidba_1.png',
+    images: ['/images/miidba_1.png', '/images/miidba_2.png', '/images/miidba_3.png'],
+    overview:
+      'MIIDBA is an internal admin dashboard built for database operations and operational control. The product combines role-based access, structured management screens, form-driven workflows and data-heavy views for backups, instances, organizations, users and settings.',
+    challenge:
+      'The main challenge is keeping dense administrative information usable. The interface has to present tables, filters, modals, forms and status-heavy workflows in a way that remains predictable for operators working with production data.',
+    outcome:
+      'The result is a clean B2B-style dashboard with a strong focus on data handling, operational clarity and reusable frontend architecture. It demonstrates experience with real admin product requirements rather than marketing pages.',
+    responsibilities: [
+      {
+        title: 'Admin workflows',
+        description:
+          'Implemented the main operational screens for dashboards, instances, backups, organizations, users and settings.',
+      },
+      {
+        title: 'Forms and validation',
+        description:
+          'Built structured form flows with validation for create and edit actions across admin entities.',
+      },
+      {
+        title: 'Data handling',
+        description:
+          'Connected the UI to API-driven data with consistent loading, empty and state transitions.',
+      },
+      {
+        title: 'Reusable UI',
+        description:
+          'Worked with shared tables, dialogs, inputs and layout patterns to keep the application maintainable.',
+      },
+    ],
+  },
+  {
     slug: 'truckrates',
     title: 'TruckRates.ai',
     eyebrow: 'Logistics SaaS',
