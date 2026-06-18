@@ -171,46 +171,57 @@ export const projects: Project[] = [
   {
     slug: 'ciq-mobile',
     title: 'CIQ Mobile',
-    eyebrow: 'Mobile Application',
-    shortDescription: 'Mobile-first Ionic React application with GraphQL-driven product logic.',
-    subtitle: 'Mobile-first application with structured GraphQL-driven product logic.',
+    eyebrow: 'Operations Platform',
+    shortDescription:
+      'Industrial dashboard for project operations, street sheets, maps, task workflows and PDF export.',
+    subtitle:
+      'Operational web platform for managing construction projects, work bundles and field data.',
     role: 'Frontend / Mobile Engineer',
     stack: [
-      'Ionic React',
+      'React',
       'TypeScript',
+      'Ionic React',
       'Apollo GraphQL',
       'Capacitor',
       'React Router',
-      'Formik',
-      'CSS Modules',
+      'React Hook Form',
+      'Zod',
+      'Chart.js',
+      'Google Maps',
+      'PDF export',
       'iOS',
       'Android',
     ],
     focus:
-      'Mobile UX, GraphQL state handling, screen flows, loading states and app-like interactions.',
-    image:
-      'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1600&auto=format&fit=crop',
-    images: [],
+      'Project navigation, map-driven planning, street sheet workflows, tables, dialogs and exports.',
+    image: '/images/ciq_1.png',
+    images: ['/images/ciq_1.png', '/images/ciq_2.png', '/images/ciq_3.png'],
     overview:
-      'CIQ Mobile is a mobile-first application where the frontend experience depends on clear flows, fast feedback and correct data handling. The product combines mobile UX constraints with a GraphQL data layer and app-like interaction patterns.',
+      'CIQ is an operations platform used to manage construction projects, work bundle definitions, street sheets and field data. The frontend combines dense administrative screens, map-based planning, modal workflows and exportable operational views in one application.',
     challenge:
-      'The challenge is to keep the app feeling simple while handling real production states: fetching, mutations, cache updates, form screens, navigation transitions and mobile responsiveness. In mobile interfaces, small inconsistencies become visible very quickly, so spacing, hierarchy and interaction states matter.',
+      'The challenge is to keep complex operational data understandable. Users need to move between projects, plans, tasks and street sheets without losing context, while the UI still has to stay responsive and predictable across large tables, overlays and map interactions.',
     outcome:
-      'The work demonstrates practical mobile frontend experience: Ionic React structure, Apollo integration, production-oriented UI states and layouts that remain usable across device sizes.',
+      'The result is a production-style dashboard that supports real operational workflows: planning, review, status tracking, map inspection and PDF output. It shows experience with heavy business UI rather than just static marketing pages.',
     responsibilities: [
       {
-        title: 'Mobile-first flows',
+        title: 'Project and task workflows',
         description:
-          'Built screens and interactions around mobile behaviour, smaller viewports and app navigation.',
+          'Built navigation and screen flows for projects, work bundle definitions, tasks and related operational records.',
       },
       {
-        title: 'GraphQL integration',
-        description: 'Handled query and mutation states through Apollo-driven UI logic.',
+        title: 'Map and planning views',
+        description:
+          'Worked with map-based layouts for construction planning and visual inspection of project areas.',
       },
       {
-        title: 'Production states',
+        title: 'Forms, dialogs and exports',
         description:
-          'Covered loading, empty, error and transition states to keep the interface stable.',
+          'Implemented modal-driven CRUD flows, structured forms and PDF export interactions for street sheet data.',
+      },
+      {
+        title: 'Data-heavy admin UI',
+        description:
+          'Handled tables, filters, status indicators and loading states in a dense business application.',
       },
     ],
   },
