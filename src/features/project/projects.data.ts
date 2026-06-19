@@ -2,6 +2,69 @@ import type { Project } from './project.types';
 
 export const projects: Project[] = [
   {
+    slug: 'prepry',
+    title: 'Prepry AI',
+    eyebrow: 'AI Recovery / EdTech Platform',
+    badge: 'AI cleanup + architecture rescue',
+    shortDescription:
+      'Large education platform that I stabilized after AI-vibe coding, rebuilt into a maintainable production structure and hardened for real delivery.',
+    subtitle:
+      'Full-stack education platform for clinical, academic and AI-driven workflows, brought from scattered AI output to production-ready architecture.',
+    role: 'Frontend Engineer',
+    stack: [
+      'React 19',
+      'TypeScript',
+      'Vite',
+      'TanStack Query',
+      'React Router',
+      'Tailwind CSS 4',
+      'Supabase',
+      'Firebase Auth',
+      'Firebase Functions',
+      'Fastify',
+      'Prisma',
+      'OpenAI',
+      'Anthropic',
+      'Zod',
+      'Radix UI',
+      'shadcn/ui',
+      'Zustand',
+      'Sentry',
+    ],
+    focus:
+      'Architecture cleanup, RBAC, institution scope, route stability, legacy removal and production hardening.',
+    image: '/images/prepry_1.png',
+    images: ['/images/prepry_1.png', '/images/prepry_2.png', '/images/prepry_3.png'],
+    overview:
+      'Prepry is a large education platform for clinical, academic and AI-assisted workflows. The codebase spans a React frontend, backend services, serverless functions, Supabase/Postgres, Firebase Auth and multiple AI features. My work focused on turning an unstable AI-generated foundation into a maintainable product architecture.',
+    challenge:
+      'The main challenge was not adding a small feature, but rescuing a large codebase with scattered logic, duplicate legacy paths, inconsistent institution scope, broken routes and weak separation between domains. The platform needed real structural cleanup before it could be treated like production software.',
+    outcome:
+      'The result was a production-oriented refactor: clearer feature boundaries, safer access control, consistent tenant scoping, removed legacy dead ends, better data flow and a codebase that could actually be extended without compounding the earlier AI-generated mess.',
+    responsibilities: [
+      {
+        title: 'Architecture rescue',
+        description:
+          'Reworked scattered AI-generated code into clearer domain boundaries, reduced duplication and aligned the frontend with a predictable project structure.',
+      },
+      {
+        title: 'RBAC and tenant scope',
+        description:
+          'Audited and fixed role checks, institution-scoped data flow and route protection so selected institution data stayed isolated and predictable.',
+      },
+      {
+        title: 'Legacy cleanup',
+        description:
+          'Removed or planned removal of dead routes, legacy hooks, stale screens and mock data that were blocking production readiness.',
+      },
+      {
+        title: 'AI feature hardening',
+        description:
+          'Kept AI features usable while moving risky logic into safer backend boundaries and making the product easier to maintain.',
+      },
+    ],
+  },
+  {
     slug: 'miidba',
     title: 'MIIDBA',
     eyebrow: 'Admin Dashboard',

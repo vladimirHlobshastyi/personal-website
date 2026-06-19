@@ -2,6 +2,7 @@ export type Project = {
   slug: string;
   title: string;
   eyebrow: string;
+  badge?: string;
   shortDescription: string;
   subtitle: string;
   role: string;

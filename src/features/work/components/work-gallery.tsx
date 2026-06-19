@@ -29,6 +29,11 @@ export function WorkGallery() {
             <h3 className="mb-4 text-[clamp(2.125rem,5vw,3.875rem)] leading-[.9] font-semibold tracking-[-0.07em]">
               {project.title}
             </h3>
+            {project.badge ? (
+              <p className="mb-4 inline-flex border border-white/15 bg-black/20 px-3 py-1.5 text-xs font-semibold tracking-[.08em] uppercase text-white/90 backdrop-blur">
+                {project.badge}
+              </p>
+            ) : null}
             <p className="mb-5 max-w-xl leading-7 text-white/75">{project.shortDescription}</p>
             <div className="flex flex-wrap gap-2">
               {project.stack.slice(0, 5).map((tag) => (

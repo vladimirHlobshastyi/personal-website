@@ -23,6 +23,11 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           <div className="text-accent before:bg-accent mb-7 inline-flex items-center gap-3 text-xs font-extrabold tracking-[.12em] uppercase before:block before:h-px before:w-10 before:opacity-50">
             Case Study
           </div>
+          {project.badge ? (
+            <div className="mb-5 inline-flex border border-black/10 bg-white/70 px-3 py-1.5 text-xs font-semibold tracking-[.08em] uppercase text-muted">
+              {project.badge}
+            </div>
+          ) : null}
           <h1 className="text-[clamp(3.125rem,7vw,5.625rem)] leading-[.9] font-semibold tracking-[-0.08em]">
             {project.title}
           </h1>
