@@ -1,4 +1,4 @@
-import { Badge, ImageCarousel, Tag } from '@/components/ui';
+import { ArrowIcon, Badge, ImageCarousel, Tag } from '@/components/ui';
 import type { Project } from '../project.types';
 
 type ProjectHeroProps = {
@@ -31,6 +31,23 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           {project.title}
         </h1>
         <p className="text-muted mt-6 max-w-2xl text-lg leading-8">{project.subtitle}</p>
+
+        {project.links && project.links.length > 0 ? (
+          <div className="mt-7 flex flex-wrap gap-3">
+            {project.links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group border-line bg-surface text-fg hover:border-accent hover:text-accent inline-flex items-center gap-2 border px-5 py-3 text-sm font-bold transition-colors"
+              >
+                {link.label}
+                <ArrowIcon className="h-3.5 w-3.5 -rotate-45 transition-transform group-hover:translate-x-0.5" />
+              </a>
+            ))}
+          </div>
+        ) : null}
       </header>
 
       {/* One consolidated meta panel: role + focus, then the full stack. */}

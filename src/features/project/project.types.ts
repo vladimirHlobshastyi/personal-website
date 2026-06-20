@@ -8,6 +8,7 @@ export type Project = {
   role: string;
   stack: string[];
   focus: string;
+  links?: { label: string; href: string }[];
   image: string;
   images: string[];
   overview: string;
