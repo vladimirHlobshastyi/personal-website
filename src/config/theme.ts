@@ -1,20 +1,29 @@
 /**
  * Design tokens for use in TypeScript (inline styles, canvas, etc.).
- * CSS source of truth is globals.css @theme block.
+ * The CSS source of truth is the @theme / :root blocks in globals.css —
+ * keep these in sync. Theme-aware values are listed per scheme.
  */
-export const colors = {
-  ink: '#11100f',
-  muted: '#68615a',
-  quiet: '#9a928a',
-  surface: '#fffdf9',
-  page: '#f7f5f1',
-  accent: '#7a523b',
-  dark: '#141210',
+export const palette = {
+  light: {
+    bg: '#fbfaf7',
+    surface: '#ffffff',
+    surface2: '#f3efe8',
+    fg: '#17130f',
+    muted: '#6a625a',
+    quiet: '#9a928a',
+    accent: '#8a5a40',
+  },
+  dark: {
+    bg: '#100d0a',
+    surface: '#191512',
+    surface2: '#231d18',
+    fg: '#f1ebe2',
+    muted: '#a89e92',
+    quiet: '#786d61',
+    accent: '#c2895e',
+  },
 } as const;
 
-export const shadows = {
-  soft: '0 1rem 2.8125rem rgba(40, 28, 20, 0.055)',
-  elevated: '0 1.5rem 4.375rem rgba(40, 28, 20, 0.09)',
-  subtle: '0 0.875rem 2.375rem rgba(40, 28, 20, 0.035)',
-  button: '0 1rem 2.375rem rgba(17, 16, 15, 0.16)',
-} as const;
+/** Dark gradient overlay used on photo cards — theme-agnostic (text is always white). */
+export const mediaOverlay =
+  'linear-gradient(180deg, rgba(17,16,15,.10), rgba(17,16,15,.72))';

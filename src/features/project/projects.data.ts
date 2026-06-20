@@ -5,7 +5,7 @@ export const projects: Project[] = [
     slug: 'prepry',
     title: 'Prepry AI',
     eyebrow: 'AI Recovery / EdTech Platform',
-    badge: 'AI cleanup + architecture rescue',
+    badge: 'AI rescue / production refactor',
     shortDescription:
       'Large education platform that I stabilized after AI-vibe coding, rebuilt into a maintainable production structure and hardened for real delivery.',
     subtitle:

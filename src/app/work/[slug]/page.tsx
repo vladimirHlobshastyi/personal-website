@@ -1,12 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import {
-  projects,
-  getProjectBySlug,
-  ProjectGallery,
-  ProjectHero,
-  ProjectStory,
-} from '@/features/project';
+import { ArrowIcon } from '@/components/ui';
+import { projects, getProjectBySlug, ProjectHero, ProjectStory } from '@/features/project';
 
 type ProjectPageProps = {
   params: Promise<{
@@ -46,14 +41,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <main>
       <Link
         href="/work"
-        className="text-muted hover:text-ink mb-9 inline-flex font-bold transition-colors"
+        className="text-muted hover:text-fg group mb-9 inline-flex items-center gap-2 font-bold transition-colors"
       >
-        ← Back to work
+        <ArrowIcon className="h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-1" />
+        Back to work
       </Link>
 
       <ProjectHero project={project} />
       <ProjectStory project={project} />
-      <ProjectGallery project={project} />
     </main>
   );
 }

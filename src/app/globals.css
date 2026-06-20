@@ -1,26 +1,79 @@
 @import 'tailwindcss';
 
-@theme {
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* ---------------------------------------------------------------------------
+   Semantic theme tokens. :root = light, [data-theme='dark'] = dark override.
+   Tailwind utilities are mapped from these in the @theme inline block below,
+   so bg-bg / text-fg / border-line / text-accent react to the theme live.
+--------------------------------------------------------------------------- */
+:root {
+  --bg: #faf8f3;
+  --surface: #ffffff;
+  --surface-2: #f2ede3;
+  --fg: #1a1714;
+  --muted: #6a6258;
+  --quiet: #9c9384;
+  --line: rgba(26, 23, 20, 0.1);
+  --line-strong: rgba(26, 23, 20, 0.18);
+  --accent: #9a7b4f;
+  --accent-soft: rgba(154, 123, 79, 0.14);
+
+  /* Inverse block (footer / contact) — stays dark in both themes. */
+  --inverse-bg: #16120c;
+  --inverse-fg: #f0eadd;
+
+  --card-shadow: 0 1px 2px rgba(26, 23, 20, 0.04), 0 0.75rem 2rem rgba(26, 23, 20, 0.05);
+  --float-shadow: 0 2px 6px rgba(26, 23, 20, 0.06), 0 1.5rem 3.5rem rgba(26, 23, 20, 0.1);
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --bg: #121009;
+  --surface: #1c1812;
+  --surface-2: #221d14;
+  --fg: #f0eadd;
+  --muted: #a99e8c;
+  --quiet: #7d7464;
+  --line: rgba(240, 234, 221, 0.12);
+  --line-strong: rgba(240, 234, 221, 0.22);
+  --accent: #c9a468;
+  --accent-soft: rgba(201, 164, 104, 0.16);
+
+  --inverse-bg: #1c1812;
+  --inverse-fg: #f0eadd;
+
+  --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0.75rem 2rem rgba(0, 0, 0, 0.35);
+  --float-shadow: 0 2px 6px rgba(0, 0, 0, 0.35), 0 1.5rem 3.5rem rgba(0, 0, 0, 0.5);
+
+  color-scheme: dark;
+}
+
+@theme inline {
   /* Font */
   --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
   /* Colors */
-  --color-ink: #11100f;
-  --color-muted: #68615a;
-  --color-quiet: #9a928a;
-  --color-surface: #fffdf9;
-  --color-page: #f7f5f1;
-  --color-accent: #7a523b;
-  --color-dark: #141210;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-quiet: var(--quiet);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-inverse: var(--inverse-bg);
+  --color-inverse-fg: var(--inverse-fg);
 
   /* Shadows */
-  --shadow-soft: 0 1rem 2.8125rem rgba(40, 28, 20, 0.055);
-  --shadow-elevated: 0 1.5rem 4.375rem rgba(40, 28, 20, 0.09);
-  --shadow-subtle: 0 0.875rem 2.375rem rgba(40, 28, 20, 0.035);
-  --shadow-button: 0 1rem 2.375rem rgba(17, 16, 15, 0.16);
+  --shadow-card: var(--card-shadow);
+  --shadow-float: var(--float-shadow);
 
   /* Letter spacing */
-  --tracking-tighter-x: -0.085em;
+  --tracking-tightest: -0.085em;
 }
 
 html {
@@ -29,16 +82,42 @@ html {
 }
 
 body {
-  color: var(--color-ink);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0) 32%),
-    radial-gradient(circle at 16% 0%, rgba(217, 200, 184, 0.42), transparent 28vw),
-    var(--color-page);
+  color: var(--fg);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 ::selection {
-  background: var(--color-ink);
-  color: #fff;
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* Page transition — replayed on every route change via app/template.tsx. */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .page-enter {
+    animation: none;
+  }
 }
