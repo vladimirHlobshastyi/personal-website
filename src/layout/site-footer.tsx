@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import { CONTACTS } from '@/config/contacts';
 
 const links = [
-  { label: 'Email', href: 'mailto:vladimirp300@gmail.com', external: true },
-  { label: 'LinkedIn', href: '#', external: false },
-  { label: 'GitHub', href: '#', external: false },
-  { label: 'Telegram', href: '#', external: false },
+  { label: CONTACTS.email.label, href: CONTACTS.email.href, external: true },
+  { label: CONTACTS.linkedin.label, href: CONTACTS.linkedin.href, external: true },
+  { label: CONTACTS.telegram.label, href: CONTACTS.telegram.href, external: true },
+  { label: CONTACTS.x.label, href: CONTACTS.x.href, external: true },
 ];
 
 export function SiteFooter() {

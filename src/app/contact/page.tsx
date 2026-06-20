@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowIcon, SocialIcon } from '@/components/ui';
+import { CONTACTS } from '@/config/contacts';
 
 export const metadata = {
   title: 'Contact — Vladimir Hlobchastyi',
@@ -7,12 +8,17 @@ export const metadata = {
 };
 
 const socials = [
-  { name: 'email', label: 'Email', value: 'vladimirp300@gmail.com', href: 'mailto:vladimirp300@gmail.com' },
-  { name: 'linkedin', label: 'LinkedIn', value: 'Professional profile', href: '#' },
-  { name: 'github', label: 'GitHub', value: 'Code and projects', href: '#' },
-  { name: 'telegram', label: 'Telegram', value: 'Fastest way to reach me', href: '#' },
-  { name: 'x', label: 'X', value: 'Updates and thoughts', href: '#' },
-  { name: 'facebook', label: 'Facebook', value: 'Social profile', href: '#' },
+  {
+    name: 'email',
+    ...CONTACTS.email,
+  },
+  {
+    name: 'linkedin',
+    ...CONTACTS.linkedin,
+  },
+  { name: 'telegram', ...CONTACTS.telegram },
+  { name: 'x', ...CONTACTS.x },
+  { name: 'facebook', ...CONTACTS.facebook },
 ];
 
 const languages = [
@@ -46,10 +52,10 @@ export default function ContactPage() {
         </p>
         <a
           className="bg-accent mt-9 inline-flex items-center gap-2 px-6 py-4 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
-          href="mailto:vladimirp300@gmail.com"
+          href={CONTACTS.email.href}
         >
           <SocialIcon name="email" className="h-4 w-4" />
-          vladimirp300@gmail.com
+          {CONTACTS.email.value}
         </a>
       </section>
 

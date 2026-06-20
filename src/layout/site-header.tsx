@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/ui';
+import { CONTACTS } from '@/config/contacts';
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -46,7 +47,7 @@ export function SiteHeader() {
 
         <div className="flex items-center justify-end gap-5">
           <a
-            href="mailto:vladimirp300@gmail.com"
+            href={CONTACTS.email.href}
             className="group hover:text-accent inline-flex items-center gap-2 text-sm font-semibold transition-colors max-lg:hidden"
           >
             <span className="bg-accent/60 group-hover:bg-accent h-1.5 w-1.5 rounded-full transition-colors" />
