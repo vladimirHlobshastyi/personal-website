@@ -72,8 +72,8 @@
   --shadow-card: var(--card-shadow);
   --shadow-float: var(--float-shadow);
 
-  /* Letter spacing */
-  --tracking-tightest: -0.085em;
+  /* Letter spacing — kept moderate so large display headings stay readable. */
+  --tracking-tightest: -0.035em;
 }
 
 html {

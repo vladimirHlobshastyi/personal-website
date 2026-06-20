@@ -33,6 +33,8 @@ export function SiteFooter() {
                   key={link.label}
                   className="text-inverse-fg/90 hover:border-accent hover:text-accent border border-white/12 px-5 py-3 text-sm font-bold transition-colors"
                   href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {link.label}
                 </a>

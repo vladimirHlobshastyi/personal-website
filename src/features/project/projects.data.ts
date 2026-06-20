@@ -257,7 +257,9 @@ export const projects: Project[] = [
       'WebRTC',
       'Daily.co',
       'Socket.io',
+      'WebSockets',
       'Whisper.rn',
+      'AI / LLM',
       'Persona',
       'Firebase',
       'TanStack Query',
@@ -268,10 +270,15 @@ export const projects: Project[] = [
     ],
     focus:
       'Realtime audio/video calls, on-device transcription, secure onboarding & identity verification, and calm crisis-safety flows.',
-    image: '/images/claratalks_1.png',
-    images: ['/images/claratalks_1.png', '/images/claratalks_2.png', '/images/claratalks_3.png'],
+    image: '/images/claratalks_1.jpg',
+    images: [
+      '/images/claratalks_1.jpg',
+      '/images/claratalks_2.jpg',
+      '/images/claratalks_3.jpg',
+      '/images/claratalks_4.jpg',
+    ],
     overview:
-      'ClaraTalks is a confidential, realtime support product for iOS and Android. It connects people who need to talk with trained peer listeners ("sisters") over secure audio and video calls. The app spans a full call lifecycle — topic selection, matching and waiting, pre-call, incoming and active calls, and post-call decompression — on top of WebRTC and Daily.co, with Socket.io handling signaling and session state. Sensitive context shaped every decision: speech-to-text runs on-device via Whisper, identity is verified through Persona, and data is kept in secure storage.',
+      'ClaraTalks is a confidential, realtime support product for iOS and Android. It connects people who need to talk with trained peer listeners ("sisters") over secure audio and video calls. The app spans a full call lifecycle — topic selection, matching and waiting, pre-call, incoming and active calls, and post-call decompression — on top of WebRTC and Daily.co, with Socket.io handling signaling and session state. Sensitive context shaped every decision: a client-side AI agent processes the conversation in real time (live transcription, auto-mute and safety cues) with speech-to-text running on-device via Whisper, identity is verified through Persona, and data is kept in secure storage.',
     challenge:
       'Realtime calling is unforgiving — connection setup, permissions, proximity handling, network drops and call state all have to feel instant and reliable. On top of that, the product operates in an emotionally sensitive, privacy-critical context: transcription has to stay on-device, identity must be verified without friction, and crisis situations need clear, calm, fail-safe flows rather than clever UI.',
     outcome:
@@ -283,9 +290,9 @@ export const projects: Project[] = [
           'Built the full call lifecycle — pre-call, incoming, active and post-call screens — on WebRTC and Daily.co, including permissions, in-call proximity handling and graceful recovery from network changes.',
       },
       {
-        title: 'On-device transcription',
+        title: 'Client-side realtime AI agent',
         description:
-          'Integrated whisper.rn for in-call speech-to-text that runs entirely on the device, keeping audio private while still providing live transcription.',
+          'Added an on-client AI agent that processes the live conversation in real time — driving live transcription, auto-mute and safety cues — with whisper.rn speech-to-text running entirely on the device to keep audio private.',
       },
       {
         title: 'Onboarding & verification',
@@ -521,55 +528,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'clinical-logs',
-    title: 'Clinical Logs',
-    eyebrow: 'Healthcare Education',
-    shortDescription:
-      'Clinical education platform with roles, logs, review screens and location verification.',
-    subtitle: 'Clinical education platform for students, preceptors and admins.',
-    role: 'Frontend Engineer',
-    stack: [
-      'React',
-      'TypeScript',
-      'React Hook Form',
-      'Zod',
-      'Zustand',
-      'RBAC',
-      'React Router',
-      'Axios',
-      'date-fns',
-      'Tailwind CSS',
-    ],
-    focus:
-      'Dynamic forms, role-based interfaces, review flows, validation and predictable user states.',
-    image:
-      'https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=1600&auto=format&fit=crop',
-    images: [],
-    overview:
-      'Clinical Logs is a role-based web platform for clinical education workflows. Students create logs, preceptors review submitted work, and admins manage structured operational flows. The frontend has to support serious usage: clear forms, strict validation, status visibility, review screens and predictable navigation.',
-    challenge:
-      'The main complexity is correctness. Different roles see different states, logs move through multiple statuses, forms depend on selected templates, and location verification can block or allow actions. The UI must explain what is happening without overwhelming the user.',
-    outcome:
-      'The implementation direction is focused on maintainable dynamic forms, role-aware rendering, readable review flows and clean state separation. For a client, this shows ability to work with business rules, not only landing pages.',
-    responsibilities: [
-      {
-        title: 'Role-aware UI',
-        description:
-          'Separated student, preceptor and admin interactions into predictable screen states.',
-      },
-      {
-        title: 'Complex forms',
-        description:
-          'Worked with dynamic fields, validation rules and multi-step clinical log flows.',
-      },
-      {
-        title: 'Review experience',
-        description:
-          'Designed clear review screens with statuses, actions and readable clinical log data.',
-      },
-    ],
-  },
-  {
     slug: 'ciq-mobile',
     title: 'CIQ Mobile',
     eyebrow: 'Operations Platform',
@@ -629,46 +587,49 @@ export const projects: Project[] = [
   {
     slug: 'flychat',
     title: 'FlyChat',
-    eyebrow: 'Realtime Product',
+    eyebrow: 'Realtime Chat · PWA',
     shortDescription:
-      'Realtime pet communication concept with authentication, storage and websocket features.',
+      'Realtime chat app with JWT auth, WebSocket messaging, unread/read states, online presence and role-based user/admin flows.',
     subtitle:
-      'Realtime pet communication concept with authentication, storage and websocket features.',
+      'Realtime chat product built with React, TanStack Router/Query, Zustand, Supabase and WebSocket-driven messaging.',
     role: 'Frontend Engineer',
     stack: [
-      'React',
+      'React 19',
       'TypeScript',
+      'Vite',
       'Supabase',
       'WebSocket',
       'Tailwind CSS',
-      'React Router',
+      'TanStack Router',
+      'TanStack Query',
       'Zustand',
-      'Framer Motion',
+      'PWA',
     ],
     focus:
-      'Authentication, realtime communication, user flows, storage and product-oriented frontend structure.',
-    image:
-      'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1600&auto=format&fit=crop',
-    images: [],
+      'JWT auth, realtime dialogs, message sync, unread/read flow, online presence, role-based routes and mobile-first product structure.',
+    image: '/images/flychat_1.png',
+    images: ['/images/flychat_1.png', '/images/flychat_2.png', '/images/flychat_3.png'],
     overview:
-      'FlyChat is a realtime communication concept focused on pet-related social interaction. It includes authentication, profile-like flows, storage and websocket-based messaging behaviour. The project is useful for showing full product thinking, not just isolated UI screens.',
+      'FlyChat is a realtime chat application built with React, Vite, Zustand, TanStack Router/Query, Supabase and a WebSocket backend. The product covers more than a single chat screen: authentication, dialogs, unread counts, typing states, online presence, profile management, role-based user/admin areas and PWA preparation for desktop and mobile usage.',
     challenge:
-      'Realtime interfaces need careful handling of optimistic updates, connection states, loading states and message ordering. The frontend must remain understandable when data changes quickly and when network conditions are imperfect.',
+      'Realtime product UI has to stay understandable while data changes constantly. Dialog order, unread counters, typing signals, read states, presence and infinite message history all need to stay synchronized without breaking navigation or making the interface feel unstable on mobile and desktop.',
     outcome:
-      'The result is a compact but meaningful product case: authentication, storage, realtime communication and user-facing flows combined into a modern React application structure.',
+      'The result is a structured chat product with real application depth: JWT auth, synchronized messaging, role-aware routes, searchable user flows, profile editing and PWA-ready frontend foundations. It demonstrates product thinking and realtime state handling, not just isolated messenger visuals.',
     responsibilities: [
       {
-        title: 'Realtime communication',
-        description: 'Structured message-related UI states and websocket-driven updates.',
-      },
-      {
-        title: 'Auth and storage',
-        description: 'Integrated authentication and storage flows into the product experience.',
-      },
-      {
-        title: 'Product UI',
+        title: 'Realtime messaging',
         description:
-          'Created a clear social-product interface around profiles, messages and user actions.',
+          'Implemented chat flows around WebSocket updates, typing states, unread counters, read events and synchronized message ordering.',
+      },
+      {
+        title: 'Auth and app state',
+        description:
+          'Worked with JWT auth, persisted Zustand state, TanStack Query data flow and route-level role separation for user and admin areas.',
+      },
+      {
+        title: 'Product surfaces',
+        description:
+          'Built dialogs, active chat, profile management and data-management screens in a mobile-first layout prepared for PWA installation.',
       },
     ],
   },

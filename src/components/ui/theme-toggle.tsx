@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 
 type Theme = 'light' | 'dark';
+const STORAGE_KEY = 'theme-preference';
+const LEGACY_STORAGE_KEY = 'theme';
 
 function getInitialTheme(): Theme {
   if (typeof document === 'undefined') {
@@ -11,21 +13,57 @@ function getInitialTheme(): Theme {
   return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
 }
 
+function getStoredPreference(): Theme | null {
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
+  const saved = window.localStorage.getItem(STORAGE_KEY) ?? window.localStorage.getItem(LEGACY_STORAGE_KEY);
+  return saved === 'dark' || saved === 'light' ? saved : null;
+}
+
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>('light');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setTheme(getInitialTheme());
+    const stored = getStoredPreference();
+    const resolved = stored ?? getInitialTheme();
+
+    setTheme(resolved);
     setMounted(true);
+
+    if (stored) {
+      document.documentElement.setAttribute('data-theme', stored);
+      return;
+    }
+
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    const syncWithSystem = (event: MediaQueryListEvent | MediaQueryList) => {
+      const next = event.matches ? 'dark' : 'light';
+      setTheme(next);
+      document.documentElement.setAttribute('data-theme', next);
+    };
+
+    syncWithSystem(media);
+
+    if (typeof media.addEventListener === 'function') {
+      media.addEventListener('change', syncWithSystem);
+      return () => media.removeEventListener('change', syncWithSystem);
+    }
+
+    media.addListener(syncWithSystem);
+    return () => media.removeListener(syncWithSystem);
   }, []);
 
   const toggle = () => {
     const next: Theme = theme === 'dark' ? 'light' : 'dark';
     setTheme(next);
     document.documentElement.setAttribute('data-theme', next);
+
     try {
-      localStorage.setItem('theme', next);
+      localStorage.setItem(STORAGE_KEY, next);
+      localStorage.removeItem(LEGACY_STORAGE_KEY);
     } catch {
       // ignore storage failures (private mode, etc.)
     }

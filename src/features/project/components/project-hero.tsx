@@ -1,21 +1,22 @@
 import { ArrowIcon, Badge, ImageCarousel, Tag } from '@/components/ui';
+import { getProjectShowcaseImages, hasProjectRealScreenshots } from '../project-preview';
 import type { Project } from '../project.types';
 
 type ProjectHeroProps = {
   project: Project;
 };
 
-function MetaField({ label, value }: { label: string; value: string }) {
+function MetaRow({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div>
-      <p className="text-quiet mb-1.5 text-xs font-bold tracking-[.12em] uppercase">{label}</p>
-      <p className="text-fg leading-7 font-medium">{value}</p>
+    <div className="border-line grid grid-cols-[7.5rem_1fr] items-baseline gap-x-10 border-b px-7 py-5 last:border-b-0 max-sm:grid-cols-1 max-sm:gap-y-2 max-sm:px-6">
+      <p className="text-quiet text-xs font-bold tracking-[.14em] uppercase">{label}</p>
+      <div className="text-fg leading-7">{children}</div>
     </div>
   );
 }
 
 export function ProjectHero({ project }: ProjectHeroProps) {
-  const allImages = project.images.length > 0 ? project.images : [project.image];
+  const allImages = getProjectShowcaseImages(project);
 
   return (
     <>
@@ -50,21 +51,26 @@ export function ProjectHero({ project }: ProjectHeroProps) {
         ) : null}
       </header>
 
-      {/* One consolidated meta panel: role + focus, then the full stack. */}
-      <div className="border-line bg-surface mb-10 grid grid-cols-[minmax(0,auto)_1fr] gap-x-12 gap-y-6 border p-7 max-sm:grid-cols-1 max-sm:p-6">
-        <MetaField label="Role" value={project.role} />
-        <MetaField label="Focus" value={project.focus} />
-        <div className="border-line col-span-2 border-t pt-6 max-sm:col-span-1">
-          <p className="text-quiet mb-3 text-xs font-bold tracking-[.12em] uppercase">Stack</p>
+      {/* Consolidated, scannable meta panel: aligned label rows. */}
+      <div className="border-line bg-surface mb-10 border">
+        <MetaRow label="Role">
+          <span className="font-medium">{project.role}</span>
+        </MetaRow>
+        <MetaRow label="Focus">{project.focus}</MetaRow>
+        <MetaRow label="Stack">
           <div className="flex flex-wrap gap-2">
             {project.stack.map((tech) => (
               <Tag key={tech}>{tech}</Tag>
             ))}
           </div>
-        </div>
+        </MetaRow>
       </div>
 
-      <ImageCarousel title={project.title} images={allImages} />
+      <ImageCarousel
+        title={project.title}
+        images={allImages}
+        label={hasProjectRealScreenshots(project) ? 'Preview & Screenshots' : 'Project Preview'}
+      />
     </>
   );
 }

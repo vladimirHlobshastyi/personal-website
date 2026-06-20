@@ -1,8 +1,8 @@
 const metrics = [
-  ['5+ yrs', 'Commercial frontend and product engineering'],
-  ['Web + Mobile', 'React & Next.js on web · React Native & Ionic on mobile'],
-  ['End-to-end', 'Frontend-first, with Node.js when the product needs it'],
-  ['6+ domains', 'EdTech, logistics, healthcare, operations & realtime'],
+  ['5+ years', 'Commercial product engineering, web & mobile'],
+  ['10+ products', 'Shipped to web, iOS and Android'],
+  ['Web + Mobile', 'React · Next.js · React Native · Ionic'],
+  ['Realtime & AI', 'WebRTC, WebSockets, on-device AI, payments & maps'],
 ];
 
 export function MetricsSection() {

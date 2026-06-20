@@ -6,7 +6,7 @@ export const CONTACTS = {
   },
   linkedin: {
     label: 'LinkedIn',
-    value: 'Professional profile',
+    value: 'linkedin.com/in/vladimir-globchastyi',
     href: 'https://www.linkedin.com/in/vladimir-globchastyi/',
   },
   telegram: {
@@ -16,12 +16,7 @@ export const CONTACTS = {
   },
   x: {
     label: 'X',
-    value: 'Updates and thoughts',
+    value: '@Vladi_Dev_ua',
     href: 'https://x.com/Vladi_Dev_ua',
-  },
-  facebook: {
-    label: 'Facebook',
-    value: 'Social profile',
-    href: '#',
   },
 } as const;

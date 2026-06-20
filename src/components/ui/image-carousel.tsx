@@ -8,9 +8,10 @@ import { ArrowIcon } from './icon';
 type ImageCarouselProps = {
   title: string;
   images: string[];
+  label?: string;
 };
 
-export function ImageCarousel({ title, images }: ImageCarouselProps) {
+export function ImageCarousel({ title, images, label = 'Screenshots' }: ImageCarouselProps) {
   const [active, setActive] = useState(0);
   const allImages = images.length > 0 ? images : [];
 
@@ -26,7 +27,7 @@ export function ImageCarousel({ title, images }: ImageCarouselProps) {
     <figure className="border-line bg-surface shadow-card overflow-hidden border">
       <figcaption className="border-line bg-surface-2/50 flex items-center justify-between gap-4 border-b px-5 py-3.5 max-sm:px-4">
         <span className="text-accent inline-flex items-center gap-3 text-[0.7rem] font-bold tracking-[.18em] uppercase before:block before:h-px before:w-7 before:bg-accent/50">
-          Screenshots
+          {label}
         </span>
 
         <div className="flex items-center gap-4">
@@ -67,7 +68,7 @@ export function ImageCarousel({ title, images }: ImageCarouselProps) {
             <div key={img} className="relative aspect-[16/9] w-full shrink-0">
               <Image
                 src={img}
-                alt={`${title} — screenshot ${i + 1}`}
+                alt={`${title} — image ${i + 1}`}
                 fill
                 className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 1180px"

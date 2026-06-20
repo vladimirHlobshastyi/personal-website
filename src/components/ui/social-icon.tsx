@@ -1,4 +1,4 @@
-import { siFacebook, siGithub, siGmail, siTelegram, siX } from 'simple-icons';
+import { siGithub, siGmail, siTelegram, siX } from 'simple-icons';
 import { cn } from '@/lib/cn';
 
 // LinkedIn was removed from Simple Icons for brand reasons — keep its glyph inline.
@@ -10,7 +10,6 @@ const ICONS: Record<string, string> = {
   x: siX.path,
   github: siGithub.path,
   telegram: siTelegram.path,
-  facebook: siFacebook.path,
   email: siGmail.path,
 };
 

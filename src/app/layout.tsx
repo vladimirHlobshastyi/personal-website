@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     'Software Engineer focused on React, Next.js, React Native, Ionic React and product-grade frontend architecture.',
 };
 
-// Runs before paint to set the theme from storage / system preference,
-// avoiding a flash of the wrong theme on first load.
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();`;
+// Runs before paint to resolve theme. By default it follows the system scheme;
+// once the user toggles manually, that explicit choice is persisted.
+const themeScript = `(function(){try{var k='theme-preference';var legacy=localStorage.getItem('theme');var saved=localStorage.getItem(k)||((legacy==='light'||legacy==='dark')?legacy:null);if(saved==='light'||saved==='dark'){document.documentElement.setAttribute('data-theme',saved);return;}var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',dark?'dark':'light');}catch(e){var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',dark?'dark':'light');}})();`;
 
 export default function RootLayout({
   children,
@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="font-sans">
+      <body className="font-sans" suppressHydrationWarning>
         <SiteHeader />
         <div className="mx-auto w-[min(73.75rem,calc(100%-3rem))] pt-10 pb-8 max-sm:w-[min(100%-1.75rem,73.75rem)]">
           {children}

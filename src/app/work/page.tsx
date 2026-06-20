@@ -13,8 +13,8 @@ export default function WorkPage() {
           Work archive
         </h1>
         <p className="text-muted text-lg leading-8">
-          A visual archive of projects: product context, engineering focus, stack and transition to
-          detailed case studies.
+          Selected web and mobile product work, organized for fast scanning: what the product is,
+          where it runs, what makes it useful and which technologies shaped delivery.
         </p>
       </section>
 

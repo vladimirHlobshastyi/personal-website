@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ThemeToggle } from '@/components/ui';
+import { ArrowIcon, Logo, ThemeToggle } from '@/components/ui';
 import { CONTACTS } from '@/config/contacts';
 
 const navItems = [
@@ -17,10 +17,15 @@ export function SiteHeader() {
   return (
     <header className="border-line bg-bg/80 supports-[backdrop-filter]:bg-bg/65 sticky top-0 z-40 w-full border-b backdrop-blur-xl">
       <div className="mx-auto grid w-[min(73.75rem,calc(100%-3rem))] grid-cols-[1fr_auto_1fr] items-center gap-6 py-5 max-lg:grid-cols-[1fr_auto] max-sm:w-[min(100%-1.75rem,73.75rem)]">
-        <Link href="/" className="group inline-flex items-center gap-2.5 justify-self-start">
-          <span className="bg-accent inline-block h-1.5 w-1.5 rotate-45 transition-transform duration-300 group-hover:rotate-[135deg]" />
-          <span className="text-[0.9375rem] font-bold tracking-[-0.02em]">
-            Vladimir Hlobchastyi
+        <Link href="/" className="group inline-flex items-center gap-3 justify-self-start">
+          <Logo className="h-8 w-8 transition-transform duration-300 group-hover:-translate-y-0.5" />
+          <span className="flex flex-col leading-none">
+            <span className="text-[0.9375rem] font-bold tracking-[-0.02em]">
+              Vladimir Hlobchastyi
+            </span>
+            <span className="text-quiet mt-1 text-[0.6875rem] font-semibold tracking-[.12em] uppercase">
+              Software Engineer
+            </span>
           </span>
         </Link>
 
@@ -48,10 +53,10 @@ export function SiteHeader() {
         <div className="flex items-center justify-end gap-5">
           <a
             href={CONTACTS.email.href}
-            className="group hover:text-accent inline-flex items-center gap-2 text-sm font-semibold transition-colors max-lg:hidden"
+            className="group border-line bg-surface text-fg hover:border-accent hover:text-accent inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold transition-colors max-lg:hidden"
           >
-            <span className="bg-accent/60 group-hover:bg-accent h-1.5 w-1.5 rounded-full transition-colors" />
             {"Let's talk"}
+            <ArrowIcon className="h-3.5 w-3.5 -rotate-45 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <ThemeToggle />
         </div>
