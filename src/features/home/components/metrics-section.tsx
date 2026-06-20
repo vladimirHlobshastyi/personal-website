@@ -1,19 +1,26 @@
 const metrics = [
-  ['5+', 'Years of commercial frontend and product development'],
-  ['Web', 'Platforms, dashboards, maps, forms and complex product flows'],
-  ['Mobile', 'React Native and Ionic React mobile applications'],
-  ['Full-stack', 'Frontend-first work with Node.js when product delivery needs it'],
+  ['5+ yrs', 'Commercial frontend and product engineering'],
+  ['Web + Mobile', 'React & Next.js on web · React Native & Ionic on mobile'],
+  ['End-to-end', 'Frontend-first, with Node.js when the product needs it'],
+  ['6+ domains', 'EdTech, logistics, healthcare, operations & realtime'],
 ];
 
 export function MetricsSection() {
   return (
-    <section className="mt-28 grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
-      {metrics.map(([value, label]) => (
-        <div key={value} className="border-line bg-surface border p-7">
-          <strong className="mb-2 block text-4xl font-semibold tracking-[-0.055em]">{value}</strong>
-          <span className="text-muted text-[0.9375rem] leading-7">{label}</span>
-        </div>
-      ))}
+    <section className="mt-28">
+      <p className="text-accent before:bg-accent/50 mb-8 inline-flex items-center gap-3 text-xs font-bold tracking-[.16em] uppercase before:block before:h-px before:w-10">
+        What I bring
+      </p>
+      <div className="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        {metrics.map(([value, label]) => (
+          <div key={value} className="border-line bg-surface border p-7">
+            <strong className="mb-2 block text-[2rem] leading-none font-semibold tracking-[-0.04em]">
+              {value}
+            </strong>
+            <span className="text-muted text-[0.9375rem] leading-7">{label}</span>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

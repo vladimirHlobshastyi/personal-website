@@ -112,12 +112,49 @@ body {
   animation: page-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Radix Collapsible — smooth height + fade for the skills reveal. */
+@keyframes collapsible-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes collapsible-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.collapsible-content {
+  overflow: hidden;
+}
+
+.collapsible-content[data-state='open'] {
+  animation: collapsible-down 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.collapsible-content[data-state='closed'] {
+  animation: collapsible-up 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .page-enter {
+  .page-enter,
+  .collapsible-content[data-state='open'],
+  .collapsible-content[data-state='closed'] {
     animation: none;
   }
 }

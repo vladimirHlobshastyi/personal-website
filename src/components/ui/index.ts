@@ -2,6 +2,7 @@ export { Badge } from './badge';
 export { ArrowIcon } from './icon';
 export { ImageCarousel } from './image-carousel';
 export { InfoCard } from './info-card';
+export { SocialIcon } from './social-icon';
 export { Tag } from './tag';
 export { TechIcon } from './tech-icon';
 export { ThemeToggle } from './theme-toggle';

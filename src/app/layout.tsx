@@ -30,11 +30,11 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="font-sans">
-        <div className="mx-auto w-[min(73.75rem,calc(100%-3rem))] py-8 max-sm:w-[min(100%-1.75rem,73.75rem)]">
-          <SiteHeader />
+        <SiteHeader />
+        <div className="mx-auto w-[min(73.75rem,calc(100%-3rem))] pt-10 pb-8 max-sm:w-[min(100%-1.75rem,73.75rem)]">
           {children}
-          <SiteFooter />
         </div>
+        <SiteFooter />
       </body>
     </html>
   );
