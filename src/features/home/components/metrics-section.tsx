@@ -1,8 +1,7 @@
 const metrics = [
-  ['5+ years', 'Commercial product engineering, web & mobile'],
+  ['5+ years', 'Commercial product engineering'],
   ['10+ products', 'Shipped to web, iOS and Android'],
-  ['Web + Mobile', 'React · Next.js · React Native · Ionic'],
-  ['Realtime & AI', 'WebRTC, WebSockets, on-device AI, payments & maps'],
+  ['6 domains', 'EdTech, health, logistics, social, ops & realtime'],
 ];
 
 export function MetricsSection() {
@@ -11,7 +10,7 @@ export function MetricsSection() {
       <p className="text-accent before:bg-accent/50 mb-8 inline-flex items-center gap-3 text-xs font-bold tracking-[.16em] uppercase before:block before:h-px before:w-10">
         What I bring
       </p>
-      <div className="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
+      <div className="grid grid-cols-3 gap-5 max-sm:grid-cols-1">
         {metrics.map(([value, label]) => (
           <div key={value} className="border-line bg-surface border p-7">
             <strong className="mb-2 block text-[2rem] leading-none font-semibold tracking-[-0.04em]">

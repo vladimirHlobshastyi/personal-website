@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import { SiteHeader, SiteFooter } from '@/layout';
+import { CONTACTS } from '@/config/contacts';
+import { SITE } from '@/config/site';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -10,9 +12,63 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Vladimir Hlobchastyi — Software Engineer',
-  description:
-    'Software Engineer focused on React, Next.js, React Native, Ionic React and product-grade frontend architecture.',
+  metadataBase: new URL(SITE.url),
+  title: { default: SITE.title, template: '%s — Vladimir Hlobchastyi' },
+  description: SITE.description,
+  keywords: [...SITE.keywords],
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  applicationName: `${SITE.name} — Portfolio`,
+  alternates: { canonical: '/' },
+  openGraph: {
+    type: 'website',
+    url: SITE.url,
+    siteName: SITE.name,
+    title: SITE.title,
+    description: SITE.description,
+    locale: SITE.locale,
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: `${SITE.name} — ${SITE.role}` }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE.title,
+    description: SITE.description,
+    images: ['/og.png'],
+    creator: '@Vladi_Dev_ua',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  },
+};
+
+// JSON-LD structured data helps search and AI engines understand who this is.
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': `${SITE.url}/#person`,
+      name: SITE.name,
+      jobTitle: SITE.role,
+      description: SITE.description,
+      url: SITE.url,
+      image: `${SITE.url}/og.png`,
+      email: CONTACTS.email.value,
+      sameAs: SITE.sameAs,
+      knowsAbout: [...SITE.knowsAbout],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE.url}/#website`,
+      url: SITE.url,
+      name: SITE.name,
+      description: SITE.description,
+      inLanguage: 'en',
+      publisher: { '@id': `${SITE.url}/#person` },
+    },
+  ],
 };
 
 // Runs before paint to resolve theme. By default it follows the system scheme;
@@ -28,6 +84,10 @@ export default function RootLayout({
     <html lang="en" className={jakarta.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="font-sans" suppressHydrationWarning>
         <SiteHeader />

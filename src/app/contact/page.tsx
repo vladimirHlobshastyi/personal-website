@@ -2,8 +2,10 @@ import { ArrowIcon, SocialIcon, Tag } from '@/components/ui';
 import { CONTACTS } from '@/config/contacts';
 
 export const metadata = {
-  title: 'Contact — Vladimir Hlobchastyi',
-  description: 'Get in touch with Vladimir Hlobchastyi — software engineer for web and mobile.',
+  title: 'Contact',
+  description:
+    'Contact Vladimir Hlobchastyi — software engineer for web and mobile (React, Next.js, React Native). Available for full-time and freelance work; fastest reply by email or Telegram.',
+  alternates: { canonical: '/contact' },
 };
 
 const socials = [
@@ -77,16 +79,18 @@ export default function ContactPage() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group border-line hover:border-line-strong hover:bg-surface-2/50 flex items-center gap-4 border p-4 transition-colors"
+                className="group border-line hover:border-line-strong hover:bg-surface-2/50 flex min-w-0 items-center gap-4 border p-4 transition-colors"
               >
                 <span className="text-fg grid h-10 w-10 shrink-0 place-items-center">
                   <SocialIcon name={social.name} className="h-5 w-5" />
                 </span>
-                <span className="min-w-0">
+                <span className="min-w-0 flex-1">
                   <span className="block text-sm font-bold">{social.label}</span>
-                  <span className="text-muted block truncate text-[0.875rem]">{social.value}</span>
+                  <span className="text-muted block text-[0.875rem] break-words">
+                    {social.value}
+                  </span>
                 </span>
-                <ArrowIcon className="text-quiet group-hover:text-accent ml-auto h-4 w-4 -rotate-45 transition-all group-hover:translate-x-0.5" />
+                <ArrowIcon className="text-quiet group-hover:text-accent h-4 w-4 shrink-0 -rotate-45 transition-all group-hover:translate-x-0.5" />
               </a>
             ))}
           </div>

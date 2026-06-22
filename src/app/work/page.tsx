@@ -1,8 +1,10 @@
 import { WorkGallery } from '@/features/work';
 
 export const metadata = {
-  title: 'Work — Vladimir Hlobchastyi',
-  description: 'Selected software engineering projects by Vladimir Hlobchastyi.',
+  title: 'Work',
+  description:
+    'Selected web and mobile product work by Vladimir Hlobchastyi — EdTech, health, logistics, social and realtime apps built with React, Next.js, React Native and Ionic.',
+  alternates: { canonical: '/work' },
 };
 
 export default function WorkPage() {

@@ -15,8 +15,8 @@ const services = [
     text: 'Join an existing team to ship new features, fix what is broken and bring apps to a healthy, releasable state.',
   },
   {
-    title: 'Full delivery stack',
-    text: 'React & Next.js, React Native & Ionic — realtime, on-device AI, payments and maps when the product needs them.',
+    title: 'Realtime, AI & integrations',
+    text: 'Realtime (WebRTC, sockets), on-device AI, payments, maps and backend integration wired in when the product needs them.',
   },
 ];
 

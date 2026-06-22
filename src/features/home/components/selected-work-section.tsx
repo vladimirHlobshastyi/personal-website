@@ -28,24 +28,31 @@ export function SelectedWorkSection() {
           Selected work
         </h2>
         <p className="text-muted text-lg leading-8">
-          A focused presentation of product work: one leading case and several supporting projects
-          that show web, mobile and realtime product experience.
+          Real products I&apos;ve shipped end-to-end — from rescuing AI-built codebases to launching
+          apps across web, iOS and Android.
         </p>
       </div>
 
       <div className="grid grid-cols-[1.12fr_.88fr] gap-5 max-lg:grid-cols-1">
         <Link
           href={`/work/${featured.slug}`}
-          className="group shadow-card hover:shadow-float relative flex min-h-[36.875rem] flex-col justify-between overflow-hidden bg-cover bg-center p-8 text-white transition-all duration-300 hover:-translate-y-1"
-          style={{
-            backgroundImage: `linear-gradient(180deg, rgba(17,16,15,.10), rgba(17,16,15,.74)), url(${getProjectPreviewPath(featured.slug)})`,
-          }}
+          className="group shadow-card hover:shadow-float relative flex min-h-[36.875rem] flex-col justify-between overflow-hidden p-8 text-white transition-all duration-300 hover:-translate-y-1"
         >
-          <span className="w-max border border-white/15 px-3 py-2 text-[0.7rem] font-bold tracking-[.14em] text-white/85 uppercase">
+          <Image
+            src={getProjectPreviewPath(featured.slug)}
+            alt={featured.title}
+            fill
+            sizes="(max-width: 1024px) 100vw, 55vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(17,16,15,0.1)] to-[rgba(17,16,15,0.74)]" />
+
+          <span className="relative w-max border border-white/15 px-3 py-2 text-[0.7rem] font-bold tracking-[.14em] text-white/85 uppercase">
             Featured project
           </span>
 
-          <div>
+          <div className="relative">
             <h3 className="mb-4 text-[clamp(2.375rem,5.6vw,4.375rem)] leading-[.88] font-semibold tracking-[-0.07em]">
               {featured.title}
             </h3>
