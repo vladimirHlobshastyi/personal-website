@@ -21,8 +21,8 @@ export function SiteFooter() {
               Have a product to build? Let&apos;s talk.
             </h2>
             <p className="text-inverse-fg/60 mt-6 max-w-xl text-lg leading-8">
-              Available for the right collaborations — web platforms, mobile apps, dashboards
-              and complex product interfaces.
+              Available for the right collaborations — web platforms, mobile apps, dashboards and
+              complex product interfaces.
             </p>
           </div>
 
@@ -35,6 +35,8 @@ export function SiteFooter() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-analytics-event="contact_click"
+                  data-analytics-label={`footer_${link.label.toLowerCase()}`}
                 >
                   {link.label}
                 </a>

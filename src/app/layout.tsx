@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
+import { AnalyticsProvider } from '@/components/analytics/analytics-provider';
+import { AnalyticsScripts } from '@/components/analytics/analytics-scripts';
 import { SiteHeader, SiteFooter } from '@/layout';
 import { CONTACTS } from '@/config/contacts';
 import { SITE } from '@/config/site';
@@ -46,6 +49,8 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
+  verification: SITE.verification.google ? { google: SITE.verification.google } : undefined,
+  other: SITE.verification.bing ? { 'msvalidate.01': SITE.verification.bing } : undefined,
 };
 
 // JSON-LD structured data helps search and AI engines understand who this is.
@@ -100,6 +105,10 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans" suppressHydrationWarning>
+        <AnalyticsScripts />
+        <Suspense fallback={null}>
+          <AnalyticsProvider />
+        </Suspense>
         <SiteHeader />
         <div className="mx-auto w-[min(73.75rem,calc(100%-3rem))] pt-10 pb-8 max-sm:w-[min(100%-1.75rem,73.75rem)]">
           {children}

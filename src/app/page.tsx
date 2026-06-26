@@ -1,5 +1,6 @@
 import { SITE } from '@/config/site';
 import {
+  AboutPreviewSection,
   HeroSection,
   MetricsSection,
   SelectedWorkSection,
@@ -19,7 +20,7 @@ export default function HomePage() {
         isPartOf: { '@id': `${SITE.url}/#website` },
         about: { '@id': `${SITE.url}/#person` },
         mainEntity: { '@id': `${SITE.url}/#person` },
-        significantLink: [`${SITE.url}/work`, `${SITE.url}/contact`],
+        significantLink: [`${SITE.url}/about`, `${SITE.url}/work`, `${SITE.url}/contact`],
       },
       {
         '@type': 'ProfilePage',
@@ -41,6 +42,7 @@ export default function HomePage() {
       />
       <HeroSection />
       <ServicesSection />
+      <AboutPreviewSection />
       <SelectedWorkSection />
       <MetricsSection />
     </main>

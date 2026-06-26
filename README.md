@@ -60,3 +60,10 @@ npm run generate:covers
 
 Set `NEXT_PUBLIC_SITE_URL` in production to the real deployed domain. If it is not set, the
 project falls back to `https://vladimirh.dev`.
+
+For analytics and verification, copy `.env.example` and set:
+
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+- `NEXT_PUBLIC_CLARITY_PROJECT_ID`
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
+- `NEXT_PUBLIC_BING_SITE_VERIFICATION`

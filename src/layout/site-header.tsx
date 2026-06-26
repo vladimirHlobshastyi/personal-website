@@ -6,8 +6,8 @@ import { ArrowIcon, Avatar, ThemeToggle } from '@/components/ui';
 import { CONTACTS } from '@/config/contacts';
 
 const navItems = [
-  { href: '/', label: 'Home' },
   { href: '/work', label: 'Work' },
+  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -38,8 +38,7 @@ export function SiteHeader() {
 
         <nav className="flex items-center gap-8 max-lg:order-3 max-lg:col-span-2 max-lg:justify-center max-sm:gap-6">
           {navItems.map((item) => {
-            const isActive =
-              item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
+            const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
 
             return (
               <Link
@@ -60,6 +59,8 @@ export function SiteHeader() {
         <div className="flex items-center justify-end gap-5">
           <a
             href={CONTACTS.email.href}
+            data-analytics-event="contact_click"
+            data-analytics-label="header_email"
             className="group border-line bg-surface text-fg hover:border-accent hover:text-accent inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold transition-colors max-lg:hidden"
           >
             {"Let's talk"}

@@ -6,8 +6,7 @@ export const SITE = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vladimirh.dev',
   name: 'Vladimir Hlobchastyi',
   role: 'Software Engineer · React, Next.js, Node.js & React Native',
-  title:
-    'Vladimir Hlobchastyi — Software Engineer for Web, Mobile & AI Products',
+  title: 'Vladimir Hlobchastyi — Software Engineer for Web, Mobile & AI Products',
   description:
     'Software Engineer building web, mobile and AI-powered products with React, Next.js, Node.js, React Native and TypeScript. Available for end-to-end product delivery, deployment, store release, refactoring and AI codebase rescue.',
   locale: 'en_US',
@@ -59,4 +58,8 @@ export const SITE = {
     'Web Application Development',
     'Mobile App Development',
   ],
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    bing: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION,
+  },
 } as const;

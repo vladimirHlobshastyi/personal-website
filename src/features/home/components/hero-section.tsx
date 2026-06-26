@@ -55,7 +55,15 @@ export function HeroSection() {
             View my work
           </Link>
           <Link
+            href="/about"
+            className="text-fg border-line bg-surface hover:border-line-strong border px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] transition-colors"
+          >
+            About me
+          </Link>
+          <Link
             href="/contact"
+            data-analytics-event="contact_click"
+            data-analytics-label="home_hero_contact"
             className="text-fg border-line bg-surface hover:border-line-strong border px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] transition-colors"
           >
             Get in touch
@@ -63,9 +71,7 @@ export function HeroSection() {
         </div>
 
         <div className="border-line mt-9 border-t pt-8">
-          <p className="text-quiet mb-4 text-xs font-bold tracking-[.14em] uppercase">
-            Core stack
-          </p>
+          <p className="text-quiet mb-4 text-xs font-bold tracking-[.14em] uppercase">Core stack</p>
           <SkillList />
         </div>
       </div>

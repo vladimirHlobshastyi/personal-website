@@ -63,6 +63,7 @@
 
 ## Pages
 - Home: /
+- About: /about
 - Work archive: /work
 - Contact: /contact
 

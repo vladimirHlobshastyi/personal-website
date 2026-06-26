@@ -27,12 +27,7 @@ const quickFacts = [
   ['Response time', 'Within 24 hours'],
 ];
 
-const workFocus = [
-  'Web / Backend',
-  'React Native',
-  'AI Systems',
-  'Deployment & Release',
-];
+const workFocus = ['Web / Backend', 'React Native', 'AI Systems', 'Deployment & Release'];
 
 export default function ContactPage() {
   return (
@@ -47,8 +42,8 @@ export default function ContactPage() {
           </h1>
           <p className="text-inverse-fg/70 mt-5 max-w-2xl text-lg leading-8">
             I work on web, mobile and backend products: React, Next.js, Node.js, React Native,
-            dashboards, AI integrations, deployment and store release. The fastest response is
-            by email or Telegram.
+            dashboards, AI integrations, deployment and store release. The fastest response is by
+            email or Telegram.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">
@@ -85,6 +80,8 @@ export default function ContactPage() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-analytics-event="contact_click"
+                data-analytics-label={`contact_${social.name}`}
                 className="group border-line hover:border-line-strong hover:bg-surface-2/50 flex min-w-0 items-center gap-4 border p-4 transition-colors"
               >
                 <span className="text-fg grid h-10 w-10 shrink-0 place-items-center">
@@ -105,18 +102,24 @@ export default function ContactPage() {
 
       <section className="grid gap-5 lg:grid-cols-[1.15fr_.85fr]">
         <article className="border-line bg-surface border p-8 max-sm:p-6">
-          <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">What I help build</p>
+          <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">
+            What I help build
+          </p>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="border-line bg-surface-2/35 border p-4">
-              <h2 className="text-lg font-semibold tracking-[-0.03em]">Product UI that has to work</h2>
+              <h2 className="text-lg font-semibold tracking-[-0.03em]">
+                Product UI that has to work
+              </h2>
               <p className="text-muted mt-2 text-sm leading-7">
-                SaaS dashboards, admin panels, complex forms, maps, onboarding and multi-step product flows.
+                SaaS dashboards, admin panels, complex forms, maps, onboarding and multi-step
+                product flows.
               </p>
             </div>
             <div className="border-line bg-surface-2/35 border p-4">
               <h2 className="text-lg font-semibold tracking-[-0.03em]">Delivery and release</h2>
               <p className="text-muted mt-2 text-sm leading-7">
-                Web, backend and mobile delivery with deployment, App Store release and Google Play publication when the product is ready.
+                Web, backend and mobile delivery with deployment, App Store release and Google Play
+                publication when the product is ready.
               </p>
             </div>
           </div>
@@ -124,7 +127,9 @@ export default function ContactPage() {
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
           <article className="border-line bg-surface border p-8 max-sm:p-6">
-            <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">Languages</p>
+            <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">
+              Languages
+            </p>
             <ul className="grid gap-3">
               {languages.map(([lang, level]) => (
                 <li key={lang} className="flex items-baseline justify-between gap-4">
@@ -136,7 +141,9 @@ export default function ContactPage() {
           </article>
 
           <article className="border-line bg-surface border p-8 max-sm:p-6">
-            <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">Working style</p>
+            <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">
+              Working style
+            </p>
             <ul className="grid gap-3">
               <li className="flex items-baseline justify-between gap-4">
                 <span className="text-muted text-[0.9375rem]">Engagement</span>
