@@ -4,7 +4,7 @@ import { CONTACTS } from '@/config/contacts';
 export const metadata = {
   title: 'Contact Vladimir Hlobchastyi',
   description:
-    'Contact Vladimir Hlobchastyi for web, mobile, backend and AI systems work. Available for full-time and freelance projects, including deployment and store release; fastest reply by email or Telegram.',
+    'Contact Vladimir Hlobchastyi for web, mobile, backend and AI systems work. Available for the right collaborations, including deployment and store release; fastest reply by email or Telegram.',
   alternates: { canonical: '/contact' },
 };
 
@@ -22,7 +22,7 @@ const languages = [
 ];
 
 const quickFacts = [
-  ['Availability', 'Open to full-time and freelance'],
+  ['Availability', 'Available for the right collaborations'],
   ['Location', 'Remote · Europe-friendly hours'],
   ['Response time', 'Within 24 hours'],
 ];
@@ -140,15 +140,15 @@ export default function ContactPage() {
             <ul className="grid gap-3">
               <li className="flex items-baseline justify-between gap-4">
                 <span className="text-muted text-[0.9375rem]">Engagement</span>
-                <span className="font-medium">Full-time or freelance</span>
+                <span className="font-medium">Long-term or project-based</span>
               </li>
               <li className="flex items-baseline justify-between gap-4">
                 <span className="text-muted text-[0.9375rem]">Timezone fit</span>
                 <span className="font-medium">Europe / async-friendly</span>
               </li>
               <li className="flex items-baseline justify-between gap-4">
-                <span className="text-muted text-[0.9375rem]">Start</span>
-                <span className="font-medium">Available now</span>
+                <span className="text-muted text-[0.9375rem]">Collaboration</span>
+                <span className="font-medium">Open to the right fit</span>
               </li>
             </ul>
           </article>

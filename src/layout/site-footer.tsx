@@ -21,8 +21,8 @@ export function SiteFooter() {
               Have a product to build? Let&apos;s talk.
             </h2>
             <p className="text-inverse-fg/60 mt-6 max-w-xl text-lg leading-8">
-              Open to full-time roles and freelance projects — web platforms, mobile apps,
-              dashboards and complex product interfaces.
+              Available for the right collaborations — web platforms, mobile apps, dashboards
+              and complex product interfaces.
             </p>
           </div>
 

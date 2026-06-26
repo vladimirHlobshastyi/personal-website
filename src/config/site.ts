@@ -7,9 +7,9 @@ export const SITE = {
   name: 'Vladimir Hlobchastyi',
   role: 'Software Engineer · React, Next.js, Node.js & React Native',
   title:
-    'Vladimir Hlobchastyi — Software Engineer for Web, Mobile, AI Systems & Delivery',
+    'Vladimir Hlobchastyi — Software Engineer for Web, Mobile & AI Products',
   description:
-    'Software Engineer building production web, mobile and backend applications, AI-powered systems and end-to-end product delivery. Available for product development, deployment, App Store and Google Play releases, refactoring and AI codebase rescue.',
+    'Software Engineer building web, mobile and AI-powered products with React, Next.js, Node.js, React Native and TypeScript. Available for end-to-end product delivery, deployment, store release, refactoring and AI codebase rescue.',
   locale: 'en_US',
   sameAs: [CONTACTS.linkedin.href, CONTACTS.x.href, CONTACTS.telegram.href],
   keywords: [

@@ -16,18 +16,18 @@ export function HeroSection() {
             Vladimir Hlobchastyi
           </strong>
           <span className="text-[0.8125rem] font-medium text-white/60">
-            Software Engineer · Web · Mobile · AI Systems · Delivery
+            Software Engineer · Web · Mobile · AI Systems
           </span>
         </div>
       </div>
 
       <div>
         <div className="text-accent before:bg-accent/50 mb-7 inline-flex items-center gap-3 text-[0.6875rem] font-bold tracking-[.14em] uppercase before:block before:h-px before:w-10">
-          Software Engineer · Available for work
+          Software Engineer · Available for collaboration
         </div>
 
         <h1 className="tracking-tightest text-[clamp(3rem,7vw,5.75rem)] leading-[.9] font-semibold">
-          Software Engineer building web, mobile, AI-powered &amp; end-to-end products that ship.
+          Software Engineer for web, mobile and AI products.
         </h1>
 
         <p className="text-muted mt-7 max-w-[36rem] text-[1.0625rem] leading-[1.7]">
@@ -35,10 +35,10 @@ export function HeroSection() {
           experience building fast, maintainable web applications with{' '}
           <strong className="text-fg font-semibold">React</strong>,{' '}
           <strong className="text-fg font-semibold">Next.js</strong> and{' '}
-          <strong className="text-fg font-semibold">TypeScript</strong>, backend services with{' '}
-          <strong className="text-fg font-semibold">Node.js</strong>, and cross-platform mobile
-          apps with <strong className="text-fg font-semibold">React Native</strong>. I work
-          end-to-end: product implementation, AI system integration, deployment and release to
+          <strong className="text-fg font-semibold">TypeScript</strong>, backend services with
+          <strong className="text-fg font-semibold"> Node.js</strong>, and cross-platform mobile
+          apps with <strong className="text-fg font-semibold">React Native</strong>. I deliver
+          products end-to-end: implementation, AI system integration, deployment and release to
           the web, the App Store and Google Play. I also rescue AI-generated and vibe-coded
           codebases that need restored structure before they can reach production.
         </p>

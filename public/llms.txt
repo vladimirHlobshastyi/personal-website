@@ -3,14 +3,14 @@
 > Software Engineer building production web, mobile and backend applications, AI-powered
 > systems and end-to-end product delivery. 5+ years of commercial experience across EdTech,
 > healthcare, real estate, logistics, e-commerce, social and realtime products. Available for
-> full-time and freelance engagements.
+> the right collaborations.
 
 ## About
 - **Name:** Vladimir Hlobchastyi
 - **Role:** Software Engineer / React Developer / Node.js Developer / React Native Developer
 - **Location:** Remote · Europe-friendly hours
 - **Languages:** English (B2), Ukrainian (Native), Russian (Native)
-- **Availability:** Open to full-time and freelance work
+- **Availability:** Available for the right collaborations
 - **Delivery:** Web deployment, App Store release, Google Play release
 
 ## Core technologies
