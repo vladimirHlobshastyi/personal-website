@@ -19,8 +19,6 @@ const THEME = {
   phone: '#1a1714',
 };
 
-const MOBILE_SLUGS = new Set(['fitfast-app', 'claratalks', 'sighapp']);
-
 function normalizeText(value) {
   return value.replace(/\s+/g, ' ').trim();
 }
@@ -28,14 +26,14 @@ function normalizeText(value) {
 function parseProjects() {
   const source = fs.readFileSync(DATA_FILE, 'utf8');
   const pattern =
-    /slug: '([^']+)',\s*title: '([^']+)',\s*eyebrow: '([^']+)',[\s\S]*?image:\s*'([^']+)',\s*images:\s*\[([\s\S]*?)\],/g;
+    /slug: '([^']+)',[\s\S]*?category: '([^']+)',[\s\S]*?cover: '([^']+)',\s*images:\s*\[([\s\S]*?)\],/g;
 
   const projects = [];
   let match;
   while ((match = pattern.exec(source))) {
-    const [, slug, title, eyebrow, image, imagesBlock] = match;
+    const [, slug, category, cover, imagesBlock] = match;
     const images = [...imagesBlock.matchAll(/'([^']+)'/g)].map((item) => item[1]);
-    projects.push({ slug, title, eyebrow, image, images });
+    projects.push({ slug, category, cover, images });
   }
   return projects;
 }
@@ -104,12 +102,15 @@ function fallbackVisual() {
   return browserVisual(null);
 }
 
-function renderCover(project) {
-  const screenshots = (project.images.length > 0 ? project.images : [project.image])
-    .map(publicImageToDataUri)
-    .filter(Boolean);
+function isMobileProject(project) {
+  const category = project.category.toLowerCase();
+  return category.includes('mobile') || category.includes('ios') || category.includes('android');
+}
 
-  const visual = MOBILE_SLUGS.has(project.slug)
+function renderCover(project) {
+  const screenshots = project.images.map(publicImageToDataUri).filter(Boolean);
+
+  const visual = isMobileProject(project)
     ? mobileVisual(screenshots)
     : screenshots.length > 0
       ? browserVisual(screenshots[0])
@@ -136,19 +137,24 @@ async function main() {
   const projects = parseProjects();
   for (const project of projects) {
     const svg = renderCover(project);
-    // Rasterize to PNG: next/image won't optimize raw SVG without dangerouslyAllowSVG,
-    // and a flat PNG avoids that and renders crisply on the cards.
+    const outputPath = path.join(ROOT, 'public', project.cover.replace(/^\//, ''));
+
+    // Rasterize to WEBP so the generated covers stay aligned with the current asset format.
     await sharp(Buffer.from(svg), { density: 144 })
       .resize(1600, 1000, { fit: 'cover' })
-      .png({ compressionLevel: 9 })
-      .toFile(path.join(OUTPUT_DIR, `${project.slug}_cover.png`));
+      .webp({ quality: 88 })
+      .toFile(outputPath);
 
+    const legacyPng = path.join(OUTPUT_DIR, `${project.slug}_cover.png`);
     const legacySvg = path.join(OUTPUT_DIR, `${project.slug}_cover.svg`);
+    if (fs.existsSync(legacyPng)) {
+      fs.rmSync(legacyPng);
+    }
     if (fs.existsSync(legacySvg)) {
       fs.rmSync(legacySvg);
     }
   }
-  console.log(`Generated ${projects.length} clean project covers (PNG)`);
+  console.log(`Generated ${projects.length} clean project covers (WEBP)`);
 }
 
 main();

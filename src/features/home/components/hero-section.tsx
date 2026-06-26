@@ -15,7 +15,9 @@ export function HeroSection() {
           <strong className="block text-lg font-semibold tracking-[-0.02em] text-white">
             Vladimir Hlobchastyi
           </strong>
-          <span className="text-[0.8125rem] font-medium text-white/60">Software Engineer</span>
+          <span className="text-[0.8125rem] font-medium text-white/60">
+            Software Engineer · Web · Mobile · AI Systems · Delivery
+          </span>
         </div>
       </div>
 
@@ -25,13 +27,20 @@ export function HeroSection() {
         </div>
 
         <h1 className="tracking-tightest text-[clamp(3rem,7vw,5.75rem)] leading-[.9] font-semibold">
-          I build web &amp; mobile products that ship.
+          Software Engineer building web, mobile, AI-powered &amp; end-to-end products that ship.
         </h1>
 
         <p className="text-muted mt-7 max-w-[36rem] text-[1.0625rem] leading-[1.7]">
-          I&apos;m Vladimir Hlobchastyi — a software engineer with 5+ years building fast,
-          maintainable web and mobile apps. I take products from idea to launch, and rescue
-          AI-built codebases that need to reach production.
+          I&apos;m Vladimir Hlobchastyi — a Software Engineer with 5+ years of commercial
+          experience building fast, maintainable web applications with{' '}
+          <strong className="text-fg font-semibold">React</strong>,{' '}
+          <strong className="text-fg font-semibold">Next.js</strong> and{' '}
+          <strong className="text-fg font-semibold">TypeScript</strong>, backend services with{' '}
+          <strong className="text-fg font-semibold">Node.js</strong>, and cross-platform mobile
+          apps with <strong className="text-fg font-semibold">React Native</strong>. I work
+          end-to-end: product implementation, AI system integration, deployment and release to
+          the web, the App Store and Google Play. I also rescue AI-generated and vibe-coded
+          codebases that need restored structure before they can reach production.
         </p>
 
         <div className="mt-9 flex flex-wrap gap-3">

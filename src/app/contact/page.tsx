@@ -2,9 +2,9 @@ import { ArrowIcon, SocialIcon, Tag } from '@/components/ui';
 import { CONTACTS } from '@/config/contacts';
 
 export const metadata = {
-  title: 'Contact',
+  title: 'Contact Vladimir Hlobchastyi',
   description:
-    'Contact Vladimir Hlobchastyi — software engineer for web and mobile (React, Next.js, React Native). Available for full-time and freelance work; fastest reply by email or Telegram.',
+    'Contact Vladimir Hlobchastyi for web, mobile, backend and AI systems work. Available for full-time and freelance projects, including deployment and store release; fastest reply by email or Telegram.',
   alternates: { canonical: '/contact' },
 };
 
@@ -27,7 +27,12 @@ const quickFacts = [
   ['Response time', 'Within 24 hours'],
 ];
 
-const workFocus = ['React / Next.js', 'React Native', 'Dashboards & SaaS', 'Realtime products'];
+const workFocus = [
+  'Web / Backend',
+  'React Native',
+  'AI Systems',
+  'Deployment & Release',
+];
 
 export default function ContactPage() {
   return (
@@ -38,11 +43,12 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="tracking-tightest max-w-3xl text-[clamp(2.5rem,6vw,4.75rem)] leading-[.92] font-semibold">
-            Get the important info immediately.
+            Contact for web, mobile, backend and AI product work.
           </h1>
           <p className="text-inverse-fg/70 mt-5 max-w-2xl text-lg leading-8">
-            I work on web and mobile products: React, Next.js, React Native, dashboards, complex
-            forms and realtime flows. The fastest response is by email or Telegram.
+            I work on web, mobile and backend products: React, Next.js, Node.js, React Native,
+            dashboards, AI integrations, deployment and store release. The fastest response is
+            by email or Telegram.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">
@@ -104,13 +110,13 @@ export default function ContactPage() {
             <div className="border-line bg-surface-2/35 border p-4">
               <h2 className="text-lg font-semibold tracking-[-0.03em]">Product UI that has to work</h2>
               <p className="text-muted mt-2 text-sm leading-7">
-                SaaS dashboards, admin panels, complex forms, maps, onboarding and multi-step user flows.
+                SaaS dashboards, admin panels, complex forms, maps, onboarding and multi-step product flows.
               </p>
             </div>
             <div className="border-line bg-surface-2/35 border p-4">
-              <h2 className="text-lg font-semibold tracking-[-0.03em]">Web and mobile delivery</h2>
+              <h2 className="text-lg font-semibold tracking-[-0.03em]">Delivery and release</h2>
               <p className="text-muted mt-2 text-sm leading-7">
-                Next.js and React for web, React Native for mobile, with backend integration when the product needs it.
+                Web, backend and mobile delivery with deployment, App Store release and Google Play publication when the product is ready.
               </p>
             </div>
           </div>

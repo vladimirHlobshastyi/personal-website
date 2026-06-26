@@ -53,7 +53,7 @@ export function SiteFooter() {
 
         <div className="text-inverse-fg/40 mt-16 flex items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs font-medium tracking-[.04em] max-sm:flex-col max-sm:items-start max-sm:gap-2">
           <span>© {new Date().getFullYear()} Vladimir Hlobchastyi</span>
-          <span>Software Engineer · React · Next.js · React Native</span>
+          <span>Software Engineer · React · Next.js · Node.js · React Native</span>
         </div>
       </div>
     </footer>

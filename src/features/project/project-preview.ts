@@ -1,19 +1,19 @@
+import { getProjectBySlug } from './projects.data';
 import type { Project } from './project.types';
 
 // Platform label shown as a badge on each work card (top-right).
 const PLATFORM_BY_SLUG: Record<string, string> = {
-  prepry: 'Web',
-  fitfast: 'Web',
-  'fitfast-app': 'Mobile',
-  carnify: 'Web',
-  claratalks: 'Mobile',
-  sighapp: 'Mobile',
-  miidba: 'Web',
-  truckrates: 'Web',
-  homefinity: 'Web',
-  'clinical-logs': 'Web',
-  'ciq-mobile': 'Web + Mobile',
-  flychat: 'Development',
+  'clinical-education-platform': 'Web',
+  'subscription-web-platform': 'Web',
+  'react-native-mobile-app': 'Mobile',
+  'e-commerce-web-platform': 'Web',
+  'mental-health-mobile-app': 'Mobile',
+  'social-network-mobile-app': 'Mobile',
+  'saas-admin-dashboard': 'Web',
+  'logistics-management-platform': 'Web',
+  'real-estate-platform': 'Web',
+  'enterprise-management-platform': 'Web + Mobile',
+  'real-time-chat-application': 'Web (PWA)',
 };
 
 export function getProjectPlatform(slug: string) {
@@ -21,20 +21,19 @@ export function getProjectPlatform(slug: string) {
 }
 
 export function getProjectPreviewPath(slug: string) {
-  return `/images/${slug}_cover.png`;
+  return getProjectBySlug(slug)?.cover ?? '';
 }
 
-export function hasProjectRealScreenshots(project: Pick<Project, 'slug' | 'images'>) {
+export function hasProjectRealScreenshots(project: Pick<Project, 'images'>) {
   return project.images.length > 0;
 }
 
-export function getProjectShowcaseImages(project: Pick<Project, 'slug' | 'image' | 'images'>) {
-  const preview = getProjectPreviewPath(project.slug);
+export function getProjectShowcaseImages(project: Pick<Project, 'cover' | 'images'>) {
+  const preview = project.cover;
 
   if (!hasProjectRealScreenshots(project)) {
-    return [preview];
+    return preview ? [preview] : [];
   }
 
-  const screenshots = project.images.length > 0 ? project.images : [project.image];
-  return screenshots[0] === preview ? screenshots : [preview, ...screenshots];
+  return project.images[0] === preview ? project.images : [preview, ...project.images];
 }

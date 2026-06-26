@@ -1,16 +1,28 @@
 import type { Project } from './project.types';
 
-export const projects: Project[] = [
+// Project descriptions are based on commercial experience.
+// Real client and product names are intentionally replaced with category-based
+// titles for confidentiality. Visuals shown in the carousel are blurred or
+// anonymized and do not expose internal data or proprietary UI.
+const rawProjects: Project[] = [
   {
-    slug: 'prepry',
-    title: 'Prepry AI',
-    eyebrow: 'AI Recovery / EdTech Platform',
-    badge: 'AI rescue / production refactor',
+    slug: 'clinical-education-platform',
+    title: 'Clinical Learning Platform',
+    category: 'Healthcare · EdTech',
+    eyebrow: 'Clinical Learning Platform · Web',
+    badge: 'AI / vibe-coded rescue · architecture refactor',
     shortDescription:
-      'Large education platform that I stabilized after AI-vibe coding, rebuilt into a maintainable production structure and hardened for real delivery.',
+      'Frontend Developer on a clinical learning platform: stabilized a vibe-coded AI-generated codebase, restored structure and refactored it into a maintainable React + TypeScript product.',
     subtitle:
-      'Full-stack education platform for clinical, academic and AI-driven workflows, brought from scattered AI output to production-ready architecture.',
-    role: 'Frontend Engineer',
+      'Web platform for clinical training, assessment and AI-assisted learning workflows, rebuilt into a production-ready React architecture.',
+    role: 'Frontend Developer',
+    keywords: [
+      'React Developer',
+      'TypeScript Developer',
+      'Frontend Architecture',
+      'Web Application Development',
+      'EdTech',
+    ],
     stack: [
       'React 19',
       'TypeScript',
@@ -18,62 +30,63 @@ export const projects: Project[] = [
       'TanStack Query',
       'React Router',
       'Tailwind CSS 4',
-      'Supabase',
-      'Firebase Auth',
-      'Firebase Functions',
-      'Fastify',
-      'Prisma',
-      'OpenAI',
-      'Anthropic',
+      'Zustand',
       'Zod',
       'Radix UI',
       'shadcn/ui',
-      'Zustand',
       'Sentry',
     ],
     focus:
-      'Architecture cleanup, RBAC, institution scope, route stability, legacy removal and production hardening.',
-    image: '/images/prepry_1.png',
-    images: ['/images/prepry_1.png', '/images/prepry_2.png', '/images/prepry_3.png'],
+      'Architecture recovery after vibe coding, RBAC, tenant scope, route stability, legacy removal and production hardening.',
+    cover: '/images/case-07-cover.webp',
+    images: ['/images/case-07-01.webp', '/images/case-07-02.webp', '/images/case-07-03.webp'],
     overview:
-      'Prepry is a large education platform for clinical, academic and AI-assisted workflows. The codebase spans a React frontend, backend services, serverless functions, Supabase/Postgres, Firebase Auth and multiple AI features. My work focused on turning an unstable AI-generated foundation into a maintainable product architecture.',
+      'Contributed to a large clinical-education web platform combining structured learning, assessment and AI-assisted workflows. Worked across a React + TypeScript codebase to recover structure after vibe coding and turn an unstable AI-generated foundation into a maintainable production architecture.',
     challenge:
-      'The main challenge was not adding a small feature, but rescuing a large codebase with scattered logic, duplicate legacy paths, inconsistent institution scope, broken routes and weak separation between domains. The platform needed real structural cleanup before it could be treated like production software.',
+      'The work was not a small feature, but a structural rescue after vibe coding: scattered logic, duplicate legacy paths, inconsistent multi-tenant scope, broken routes and weak separation between domains. The platform needed real cleanup before it could be treated as production software.',
     outcome:
-      'The result was a production-oriented refactor: clearer feature boundaries, safer access control, consistent tenant scoping, removed legacy dead ends, better data flow and a codebase that could actually be extended without compounding the earlier AI-generated mess.',
+      'Delivered a production-oriented refactor with restored feature boundaries, safer access control, consistent tenant scoping, removed legacy dead ends, more predictable data flow and a codebase that could be extended without compounding earlier issues.',
     responsibilities: [
       {
-        title: 'Architecture rescue',
+        title: 'Architecture refactor',
         description:
-          'Reworked scattered AI-generated code into clearer domain boundaries, reduced duplication and aligned the frontend with a predictable project structure.',
+          'Reworked scattered AI-generated, vibe-coded code into clearer domain boundaries, reduced duplication and aligned the frontend with a predictable React project structure.',
       },
       {
-        title: 'RBAC and tenant scope',
+        title: 'Access control and tenant scope',
         description:
-          'Audited and fixed role checks, institution-scoped data flow and route protection so selected institution data stayed isolated and predictable.',
+          'Audited and corrected role checks, tenant-scoped data flow and route protection so user data stayed isolated and predictable across the platform.',
       },
       {
         title: 'Legacy cleanup',
         description:
-          'Removed or planned removal of dead routes, legacy hooks, stale screens and mock data that were blocking production readiness.',
+          'Removed dead routes, legacy hooks, stale screens and mock data that were blocking production readiness.',
       },
       {
-        title: 'AI feature hardening',
+        title: 'Reliability and monitoring',
         description:
-          'Kept AI features usable while moving risky logic into safer backend boundaries and making the product easier to maintain.',
+          'Hardened key flows, improved error boundaries and integrated runtime monitoring so production incidents could be detected and resolved quickly.',
       },
     ],
   },
   {
-    slug: 'fitfast',
-    title: 'FitFast',
-    eyebrow: 'Intermittent Fasting · Web',
-    badge: 'Quiz funnel · Subscriptions',
+    slug: 'subscription-web-platform',
+    title: 'Wellness Subscription Platform',
+    category: 'Health & Wellness · Web',
+    eyebrow: 'Wellness Subscription Platform · Web',
+    badge: 'Quiz funnel · Stripe subscriptions',
     shortDescription:
-      'Web platform for an intermittent-fasting product: a personalized quiz funnel, Stripe subscriptions and onboarding localized into 10 languages.',
+      'Frontend Developer on a wellness subscription platform: quiz funnel, Stripe billing and onboarding localized into 10 languages.',
     subtitle:
-      'A conversion-focused quiz funnel and subscription web app for an intermittent-fasting product.',
-    role: 'Frontend Engineer',
+      'Web platform for personalized quiz funnels, subscription billing and localized onboarding.',
+    role: 'Frontend Developer',
+    keywords: [
+      'React Developer',
+      'TypeScript Developer',
+      'Next.js Developer',
+      'Web Application Development',
+      'Stripe Integration',
+    ],
     stack: [
       'React',
       'TypeScript',
@@ -86,27 +99,26 @@ export const projects: Project[] = [
       'i18next',
       'Tailwind CSS',
       'Framer Motion',
-      'Victory',
       'Sentry',
     ],
     focus:
       'Conversion quiz funnel, Stripe checkout, subscription management, localization and animated progress UI.',
-    image: '/images/fitfast_1.png',
-    images: ['/images/fitfast_1.png', '/images/fitfast_2.png', '/images/fitfast_3.png'],
+    cover: '/images/case-02-cover.webp',
+    images: ['/images/case-02-01.webp', '/images/case-02-02.webp', '/images/case-02-03.webp'],
     overview:
-      'FitFast is the web platform for an intermittent-fasting product. It walks visitors through a personalized multi-step quiz, builds a tailored plan, converts them through a Stripe checkout and lets them manage their subscription — localized into 10 languages and tuned for conversion. It is the acquisition surface that feeds the FitFast mobile app.',
+      'Worked on the web platform for a subscription product in the health and wellness category. The application walks visitors through a personalized multi-step quiz, builds a tailored plan, converts via Stripe checkout and lets users manage their subscription — localized into 10 languages and tuned for conversion.',
     challenge:
-      'A funnel like this lives or dies on flow and trust: each quiz step has to feel effortless, validation must be forgiving, payment has to be rock-solid, and everything must work identically across 10 locales and metric/imperial units without breaking the conversion path.',
+      'A funnel like this lives or dies on flow and trust: each quiz step has to feel effortless, validation must be forgiving, payments have to be reliable, and everything must work identically across 10 locales and unit systems without breaking the conversion path.',
     outcome:
       'A smooth, animated quiz-to-paywall funnel with reliable Stripe checkout, self-serve subscription management and full localization — a measurable acquisition surface rather than a static marketing page.',
     responsibilities: [
       {
         title: 'Quiz funnel',
         description:
-          'Built the multi-step personalized quiz with progress UI, metric/imperial inputs, validated forms (React Hook Form + Yup) and animated step transitions (Framer Motion).',
+          'Implemented the multi-step personalized quiz with progress UI, unit toggles, validated forms (React Hook Form + Yup) and animated step transitions (Framer Motion).',
       },
       {
-        title: 'Payments & subscriptions',
+        title: 'Payments and subscriptions',
         description:
           'Integrated Stripe checkout, payment review and self-serve subscription management (manage and cancel) with clear states and error handling.',
       },
@@ -116,27 +128,29 @@ export const projects: Project[] = [
           'Wired i18next across 10 languages with locale-aware dates and units, keeping the entire funnel consistent across markets.',
       },
       {
-        title: 'Data & reliability',
+        title: 'Data and reliability',
         description:
-          'Connected the UI to the API with React Query, added progress charts (Victory) and Sentry monitoring for production reliability.',
+          'Connected the UI to the API with React Query, added progress charts and integrated runtime monitoring for production reliability.',
       },
     ],
   },
   {
-    slug: 'fitfast-app',
-    title: 'FitFast',
-    eyebrow: 'Intermittent Fasting · iOS & Android',
-    badge: 'React Native app',
+    slug: 'react-native-mobile-app',
+    title: 'Health & Wellness Mobile App',
+    category: 'Health & Wellness · iOS & Android',
+    eyebrow: 'Health & Wellness Mobile App · iOS & Android',
+    badge: 'Cross-platform mobile app',
     shortDescription:
-      'React Native app for intermittent fasting and nutrition (live on Google Play). Joined the team to ship new features and refactor parts of the app.',
+      'React Native Developer on a health and wellness app: new features, refactoring and cross-platform delivery for iOS and Android.',
     subtitle:
-      'Cross-platform mobile app (iOS & Android) for fasting, nutrition and workout tracking, built with React Native.',
-    role: 'React Native Engineer (team)',
-    links: [
-      {
-        label: 'Google Play',
-        href: 'https://play.google.com/store/apps/details?id=com.fitfast.health&hl=uk',
-      },
+      'Cross-platform wellness app for iOS and Android built with React Native and TypeScript.',
+    role: 'React Native Developer',
+    keywords: [
+      'React Native Developer',
+      'TypeScript Developer',
+      'Mobile App Development',
+      'iOS Developer',
+      'Android Developer',
     ],
     stack: [
       'React Native',
@@ -146,52 +160,58 @@ export const projects: Project[] = [
       'Reanimated',
       'Skia',
       'Vision Camera',
-      'Victory Native',
       'i18next',
       'MMKV',
-      'Pusher',
       'react-native-iap',
       'OneSignal',
       'Sentry',
     ],
     focus:
-      'New features, refactoring and ongoing improvements across fasting, nutrition, scanning, workouts and subscriptions.',
-    image: '/images/fitfast_app_1.png',
-    images: ['/images/fitfast_app_1.png', '/images/fitfast_app_2.png', '/images/fitfast_app_3.png'],
+      'New features, refactoring and ongoing improvements across tracking, scanning, subscriptions and notifications.',
+    cover: '/images/case-11-cover.webp',
+    images: ['/images/case-11-01.webp', '/images/case-11-02.webp', '/images/case-11-03.webp'],
     overview:
-      'FitFast is a comprehensive intermittent-fasting and nutrition app for iOS and Android, live on Google Play. I joined the existing team and worked within a large React Native codebase — adding new features, refactoring screens and shared logic, and helping evolve the app across fasting, meal tracking, food scanning, workouts and subscriptions.',
+      'Contributed to a feature-dense React Native application live on the App Store and Google Play. Worked within a large existing codebase — developing new features, refactoring screens and shared logic, and helping evolve the app across multiple product domains.',
     challenge:
-      'Contributing to a feature-dense production app means changes have to fit existing patterns, stay smooth on real devices and not regress fasting, nutrition, realtime or payment flows. Much of the work was careful refactoring alongside shipping new functionality.',
+      'Contributing to a production app means changes have to fit existing patterns, stay smooth on real devices and not regress critical flows. Much of the work was careful refactoring alongside shipping new functionality.',
     outcome:
-      'New features delivered and parts of the app refactored to be cleaner and easier to maintain, while keeping the live app stable for users on both platforms.',
+      'New features delivered and parts of the app refactored to be cleaner and more maintainable, while keeping the live application stable for users on both iOS and Android.',
     responsibilities: [
       {
         title: 'New features',
         description:
-          'Built and shipped new screens and flows across fasting, nutrition and tracking as part of the team.',
+          'Developed and shipped new screens and flows across tracking, scanning and content creation as part of the team.',
       },
       {
         title: 'Refactoring',
         description:
-          'Refactored existing screens and shared logic to reduce complexity and improve maintainability of the codebase.',
+          'Refactored existing screens and shared logic to reduce complexity and improve maintainability of the React Native codebase.',
       },
       {
         title: 'App-wide improvements',
         description:
-          'Worked on performance, UI consistency and fixes across the React Native app, using Reanimated and Skia to keep interactions smooth.',
+          'Worked on performance, UI consistency and bug fixes across the application, using Reanimated and Skia to keep interactions smooth.',
       },
     ],
   },
   {
-    slug: 'carnify',
-    title: 'Carnify',
-    eyebrow: 'Health & Diet SaaS',
+    slug: 'e-commerce-web-platform',
+    title: 'E-commerce Subscription Platform',
+    category: 'E-commerce · Web',
+    eyebrow: 'E-commerce Subscription Platform · Web',
     badge: 'Quiz funnel · Subscriptions',
     shortDescription:
-      'Carnivore-diet web platform with a personalized multi-step quiz funnel, Stripe subscriptions and onboarding localized into 10 languages.',
+      'Frontend Developer on a subscription e-commerce platform: multi-step quiz funnel, Stripe billing and onboarding localized into 10 languages.',
     subtitle:
-      'A conversion-focused quiz funnel and subscription web app for a carnivore-nutrition product.',
-    role: 'Frontend Engineer',
+      'E-commerce platform with a personalized quiz funnel, subscription billing and localized onboarding.',
+    role: 'Frontend Developer',
+    keywords: [
+      'React Developer',
+      'TypeScript Developer',
+      'Frontend Developer',
+      'E-commerce Development',
+      'Web Application Development',
+    ],
     stack: [
       'React',
       'TypeScript',
@@ -204,27 +224,26 @@ export const projects: Project[] = [
       'i18next',
       'Tailwind CSS',
       'Framer Motion',
-      'Victory',
       'Sentry',
     ],
     focus:
       'Conversion quiz funnel, Stripe checkout, subscription management, localization and animated progress UI.',
-    image: '/images/carnify_1.png',
-    images: ['/images/carnify_1.png', '/images/carnify_2.png', '/images/carnify_3.png'],
+    cover: '/images/case-05-cover.webp',
+    images: ['/images/case-05-01.webp', '/images/case-05-02.webp', '/images/case-05-03.webp'],
     overview:
-      'Carnify is the web platform for a carnivore-diet product. It guides visitors through a personalized multi-step quiz, builds a tailored plan, converts them through a Stripe checkout and lets them manage their subscription — all localized into 10 languages and tuned for conversion.',
+      'Contributed to an e-commerce web platform with a personalized multi-step quiz funnel and recurring subscriptions. The application guides visitors through a tailored plan, converts through Stripe checkout and lets users manage their subscription — localized into 10 languages and tuned for conversion.',
     challenge:
-      'A funnel like this lives or dies on flow and trust: each quiz step has to feel effortless, validation must be forgiving, payment has to be rock-solid, and everything must work identically across 10 locales and metric/imperial units without breaking the conversion path.',
+      'A funnel-driven storefront lives or dies on flow and trust: each quiz step has to feel effortless, validation must be forgiving, payments have to be reliable, and the experience must work identically across 10 locales without breaking the conversion path.',
     outcome:
-      'A smooth, animated quiz-to-paywall funnel with reliable Stripe checkout, self-serve subscription management and full localization — a measurable acquisition surface for the product rather than a static marketing page.',
+      'A smooth, animated quiz-to-paywall funnel with reliable Stripe checkout, self-serve subscription management and full localization — a measurable acquisition surface rather than a static marketing page.',
     responsibilities: [
       {
         title: 'Quiz funnel',
         description:
-          'Built the multi-step personalized quiz with progress UI, metric/imperial inputs, validated forms (React Hook Form + Yup) and animated step transitions (Framer Motion).',
+          'Implemented the multi-step personalized quiz with progress UI, unit toggles, validated forms (React Hook Form + Yup) and animated step transitions (Framer Motion).',
       },
       {
-        title: 'Payments & subscriptions',
+        title: 'Payments and subscriptions',
         description:
           'Integrated Stripe checkout, payment review and self-serve subscription management (manage and cancel) with clear states and error handling.',
       },
@@ -234,34 +253,39 @@ export const projects: Project[] = [
           'Wired i18next across 10 languages with locale-aware dates and units, keeping the entire funnel consistent across markets.',
       },
       {
-        title: 'Data & reliability',
+        title: 'Data and reliability',
         description:
-          'Connected the UI to the API with React Query, added progress charts (Victory) and Sentry monitoring for production reliability.',
+          'Connected the UI to the API with React Query, added progress charts and integrated runtime monitoring for production reliability.',
       },
     ],
   },
   {
-    slug: 'claratalks',
-    title: 'ClaraTalks',
-    eyebrow: 'Realtime Support · iOS & Android',
-    badge: 'WebRTC calling app',
+    slug: 'mental-health-mobile-app',
+    title: 'Mental Health Support App',
+    category: 'Mental Health · iOS & Android',
+    eyebrow: 'Mental Health Support App · iOS & Android',
+    badge: 'WebRTC realtime · React Native',
     shortDescription:
-      'Confidential realtime support app: secure audio/video calls connecting people with trained peer listeners, with on-device transcription and identity verification.',
+      'React Native Developer on a confidential mental health support app: realtime audio/video calls, on-device transcription and identity verification.',
     subtitle:
-      'A private, realtime emotional-support calling platform built with React Native, WebRTC and on-device speech-to-text.',
-    role: 'React Native Engineer',
+      'Confidential mobile app for realtime peer support, secure onboarding and on-device transcription.',
+    role: 'React Native Developer',
+    keywords: [
+      'React Native Developer',
+      'Mobile App Development',
+      'WebRTC',
+      'Realtime Communication',
+      'iOS Developer',
+      'Android Developer',
+    ],
     stack: [
       'React Native',
       'Expo',
       'TypeScript',
       'WebRTC',
-      'Daily.co',
       'Socket.io',
       'WebSockets',
-      'Whisper.rn',
-      'AI / LLM',
-      'Persona',
-      'Firebase',
+      'On-device Speech-to-Text',
       'TanStack Query',
       'Reanimated',
       'MMKV',
@@ -269,58 +293,67 @@ export const projects: Project[] = [
       'Zod',
     ],
     focus:
-      'Realtime audio/video calls, on-device transcription, secure onboarding & identity verification, and calm crisis-safety flows.',
-    image: '/images/claratalks_1.jpg',
+      'Realtime audio/video calls, on-device transcription, secure onboarding and calm safety-critical flows.',
+    cover: '/images/case-09-cover.webp',
     images: [
-      '/images/claratalks_1.jpg',
-      '/images/claratalks_2.jpg',
-      '/images/claratalks_3.jpg',
-      '/images/claratalks_4.jpg',
+      '/images/case-09-01.webp',
+      '/images/case-09-02.webp',
+      '/images/case-09-03.webp',
+      '/images/case-09-04.webp',
     ],
     overview:
-      'ClaraTalks is a confidential, realtime support product for iOS and Android. It connects people who need to talk with trained peer listeners ("sisters") over secure audio and video calls. The app spans a full call lifecycle — topic selection, matching and waiting, pre-call, incoming and active calls, and post-call decompression — on top of WebRTC and Daily.co, with Socket.io handling signaling and session state. Sensitive context shaped every decision: a client-side AI agent processes the conversation in real time (live transcription, auto-mute and safety cues) with speech-to-text running on-device via Whisper, identity is verified through Persona, and data is kept in secure storage.',
+      'Contributed to a confidential mental-health mobile application for iOS and Android. The product connects users with trained peer listeners over secure audio and video calls. Worked across the full call lifecycle — topic selection, matching, pre-call, active calls and post-call decompression — on top of WebRTC and Socket.io for signaling and session state.',
     challenge:
-      'Realtime calling is unforgiving — connection setup, permissions, proximity handling, network drops and call state all have to feel instant and reliable. On top of that, the product operates in an emotionally sensitive, privacy-critical context: transcription has to stay on-device, identity must be verified without friction, and crisis situations need clear, calm, fail-safe flows rather than clever UI.',
+      'Realtime calling is unforgiving — connection setup, permissions, proximity handling, network drops and call state all have to feel instant and reliable. On top of that, the product operates in an emotionally sensitive, privacy-critical context: transcription must stay on-device, identity must be verified without friction, and safety flows need clear, calm, fail-safe UX.',
     outcome:
-      'A reliable, private support-calling app with a smooth end-to-end call experience, on-device transcription, verified onboarding and dedicated crisis-protocol and immediate-help flows — a product where the engineering stays invisible so the conversation can come first.',
+      'A reliable, private support-calling mobile app with a smooth end-to-end call experience, on-device transcription, verified onboarding and dedicated safety flows — engineering that stays invisible so the conversation can come first.',
     responsibilities: [
       {
         title: 'Realtime calling',
         description:
-          'Built the full call lifecycle — pre-call, incoming, active and post-call screens — on WebRTC and Daily.co, including permissions, in-call proximity handling and graceful recovery from network changes.',
+          'Implemented the full call lifecycle — pre-call, incoming, active and post-call screens — on WebRTC, including permissions, in-call proximity handling and graceful recovery from network changes.',
       },
       {
-        title: 'Client-side realtime AI agent',
+        title: 'On-device realtime AI',
         description:
-          'Added an on-client AI agent that processes the live conversation in real time — driving live transcription, auto-mute and safety cues — with whisper.rn speech-to-text running entirely on the device to keep audio private.',
+          'Integrated an on-device speech-to-text pipeline driving live transcription, auto-mute and safety cues, keeping audio private on the client.',
       },
       {
-        title: 'Onboarding & verification',
+        title: 'Onboarding and verification',
         description:
-          'Implemented role- and mission-based onboarding with Persona identity verification and secure storage (expo-secure-store / MMKV).',
+          'Implemented role-based onboarding with third-party identity verification and secure storage of user state.',
       },
       {
-        title: 'Signaling & session state',
+        title: 'Signaling and session state',
         description:
           'Wired Socket.io signaling with matching, waiting/queue and session lifecycle, coordinating server state through TanStack Query.',
       },
       {
         title: 'Safety flows',
         description:
-          'Built crisis-protocol, immediate-help and support-decompression experiences with deliberately calm, predictable UX for high-stress moments.',
+          'Implemented crisis-protocol, immediate-help and decompression flows with calm, predictable UX for high-stress moments.',
       },
     ],
   },
   {
-    slug: 'sighapp',
-    title: 'SighApp',
-    eyebrow: 'Social Network · iOS & Android',
-    badge: 'React Native app',
+    slug: 'social-network-mobile-app',
+    title: 'Social Media App',
+    category: 'Social · iOS & Android',
+    eyebrow: 'Social Media App · iOS & Android',
+    badge: 'React Native social app',
     shortDescription:
-      'Social platform for iOS and Android — feed, stories, posts, chat and calls, with business accounts, analytics and subscriptions.',
+      'React Native Developer on a social media app: feed, stories, posts, chat and calls, plus creator analytics and subscriptions.',
     subtitle:
-      'A full social network built with React Native: content creation, messaging, personal and business profiles, and creator analytics.',
-    role: 'React Native Engineer',
+      'Mobile social platform for content creation, messaging, profiles, creator analytics and subscriptions.',
+    role: 'React Native Developer',
+    keywords: [
+      'React Native Developer',
+      'TypeScript Developer',
+      'Mobile App Development',
+      'Social Network',
+      'iOS Developer',
+      'Android Developer',
+    ],
     stack: [
       'React Native',
       'TypeScript',
@@ -338,47 +371,55 @@ export const projects: Project[] = [
       'Sentry',
     ],
     focus:
-      'Feed & stories, content creation, chat & calls, business accounts & analytics, subscriptions and moderation.',
-    image: '/images/sighapp_1.jpg',
-    images: ['/images/sighapp_1.jpg', '/images/sighapp_2.jpg', '/images/sighapp_3.jpg'],
+      'Feed and stories, content creation, chat and calls, business accounts and analytics, subscriptions and moderation.',
+    cover: '/images/case-04-cover.webp',
+    images: ['/images/case-04-01.webp', '/images/case-04-02.webp', '/images/case-04-03.webp'],
     overview:
-      'Sigh is a full-featured social network for iOS and Android. It combines a media-rich feed and stories, post creation from camera and video, real-time chat and calls, follow/notification systems, and both personal and business accounts. Creators and businesses get analytics and performance screens, account upgrades and subscriptions (RevenueCat), QR-based profile sharing, and a complete moderation layer with reporting and blocking.',
+      'Contributed to a full-featured social network for iOS and Android. The application combines a media-rich feed and stories, content creation from camera and video, realtime chat and calls, follow/notification systems, and both personal and business accounts. Creators and businesses get analytics and performance screens, account upgrades and subscriptions, profile sharing and a moderation layer.',
     challenge:
       'A social app is many products at once — feed, stories, media capture, messaging, calls, profiles, analytics, payments and moderation — all of which must stay fast and smooth on real devices while handling media-heavy content, push notifications and live updates without janking the scroll or draining the battery.',
     outcome:
-      'A polished, production-grade social app with a fluid media feed, frictionless content creation, real-time messaging, monetization for creators and businesses, and the safety tooling a public network needs.',
+      'A polished, production-grade social application with a fluid media feed, frictionless content creation, realtime messaging, monetization for creators and businesses, and the safety tooling a public network needs.',
     responsibilities: [
       {
-        title: 'Feed & stories',
+        title: 'Feed and stories',
         description:
-          'Built the media feed, stories viewer and post screens with smooth scrolling and transitions (FlashList, pager-view, Reanimated) and fast image/video rendering.',
+          'Implemented the media feed, stories viewer and post screens with smooth scrolling and transitions (FlashList, pager-view, Reanimated) and fast image/video rendering.',
       },
       {
         title: 'Content creation',
         description:
-          'Implemented camera and video capture (Vision Camera), thumbnail generation, view-shot and upload flows for creating posts and stories.',
+          'Implemented camera and video capture (Vision Camera), thumbnail generation and upload flows for creating posts and stories.',
       },
       {
-        title: 'Chat, calls & notifications',
+        title: 'Chat, calls and notifications',
         description:
-          'Delivered one-to-one chat, calls and a notification system with Firebase messaging and Notifee for rich push.',
+          'Developed one-to-one chat, calls and a notification system with Firebase messaging and Notifee for rich push.',
       },
       {
-        title: 'Business accounts & subscriptions',
+        title: 'Business accounts and subscriptions',
         description:
-          'Built personal and business profiles, performance analytics, account upgrades and subscriptions (RevenueCat), plus moderation flows (report and block).',
+          'Implemented personal and business profiles, performance analytics, account upgrades and subscriptions (RevenueCat), plus moderation flows (report and block).',
       },
     ],
   },
   {
-    slug: 'miidba',
-    title: 'MIIDBA',
-    eyebrow: 'Admin Dashboard',
+    slug: 'saas-admin-dashboard',
+    title: 'Operations Admin Dashboard',
+    category: 'Admin · Web',
+    eyebrow: 'Operations Admin Dashboard · Web',
     shortDescription:
-      'Internal dashboard for managing SQL backups, instances, organizations, users and access settings.',
+      'Frontend Developer on an admin dashboard for managing backups, instances, organizations, users and access settings.',
     subtitle:
-      'Administrative web application for database operations, backups and account management.',
-    role: 'Frontend Engineer',
+      'Administrative web application for operational data, account management and role-based access control.',
+    role: 'Frontend Developer',
+    keywords: [
+      'React Developer',
+      'TypeScript Developer',
+      'Frontend Developer',
+      'SaaS Dashboard',
+      'Web Application Development',
+    ],
     stack: [
       'React',
       'TypeScript',
@@ -393,15 +434,15 @@ export const projects: Project[] = [
       'Sass',
     ],
     focus:
-      'Auth flows, admin screens, tabular data, forms, backup analytics and reusable dashboard UI.',
-    image: '/images/miidba_1.png',
-    images: ['/images/miidba_1.png', '/images/miidba_2.png', '/images/miidba_3.png'],
+      'Auth flows, admin screens, tabular data, forms, analytics and reusable dashboard UI.',
+    cover: '/images/case-08-cover.webp',
+    images: ['/images/case-08-01.webp', '/images/case-08-02.webp', '/images/case-08-03.webp'],
     overview:
-      'MIIDBA is an internal admin dashboard built for database operations and operational control. The product combines role-based access, structured management screens, form-driven workflows and data-heavy views for backups, instances, organizations, users and settings.',
+      'Contributed to a SaaS admin dashboard for operational control. The product combines role-based access, structured management screens, form-driven workflows and data-heavy views for backups, instances, organizations, users and settings.',
     challenge:
-      'The main challenge is keeping dense administrative information usable. The interface has to present tables, filters, modals, forms and status-heavy workflows in a way that remains predictable for operators working with production data.',
+      'The challenge was keeping dense administrative information usable. The interface had to present tables, filters, modals, forms and status-heavy workflows in a way that stayed predictable for operators working with production data.',
     outcome:
-      'The result is a clean B2B-style dashboard with a strong focus on data handling, operational clarity and reusable frontend architecture. It demonstrates experience with real admin product requirements rather than marketing pages.',
+      'A clean B2B-style dashboard with a strong focus on data handling, operational clarity and reusable frontend architecture, demonstrating real admin product experience rather than marketing pages.',
     responsibilities: [
       {
         title: 'Admin workflows',
@@ -411,12 +452,12 @@ export const projects: Project[] = [
       {
         title: 'Forms and validation',
         description:
-          'Built structured form flows with validation for create and edit actions across admin entities.',
+          'Developed structured form flows with validation for create and edit actions across admin entities.',
       },
       {
         title: 'Data handling',
         description:
-          'Connected the UI to API-driven data with consistent loading, empty and state transitions.',
+          'Connected the UI to API-driven data with consistent loading, empty and error states.',
       },
       {
         title: 'Reusable UI',
@@ -426,14 +467,23 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: 'truckrates',
-    title: 'TruckRates.ai',
-    eyebrow: 'Logistics SaaS',
+    slug: 'logistics-management-platform',
+    title: 'Freight Rate Platform',
+    category: 'Logistics · Web',
+    eyebrow: 'Freight Rate Platform · Web',
     shortDescription:
-      'AI-powered drayage pricing platform with instant carrier rates, route mapping and booking workflows.',
+      'Next.js Developer on a freight rate platform: instant carrier pricing, route mapping and shipment booking workflows.',
     subtitle:
-      'SaaS platform for instant drayage carrier pricing, rate comparison and shipment booking.',
-    role: 'Frontend Engineer',
+      'Logistics platform for carrier pricing, rate comparison and shipment booking.',
+    role: 'Frontend Developer',
+    keywords: [
+      'Next.js Developer',
+      'React Developer',
+      'TypeScript Developer',
+      'Frontend Developer',
+      'Logistics Software',
+      'Web Application Development',
+    ],
     stack: [
       'Next.js',
       'TypeScript',
@@ -448,94 +498,112 @@ export const projects: Project[] = [
     ],
     focus:
       'Product dashboard, rate search flows, carrier comparison tables, route visualization and role-based access.',
-    image: '/images/truckrates_3.png',
+    cover: '/images/case-01-cover.webp',
     images: [
-      '/images/truckrates_3.png',
-      '/images/truckrates_1.png',
-      '/images/truckrates_2.png',
+      '/images/case-01-03.webp',
+      '/images/case-01-01.webp',
+      '/images/case-01-02.webp',
     ],
     overview:
-      'TruckRates.ai is an AI-driven logistics platform that provides instant drayage carrier pricing. The product allows shippers and brokers to search rates by route, compare carriers side by side, view distance and pricing on a map, and book shipments directly. The frontend handles complex search flows, real-time rate tables, accessorial charge breakdowns and a content-driven blog section.',
+      'Contributed to a logistics management platform providing instant carrier pricing for shippers and brokers. The product supports rate search by route, side-by-side carrier comparison, route maps with distance overlays and direct booking. The frontend handles complex search flows, rate tables, accessorial breakdowns and a content-driven blog section.',
     challenge:
-      'The main complexity is presenting dense logistics data in a way that feels simple: carrier tables with pricing tiers, route maps with distance overlays, multi-step booking flows and role-based dashboards for different user types. Search filters, rate history and RFQ management all need to stay responsive and predictable under real production data volumes.',
+      'The main complexity was presenting dense logistics data in a way that felt simple: carrier tables with pricing tiers, route maps with distance overlays, multi-step booking flows and role-based dashboards. Search filters, rate history and request-for-quote management all had to stay responsive and predictable under real production data volumes.',
     outcome:
-      'The result is a clean, product-grade logistics dashboard: intuitive rate search, visual route comparison, carrier booking in fewer clicks and a content section that drives organic traffic. The interface handles the density of logistics data without overwhelming the user.',
+      'A clean, product-grade logistics dashboard: intuitive rate search, visual route comparison, carrier booking in fewer clicks and a content section that drives organic traffic. The interface handles the density of logistics data without overwhelming the user.',
     responsibilities: [
       {
         title: 'Rate search engine',
         description:
-          'Designed and implemented the full rate search flow from scratch: route input with autocomplete, carrier result tables with sortable columns, average rate aggregation, roundtrip distance calculations and paginated search history. Handled complex filter combinations and ensured the interface remains fast under thousands of carrier records.',
+          'Designed and implemented the full rate search flow: route input with autocomplete, carrier result tables with sortable columns, average rate aggregation, roundtrip distance calculations and paginated search history. Handled complex filter combinations and kept the interface fast under thousands of carrier records.',
       },
       {
         title: 'Interactive route mapping',
         description:
-          'Integrated Mapbox GL to render pickup-to-delivery routes with real-time distance overlays, waypoint markers and pricing annotations. Built a reusable map component that adapts to different route types and viewport sizes while maintaining smooth pan and zoom performance.',
+          'Integrated Mapbox GL to render pickup-to-delivery routes with real-time distance overlays, waypoint markers and pricing annotations. Built a reusable map component that adapts to different route types and viewport sizes.',
       },
       {
-        title: 'Carrier management and RFQ',
+        title: 'Carrier and RFQ workflows',
         description:
-          'Built the carrier directory with contact details, service areas and pricing tiers. Implemented the RFQ (Request for Quote) workflow: multi-step forms with validation, status tracking and notification states. Connected carrier data to the rate comparison engine for instant pricing lookups.',
+          'Implemented the carrier directory with contact details, service areas and pricing tiers. Developed the request-for-quote workflow: multi-step forms with validation, status tracking and notification states, connected to the rate comparison engine for instant pricing lookups.',
       },
       {
         title: 'Dashboard architecture',
         description:
-          'Structured the authenticated dashboard with persistent sidebar navigation, role-based screen access, user management and application settings. Implemented search history with saved routes, bookmarked carriers and export capabilities. Ensured consistent layout behaviour across all dashboard sections.',
+          'Structured the authenticated dashboard with persistent sidebar navigation, role-based screen access, user management and application settings. Implemented saved searches and bookmarked carriers with consistent layout behavior across all sections.',
       },
       {
-        title: 'Content and SEO platform',
+        title: 'Content and SEO',
         description:
-          'Built the public-facing blog and knowledge base sections: article listing with category filters, individual article pages with structured content, accessorial charges reference and SEO-optimized meta tags. Created reusable content components for consistent typography and layout across editorial pages.',
+          'Implemented the public-facing blog and knowledge base: article listing with category filters, individual article pages with structured content, accessorial-charges reference and SEO-optimized meta tags. Created reusable content components for consistent typography and layout.',
       },
     ],
   },
   {
-    slug: 'homefinity',
-    title: 'Homefinity',
-    eyebrow: 'Real Estate · Web',
+    slug: 'real-estate-platform',
+    title: 'Property Marketplace',
+    category: 'Real Estate · Web',
+    eyebrow: 'Property Marketplace · Web',
     badge: 'Property marketplace',
     shortDescription:
-      'Web platform for discovering, comparing and buying pre-construction and assignment-sale properties — location search, listing grids and rich project pages.',
+      'Frontend Developer on a property marketplace for discovering, comparing and buying pre-construction and assignment-sale properties.',
     subtitle:
-      'A real-estate marketplace for pre-construction and assignment sales: find, compare and move to your ideal home.',
-    role: 'Frontend Engineer',
+      'Real estate marketplace for pre-construction and assignment-sale listings.',
+    role: 'Frontend Developer',
+    keywords: [
+      'Next.js Developer',
+      'React Developer',
+      'TypeScript Developer',
+      'Frontend Developer',
+      'Real Estate Web Platform',
+      'Web Application Development',
+    ],
     stack: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'TanStack Query'],
     focus:
-      'Property search & filtering, media-rich listing grids, detailed project pages and developer submissions.',
-    image: '/images/homefinity_1.png',
-    images: ['/images/homefinity_1.png', '/images/homefinity_2.png', '/images/homefinity_3.png'],
+      'Property search and filtering, media-rich listing grids, detailed project pages and developer submissions.',
+    cover: '/images/case-03-cover.webp',
+    images: ['/images/case-03-01.webp', '/images/case-03-02.webp', '/images/case-03-03.webp'],
     overview:
-      'Homefinity is a web platform for pre-construction and assignment-sale real estate. Buyers search by location and currency, browse featured and filtered listing grids, save favorites, and open detailed project pages with project information, floor plans, construction monitoring and city documents. Developers can add and manage their own projects, with clear buy and contact paths throughout.',
+      'Contributed to a real estate web platform focused on pre-construction and assignment-sale properties. Buyers search by location and currency, browse featured and filtered listing grids, save favorites and open detailed project pages with project information, floor plans, construction updates and city documents. Developers can submit and manage their own projects, with clear buy and contact paths throughout.',
     challenge:
-      'Real-estate discovery has to make dense listing data effortless: location-based search, currency and filters, fast media-heavy listing grids with pagination, and detailed project pages that stay readable across many information sections without overwhelming the buyer.',
+      'Real estate discovery has to make dense listing data effortless: location-based search, currency and filters, fast media-heavy listing grids with pagination, and detailed project pages that stay readable across many information sections without overwhelming the buyer.',
     outcome:
-      'A clean, conversion-oriented property marketplace — quick location search, scannable listing grids, rich multi-section project pages, and direct buy/contact actions that move buyers from discovery to enquiry.',
+      'A clean, conversion-oriented property marketplace — quick location search, scannable listing grids, rich multi-section project pages and direct buy/contact actions that move buyers from discovery to enquiry.',
     responsibilities: [
       {
-        title: 'Search & listings',
+        title: 'Search and listings',
         description:
-          'Built location-based property search with currency and filters, plus paginated, media-rich listing grids and featured-project sections.',
+          'Implemented location-based property search with currency and filters, plus paginated, media-rich listing grids and featured-project sections.',
       },
       {
         title: 'Project detail pages',
         description:
-          'Implemented multi-section project pages — information, floor plans, construction monitoring and city documents — with buy and contact actions.',
+          'Developed multi-section project pages — information, floor plans, construction updates and city documents — with buy and contact actions.',
       },
       {
         title: 'Discovery UX',
         description:
-          'Added favorites, recent search history and a clear, conversion-focused layout from landing to enquiry.',
+          'Implemented favorites, recent search history and a clear, conversion-focused layout from landing to enquiry.',
       },
     ],
   },
   {
-    slug: 'ciq-mobile',
-    title: 'CIQ Mobile',
-    eyebrow: 'Operations Platform',
+    slug: 'enterprise-management-platform',
+    title: 'Enterprise Operations Platform',
+    category: 'Enterprise Operations · Web + Mobile',
+    eyebrow: 'Enterprise Operations Platform · Web + Mobile',
     shortDescription:
-      'Industrial dashboard for project operations, street sheets, maps, task workflows and PDF export.',
+      'Frontend / Mobile Developer on an enterprise operations platform for managing projects, work bundles, maps, tasks and PDF exports.',
     subtitle:
-      'Operational web platform for managing construction projects, work bundles and field data.',
-    role: 'Frontend / Mobile Engineer',
+      'Enterprise platform for project workflows, field data, map-based planning and operational exports.',
+    role: 'Frontend / Mobile Developer',
+    keywords: [
+      'React Developer',
+      'TypeScript Developer',
+      'Ionic Developer',
+      'Mobile App Development',
+      'Enterprise Software',
+      'Web Application Development',
+    ],
     stack: [
       'React',
       'TypeScript',
@@ -552,52 +620,60 @@ export const projects: Project[] = [
       'Android',
     ],
     focus:
-      'Project navigation, map-driven planning, street sheet workflows, tables, dialogs and exports.',
-    image: '/images/ciq_1.png',
-    images: ['/images/ciq_1.png', '/images/ciq_2.png', '/images/ciq_3.png'],
+      'Project navigation, map-driven planning, structured workflows, tables, dialogs and exports.',
+    cover: '/images/case-10-cover.webp',
+    images: ['/images/case-10-01.webp', '/images/case-10-02.webp', '/images/case-10-03.webp'],
     overview:
-      'CIQ is an operations platform used to manage construction projects, work bundle definitions, street sheets and field data. The frontend combines dense administrative screens, map-based planning, modal workflows and exportable operational views in one application.',
+      'Contributed to an enterprise operations platform used to manage projects, work bundle definitions and field data. The frontend combines dense administrative screens, map-based planning, modal workflows and exportable operational views in one application, delivered to both web and mobile via Ionic and Capacitor.',
     challenge:
-      'The challenge is to keep complex operational data understandable. Users need to move between projects, plans, tasks and street sheets without losing context, while the UI still has to stay responsive and predictable across large tables, overlays and map interactions.',
+      'The challenge was keeping complex operational data understandable. Users needed to move between projects, plans, tasks and data sheets without losing context, while the UI had to stay responsive and predictable across large tables, overlays and map interactions.',
     outcome:
-      'The result is a production-style dashboard that supports real operational workflows: planning, review, status tracking, map inspection and PDF output. It shows experience with heavy business UI rather than just static marketing pages.',
+      'A production-style management platform that supports real operational workflows: planning, review, status tracking, map inspection and PDF output — heavy business UI delivered to web, iOS and Android from a single codebase.',
     responsibilities: [
       {
         title: 'Project and task workflows',
         description:
-          'Built navigation and screen flows for projects, work bundle definitions, tasks and related operational records.',
+          'Implemented navigation and screen flows for projects, work bundle definitions, tasks and related operational records.',
       },
       {
         title: 'Map and planning views',
         description:
-          'Worked with map-based layouts for construction planning and visual inspection of project areas.',
+          'Worked with map-based layouts for project planning and visual inspection of operational areas.',
       },
       {
         title: 'Forms, dialogs and exports',
         description:
-          'Implemented modal-driven CRUD flows, structured forms and PDF export interactions for street sheet data.',
+          'Implemented modal-driven CRUD flows, structured forms and PDF export interactions for operational data.',
       },
       {
         title: 'Data-heavy admin UI',
         description:
-          'Handled tables, filters, status indicators and loading states in a dense business application.',
+          'Worked with tables, filters, status indicators and loading states in a dense enterprise application.',
       },
     ],
   },
   {
-    slug: 'flychat',
-    title: 'FlyChat',
-    eyebrow: 'Realtime Chat · PWA',
+    slug: 'real-time-chat-application',
+    title: 'Realtime Messaging App',
+    category: 'Realtime · Web (PWA)',
+    eyebrow: 'Realtime Messaging App · Web (PWA)',
     shortDescription:
-      'Realtime chat app with JWT auth, WebSocket messaging, unread/read states, online presence and role-based user/admin flows.',
+      'Frontend Developer on a realtime messaging app with JWT auth, WebSocket messaging, online presence and role-based user/admin flows.',
     subtitle:
-      'Realtime chat product built with React, TanStack Router/Query, Zustand, Supabase and WebSocket-driven messaging.',
-    role: 'Frontend Engineer',
+      'Realtime web messaging product with synchronized dialogs, presence and PWA-ready frontend architecture.',
+    role: 'Frontend Developer',
+    keywords: [
+      'React Developer',
+      'TypeScript Developer',
+      'Frontend Developer',
+      'WebSocket',
+      'PWA Developer',
+      'Real-Time Web Applications',
+    ],
     stack: [
       'React 19',
       'TypeScript',
       'Vite',
-      'Supabase',
       'WebSocket',
       'Tailwind CSS',
       'TanStack Router',
@@ -607,14 +683,14 @@ export const projects: Project[] = [
     ],
     focus:
       'JWT auth, realtime dialogs, message sync, unread/read flow, online presence, role-based routes and mobile-first product structure.',
-    image: '/images/flychat_1.png',
-    images: ['/images/flychat_1.png', '/images/flychat_2.png', '/images/flychat_3.png'],
+    cover: '/images/case-06-cover.webp',
+    images: ['/images/case-06-01.webp', '/images/case-06-02.webp', '/images/case-06-03.webp'],
     overview:
-      'FlyChat is a realtime chat application built with React, Vite, Zustand, TanStack Router/Query, Supabase and a WebSocket backend. The product covers more than a single chat screen: authentication, dialogs, unread counts, typing states, online presence, profile management, role-based user/admin areas and PWA preparation for desktop and mobile usage.',
+      'Developed a realtime chat web application with React, Vite, Zustand, TanStack Router/Query and a WebSocket backend. The product covers authentication, dialogs, unread counts, typing states, online presence, profile management, role-based user/admin areas and PWA preparation for desktop and mobile usage.',
     challenge:
-      'Realtime product UI has to stay understandable while data changes constantly. Dialog order, unread counters, typing signals, read states, presence and infinite message history all need to stay synchronized without breaking navigation or making the interface feel unstable on mobile and desktop.',
+      'Realtime product UI has to stay understandable while data changes constantly. Dialog order, unread counters, typing signals, read states, presence and infinite message history all needed to stay synchronized without breaking navigation or making the interface feel unstable on mobile and desktop.',
     outcome:
-      'The result is a structured chat product with real application depth: JWT auth, synchronized messaging, role-aware routes, searchable user flows, profile editing and PWA-ready frontend foundations. It demonstrates product thinking and realtime state handling, not just isolated messenger visuals.',
+      'A structured chat product with real application depth: JWT auth, synchronized messaging, role-aware routes, searchable user flows, profile editing and PWA-ready frontend foundations — demonstrating realtime state handling, not just isolated messenger visuals.',
     responsibilities: [
       {
         title: 'Realtime messaging',
@@ -629,11 +705,35 @@ export const projects: Project[] = [
       {
         title: 'Product surfaces',
         description:
-          'Built dialogs, active chat, profile management and data-management screens in a mobile-first layout prepared for PWA installation.',
+          'Developed dialogs, active chat, profile management and data-management screens in a mobile-first layout prepared for PWA installation.',
       },
     ],
   },
 ];
+
+const PROJECT_ORDER = [
+  'social-network-mobile-app',
+  'e-commerce-web-platform',
+  'mental-health-mobile-app',
+  'logistics-management-platform',
+  'real-estate-platform',
+  'enterprise-management-platform',
+  'real-time-chat-application',
+  'clinical-education-platform',
+  'react-native-mobile-app',
+  'saas-admin-dashboard',
+  'subscription-web-platform',
+] as const;
+
+const projectOrderIndex = new Map<string, number>(
+  PROJECT_ORDER.map((slug, index) => [slug, index]),
+);
+
+export const projects: Project[] = [...rawProjects].sort((left, right) => {
+  const leftIndex = projectOrderIndex.get(left.slug) ?? Number.MAX_SAFE_INTEGER;
+  const rightIndex = projectOrderIndex.get(right.slug) ?? Number.MAX_SAFE_INTEGER;
+  return leftIndex - rightIndex;
+});
 
 export function getProjectBySlug(slug: string) {
   return projects.find((project) => project.slug === slug);

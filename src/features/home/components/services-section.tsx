@@ -3,20 +3,20 @@ import { ArrowIcon } from '@/components/ui';
 
 const services = [
   {
-    title: 'Turnkey web & mobile apps',
-    text: 'From idea to production and the App Store — product logic, UI and delivery in one pair of hands.',
+    title: 'End-to-end product delivery',
+    text: 'From idea to production — product logic, implementation, deployment and release to web, App Store and Google Play.',
   },
   {
     title: 'AI project rescue',
-    text: 'I stabilize, refactor and harden AI-generated and vibe-coded codebases into maintainable production software.',
+    text: 'I stabilize, refactor and restore structure in AI-generated and vibe-coded codebases until they become maintainable production software.',
   },
   {
     title: 'Features, support & fixes',
     text: 'Join an existing team to ship new features, fix what is broken and bring apps to a healthy, releasable state.',
   },
   {
-    title: 'Realtime, AI & integrations',
-    text: 'Realtime (WebRTC, sockets), on-device AI, payments, maps and backend integration wired in when the product needs them.',
+    title: 'AI systems & integrations',
+    text: 'AI system integration, realtime (WebRTC, sockets), payments, maps, backend workflows and production rollout wired in when the product needs them.',
   },
 ];
 

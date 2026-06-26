@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowIcon, Tag } from '@/components/ui';
+import { ArrowIcon, ConfidentialityNotice, Tag } from '@/components/ui';
 import { getProjectBySlug, getProjectPlatform, getProjectPreviewPath } from '@/features/project';
 import {
   FEATURED_PROJECT_SLUG,
@@ -28,10 +28,13 @@ export function SelectedWorkSection() {
           Selected work
         </h2>
         <p className="text-muted text-lg leading-8">
-          Real products I&apos;ve shipped end-to-end — from rescuing AI-built codebases to launching
-          apps across web, iOS and Android.
+          Commercial web, mobile and product systems built as a Software Engineer — from
+          rescuing AI-generated and vibe-coded codebases to launching apps across web, backend,
+          iOS and Android.
         </p>
       </div>
+
+      <ConfidentialityNotice className="mb-8" />
 
       <div className="grid grid-cols-[1.12fr_.88fr] gap-5 max-lg:grid-cols-1">
         <Link

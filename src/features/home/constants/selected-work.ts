@@ -1,7 +1,7 @@
-export const FEATURED_PROJECT_SLUG = 'prepry' as const;
+export const FEATURED_PROJECT_SLUG = 'clinical-education-platform' as const;
 
 export const SUPPORTING_PROJECT_SLUGS = [
-  'homefinity',
-  'fitfast-app',
-  'ciq-mobile',
+  'real-estate-platform',
+  'react-native-mobile-app',
+  'enterprise-management-platform',
 ] as const;

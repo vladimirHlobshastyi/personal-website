@@ -18,22 +18,27 @@ export const metadata: Metadata = {
   keywords: [...SITE.keywords],
   authors: [{ name: SITE.name, url: SITE.url }],
   creator: SITE.name,
+  publisher: SITE.name,
   applicationName: `${SITE.name} — Portfolio`,
   alternates: { canonical: '/' },
+  category: 'technology',
   openGraph: {
-    type: 'website',
+    type: 'profile',
     url: SITE.url,
     siteName: SITE.name,
     title: SITE.title,
     description: SITE.description,
     locale: SITE.locale,
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: `${SITE.name} — ${SITE.role}` }],
+    firstName: 'Vladimir',
+    lastName: 'Hlobchastyi',
+    username: 'Vladi_Dev_ua',
+    images: [{ url: '/og.webp', width: 1200, height: 630, alt: `${SITE.name} — ${SITE.role}` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE.title,
     description: SITE.description,
-    images: ['/og.png'],
+    images: ['/og.webp'],
     creator: '@Vladi_Dev_ua',
   },
   robots: {
@@ -51,13 +56,17 @@ const jsonLd = {
       '@type': 'Person',
       '@id': `${SITE.url}/#person`,
       name: SITE.name,
-      jobTitle: SITE.role,
+      givenName: 'Vladimir',
+      familyName: 'Hlobchastyi',
+      jobTitle: 'Software Engineer',
       description: SITE.description,
       url: SITE.url,
-      image: `${SITE.url}/og.png`,
+      image: `${SITE.url}/og.webp`,
       email: CONTACTS.email.value,
       sameAs: SITE.sameAs,
       knowsAbout: [...SITE.knowsAbout],
+      knowsLanguage: ['en', 'uk', 'ru'],
+      worksFor: { '@type': 'Organization', name: 'Independent / Freelance' },
     },
     {
       '@type': 'WebSite',
@@ -83,6 +92,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={jakarta.variable} suppressHydrationWarning>
       <head>
+        <link rel="alternate" type="application/llms.txt" href="/llms.txt" />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
           type="application/ld+json"

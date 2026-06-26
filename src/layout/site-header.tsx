@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ArrowIcon, Logo, ThemeToggle } from '@/components/ui';
+import { ArrowIcon, Avatar, ThemeToggle } from '@/components/ui';
 import { CONTACTS } from '@/config/contacts';
 
 const navItems = [
@@ -17,8 +17,15 @@ export function SiteHeader() {
   return (
     <header className="border-line bg-bg/80 supports-[backdrop-filter]:bg-bg/65 sticky top-0 z-40 w-full border-b backdrop-blur-xl">
       <div className="mx-auto grid w-[min(73.75rem,calc(100%-3rem))] grid-cols-[1fr_auto_1fr] items-center gap-6 py-5 max-lg:grid-cols-[1fr_auto] max-sm:w-[min(100%-1.75rem,73.75rem)]">
-        <Link href="/" className="group inline-flex items-center gap-3 justify-self-start">
-          <Logo className="h-8 w-8 transition-transform duration-300 group-hover:-translate-y-0.5" />
+        <Link
+          href="/"
+          aria-label="Vladimir Hlobchastyi — Home"
+          className="group inline-flex items-center gap-3 justify-self-start"
+        >
+          <Avatar
+            size={40}
+            className="transition-transform duration-300 group-hover:-translate-y-0.5"
+          />
           <span className="flex flex-col leading-none">
             <span className="text-[0.9375rem] font-bold tracking-[-0.02em]">
               Vladimir Hlobchastyi

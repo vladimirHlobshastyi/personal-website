@@ -1,4 +1,4 @@
-import { ArrowIcon, Badge, ImageCarousel, Tag } from '@/components/ui';
+import { ArrowIcon, Badge, ConfidentialityNotice, ImageCarousel, Tag } from '@/components/ui';
 import { getProjectShowcaseImages, hasProjectRealScreenshots } from '../project-preview';
 import type { Project } from '../project.types';
 
@@ -65,6 +65,8 @@ export function ProjectHero({ project }: ProjectHeroProps) {
           </div>
         </MetaRow>
       </div>
+
+      <ConfidentialityNotice className="mb-6" />
 
       <ImageCarousel
         title={project.title}
