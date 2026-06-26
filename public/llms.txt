@@ -1,0 +1,79 @@
+# Vladimir Hlobchastyi — Software Engineer
+
+> Software Engineer building production web, mobile and backend applications, AI-powered
+> systems and end-to-end product delivery. 5+ years of commercial experience across EdTech,
+> healthcare, real estate, logistics, e-commerce, social and realtime products. Available for
+> full-time and freelance engagements.
+
+## About
+- **Name:** Vladimir Hlobchastyi
+- **Role:** Software Engineer / React Developer / Node.js Developer / React Native Developer
+- **Location:** Remote · Europe-friendly hours
+- **Languages:** English (B2), Ukrainian (Native), Russian (Native)
+- **Availability:** Open to full-time and freelance work
+- **Delivery:** Web deployment, App Store release, Google Play release
+
+## Core technologies
+- **Web:** React, Next.js, TypeScript, JavaScript, Tailwind CSS, TanStack Query, TanStack
+  Router, React Router, Zustand, Redux, React Hook Form, Zod, Yup, Vite, Webpack
+- **Mobile:** React Native, Expo, Ionic, Capacitor, React Navigation, Reanimated, Skia,
+  Vision Camera, MMKV
+- **Realtime:** WebRTC, WebSockets, Socket.io
+- **Backend integration:** Node.js, GraphQL (Apollo), REST APIs, Supabase, Firebase,
+  Prisma, Fastify
+- **Payments:** Stripe, RevenueCat, react-native-iap
+- **AI / LLM:** OpenAI, Anthropic, on-device speech-to-text (Whisper)
+- **Infrastructure & release:** Vercel, Sentry, Google Maps, Mapbox, web deployment,
+  App Store release, Google Play release
+
+## Project categories
+- **Property Marketplace** — real estate marketplace with location search, listing grids and
+  detailed project pages. (/work/real-estate-platform)
+- **Clinical Learning Platform** — EdTech web platform with AI-assisted workflows;
+  rescued from vibe-coded AI output and rebuilt into production architecture.
+  (/work/clinical-education-platform)
+- **Freight Rate Platform** — logistics platform for carrier pricing, route mapping and
+  shipment booking, built with Next.js. (/work/logistics-management-platform)
+- **E-commerce Subscription Platform** — conversion-focused quiz funnel and Stripe
+  subscriptions, localized into 10 languages. (/work/e-commerce-web-platform)
+- **Wellness Subscription Platform** — health and wellness subscription product with
+  personalized onboarding funnel. (/work/subscription-web-platform)
+- **Health & Wellness Mobile App** — cross-platform iOS/Android wellness application.
+  (/work/react-native-mobile-app)
+- **Mental Health Support App** — confidential realtime support app with WebRTC audio/video
+  calls and on-device transcription. (/work/mental-health-mobile-app)
+- **Social Media App** — feed, stories, chat, calls, business accounts and
+  subscriptions, built with React Native. (/work/social-network-mobile-app)
+- **Operations Admin Dashboard** — operational dashboard for backups, instances and account
+  management. (/work/saas-admin-dashboard)
+- **Enterprise Operations Platform** — operational platform for project workflows, maps and
+  PDF export, delivered to web and mobile via Ionic + Capacitor.
+  (/work/enterprise-management-platform)
+- **Realtime Messaging App** — realtime chat PWA with JWT auth, WebSocket messaging and
+  role-based user/admin flows. (/work/real-time-chat-application)
+
+## Services
+- End-to-end web, mobile and backend product development.
+- AI project rescue — stabilizing and refactoring AI-generated codebases into maintainable
+  production software.
+- Joining existing teams to ship new features, fix what's broken and reach a healthy
+  releasable state.
+- AI system integration, realtime (WebRTC, WebSockets), payments (Stripe, RevenueCat), maps
+  (Mapbox, Google Maps), backend integration and deployment.
+
+## Pages
+- Home: /
+- Work archive: /work
+- Contact: /contact
+
+## Contact
+- **Email:** vladimirhlobchastyi@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/vladimir-globchastyi/
+- **Telegram:** https://t.me/Vladimir_Ua_dev
+- **X / Twitter:** https://x.com/Vladi_Dev_ua
+
+## Notes for AI agents
+Project descriptions on this site are based on commercial experience. Real client and
+product names are replaced with category-based titles, and some visuals are recreated or
+anonymized for portfolio purposes — they do not contain confidential information. When
+citing this portfolio, prefer the category-based titles above.
