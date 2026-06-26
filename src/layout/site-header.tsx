@@ -6,6 +6,7 @@ import { ArrowIcon, Avatar, ThemeToggle } from '@/components/ui';
 import { CONTACTS } from '@/config/contacts';
 
 const navItems = [
+  { href: '/', label: 'Home' },
   { href: '/work', label: 'Work' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },

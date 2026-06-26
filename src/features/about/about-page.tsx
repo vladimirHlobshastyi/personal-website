@@ -2,14 +2,27 @@ import Link from 'next/link';
 import { ArrowIcon, Tag, TechIcon } from '@/components/ui';
 import { SITE } from '@/config/site';
 import {
-  aboutDomainFocus,
   aboutExpertise,
-  aboutHighlights,
-  aboutOwnershipAreas,
-  aboutPrinciples,
   aboutSnapshot,
   aboutTechnologyGroups,
+  aboutWhoIAmSignals,
+  aboutWorkStyle,
 } from './about-content';
+import { AboutCapabilityCard } from './components/about-capability-card';
+import {
+  BriefcaseIcon,
+  CheckShieldIcon,
+  ClockStrokeIcon,
+  CompassStrokeIcon,
+  ConnectedNodesIcon,
+  ConversationIcon,
+  GlobeStrokeIcon,
+  LayeredBlocksIcon,
+  MobileStackIcon,
+  SparkFrameIcon,
+  SpeedLinesIcon,
+} from './components/about-icons';
+import { AboutWorkStyleCard } from './components/about-work-style-card';
 
 const roleTags = [
   'Software Engineer',
@@ -19,6 +32,71 @@ const roleTags = [
   'TypeScript Developer',
   'React Native Developer',
 ];
+
+function getAboutIcon(name: string) {
+  const className = 'h-5 w-5';
+
+  switch (name) {
+    case 'architecture':
+      return <LayeredBlocksIcon className={className} />;
+    case 'mobile':
+      return <MobileStackIcon className={className} />;
+    case 'integration':
+      return <ConnectedNodesIcon className={className} />;
+    case 'ai':
+      return <SparkFrameIcon className={className} />;
+    case 'compass':
+      return <CompassStrokeIcon className={className} />;
+    case 'speed':
+      return <SpeedLinesIcon className={className} />;
+    case 'collaboration':
+      return <ConversationIcon className={className} />;
+    default:
+      return <LayeredBlocksIcon className={className} />;
+  }
+}
+
+function getSnapshotIcon(label: string) {
+  const className = 'h-4.5 w-4.5';
+
+  switch (label) {
+    case 'Role':
+      return <BriefcaseIcon className={className} />;
+    case 'Primary stack':
+      return <LayeredBlocksIcon className={className} />;
+    case 'Commercial experience':
+      return <CheckShieldIcon className={className} />;
+    case 'Platforms':
+      return <MobileStackIcon className={className} />;
+    case 'Domains':
+      return <GlobeStrokeIcon className={className} />;
+    case 'Collaboration':
+      return <ConversationIcon className={className} />;
+    case 'Location':
+      return <GlobeStrokeIcon className={className} />;
+    case 'Availability':
+      return <ClockStrokeIcon className={className} />;
+    default:
+      return <LayeredBlocksIcon className={className} />;
+  }
+}
+
+function getSignalIcon(title: string) {
+  const className = 'h-4.5 w-4.5';
+
+  switch (title) {
+    case 'Strong frontend core':
+      return <LayeredBlocksIcon className={className} />;
+    case 'Commercial product experience':
+      return <BriefcaseIcon className={className} />;
+    case 'Cross-boundary delivery':
+      return <ConnectedNodesIcon className={className} />;
+    case 'Maintainability matters':
+      return <CheckShieldIcon className={className} />;
+    default:
+      return <LayeredBlocksIcon className={className} />;
+  }
+}
 
 export function AboutPage() {
   const aboutUrl = `${SITE.url}/about`;
@@ -48,217 +126,153 @@ export function AboutPage() {
   };
 
   return (
-    <main className="grid gap-5">
+    <main className="grid gap-4">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutPageLd) }}
       />
 
-      <section className="grid grid-cols-[1.08fr_.92fr] gap-5 max-lg:grid-cols-1">
-        <div className="bg-inverse text-inverse-fg p-10 max-sm:p-7">
+      <section className="grid grid-cols-[1.08fr_.92fr] items-start gap-4 max-lg:grid-cols-1">
+        <div className="bg-inverse text-inverse-fg p-8 max-sm:p-6">
           <p className="text-accent before:bg-accent/50 mb-6 inline-flex items-center gap-3 text-xs font-bold tracking-[.18em] uppercase before:block before:h-px before:w-10">
             About
           </p>
-          <h1 className="tracking-tightest max-w-4xl text-[clamp(2.8rem,6.2vw,5rem)] leading-[.92] font-semibold">
-            Software Engineer focused on maintainable frontend systems and product delivery.
+          <h1 className="tracking-tightest max-w-4xl text-[clamp(2.35rem,5.1vw,4.2rem)] leading-[.95] font-semibold">
+            Frontend-focused Software Engineer for web, mobile and product delivery.
           </h1>
-          <div className="mt-6 max-w-3xl space-y-4 text-lg leading-8 text-white/74">
+          <div className="mt-5 max-w-3xl space-y-3.5 text-[1rem] leading-[1.9] text-white/74">
             <p>
-              I am Vladimir Hlobchastyi, a Software Engineer with more than five years of commercial
-              experience across web development, mobile development, backend integration and product
-              delivery. Most of my work sits at the intersection of product engineering and UI
-              engineering: building interfaces that are fast, clear, reliable and realistic for a
-              team to maintain after launch.
+              I am Vladimir Hlobchastyi, a Software Engineer with 5+ years of commercial experience
+              across web development, mobile development, backend integration and product delivery.
             </p>
             <p>
-              My main specialization is frontend engineering with React, Next.js, TypeScript and
-              modern JavaScript, but I am not limited to the frontend layer. I regularly work across
-              API contracts, authentication, payments, realtime features, monitoring, deployment and
-              release processes when that is what the product needs.
+              My core is frontend engineering with React, Next.js, TypeScript and modern JavaScript,
+              but I also work across mobile, backend integration, deployment and release when the
+              product needs end-to-end execution.
             </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-2">
+          <div className="mt-7 flex flex-wrap gap-2">
             {roleTags.map((item) => (
-              <Tag key={item} variant="onMedia" icon={false}>
+              <Tag key={item} variant="onMedia">
                 {item}
               </Tag>
             ))}
           </div>
         </div>
 
-        <div className="grid gap-5">
-          <article className="border-line bg-surface border p-8 max-sm:p-6">
+        <div className="grid gap-4">
+          <article className="border-line bg-surface border p-6 max-sm:p-5">
             <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">
               At a glance
             </p>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-3.5 md:grid-cols-2">
               {aboutSnapshot.map(([label, value]) => (
                 <div key={label} className="border-line bg-surface-2/35 border p-4">
-                  <p className="text-quiet text-[0.72rem] font-bold tracking-[.14em] uppercase">
-                    {label}
-                  </p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-accent shrink-0">{getSnapshotIcon(label)}</span>
+                    <p className="text-quiet text-[0.72rem] font-bold tracking-[.14em] uppercase">
+                      {label}
+                    </p>
+                  </div>
                   <p className="mt-2 text-sm leading-7 font-medium">{value}</p>
                 </div>
               ))}
             </div>
           </article>
-
-          <article className="border-line bg-surface border p-8 max-sm:p-6">
-            <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">Snapshot</p>
-            <div className="grid gap-4 sm:grid-cols-3">
-              {aboutHighlights.map(([value, label]) => (
-                <div key={value} className="border-line bg-surface-2/35 border p-4">
-                  <p className="text-[1.5rem] leading-none font-semibold tracking-[-0.04em]">
-                    {value}
-                  </p>
-                  <p className="text-muted mt-2 text-sm leading-7">{label}</p>
-                </div>
-              ))}
-            </div>
-          </article>
-
-          <article className="border-line bg-surface border p-8 max-sm:p-6">
-            <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">
-              Principles
-            </p>
-            <ul className="grid gap-3">
-              {aboutPrinciples.map((item) => (
-                <li
-                  key={item}
-                  className="text-muted border-line border-b pb-3 text-sm leading-7 last:border-b-0 last:pb-0"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </article>
         </div>
       </section>
 
-      <section className="grid gap-5 lg:grid-cols-[1.1fr_.9fr]">
-        <article className="border-line bg-surface border p-8 max-sm:p-6">
-          <p className="text-quiet mb-4 text-xs font-bold tracking-[.16em] uppercase">Who I am</p>
-          <div className="text-muted grid gap-4 text-[1.03rem] leading-8">
-            <p>
-              I work as a Software Engineer with a strong frontend core. In practice that means I
-              spend most of my time on product-facing systems built with React, Next.js, TypeScript
-              and modern JavaScript, but I also move comfortably into mobile delivery, backend
-              integration and release work when the product requires it. I am not limited to
-              assembling interfaces. I care about the engineering shape of the product: how the code
-              is structured, how reliable the flows are, and whether the system will still be easy
-              for a team to extend later.
-            </p>
-            <p>
-              My commercial experience comes from real product environments rather than isolated
-              demo work. I have worked inside existing codebases, shipped into live products,
-              handled refactoring alongside feature delivery, and collaborated with product teams
-              where design constraints, backend contracts, release pressure and maintenance all
-              matter at the same time. That is the environment where I work best.
+      <section className="grid gap-4">
+        <article className="border-line bg-surface border px-4 py-5 text-center max-sm:px-4 max-sm:py-5">
+          <div className="flex px-4">
+            <p className="text-quiet mb-2 text-[0.72rem] font-semibold tracking-[.16em] uppercase">
+              Who I am
             </p>
           </div>
-        </article>
+          <div className="text-muted grid gap-2.5 p-4 text-left text-[1rem] leading-[1.8]">
+            <p>
+              I work as a <strong className="text-fg font-semibold">Software Engineer</strong> with
+              a <strong className="text-fg font-semibold">strong frontend core</strong>. Most of my
+              day-to-day work is product-facing engineering with{' '}
+              <strong className="text-fg font-semibold">React</strong>,{' '}
+              <strong className="text-fg font-semibold">Next.js</strong>,{' '}
+              <strong className="text-fg font-semibold">TypeScript</strong> and modern{' '}
+              <strong className="text-fg font-semibold">JavaScript</strong>, but I also move
+              comfortably into <strong className="text-fg font-semibold">mobile delivery</strong>,{' '}
+              <strong className="text-fg font-semibold">backend integration</strong> and release
+              work when the product requires it.
+            </p>
+            <p>
+              My experience comes from{' '}
+              <strong className="text-fg font-semibold">live products</strong>, existing codebases
+              and teams that need software to keep evolving, not just look good once. I care about
+              the engineering shape of the product: how the code is structured, how reliable the
+              flows are and whether the system will still be easy for a team to extend later.
+            </p>
+          </div>
 
-        <div className="grid gap-5">
-          {aboutExpertise.map((item) => (
-            <article key={item.title} className="border-line bg-surface border p-8 max-sm:p-6">
-              <h2 className="text-lg font-semibold tracking-[-0.03em]">{item.title}</h2>
-              <p className="text-muted mt-3 text-sm leading-7">{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="grid gap-5 lg:grid-cols-[1.02fr_.98fr]">
-        <article className="border-line bg-surface border p-8 max-sm:p-6">
-          <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">
-            What I can own
-          </p>
-          <ul className="grid gap-3">
-            {aboutOwnershipAreas.map((item) => (
-              <li
-                key={item}
-                className="border-line text-muted bg-surface-2/35 border px-4 py-3 text-sm leading-7"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </article>
-
-        <article className="border-line bg-surface border p-8 max-sm:p-6">
-          <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">
-            Domain experience
-          </p>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {aboutDomainFocus.map((item) => (
-              <div
-                key={item}
-                className="border-line bg-surface-2/35 px-4 py-3 text-sm leading-7 font-medium"
-              >
-                {item}
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {aboutWhoIAmSignals.map((item) => (
+              <div key={item.title} className="border-line bg-surface-2/35 border p-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-accent shrink-0">{getSignalIcon(item.title)}</span>
+                  <p className="text-fg text-sm font-semibold">{item.title}</p>
+                </div>
+                <p className="text-muted mt-1.5 text-sm leading-7">{item.text}</p>
               </div>
             ))}
           </div>
         </article>
+
+        <div className="grid gap-4 lg:grid-cols-2">
+          {aboutExpertise.map((item) => (
+            <AboutCapabilityCard
+              key={item.title}
+              title={item.title}
+              summary={item.summary}
+              points={item.points}
+              tags={item.tags}
+              icon={getAboutIcon(item.icon)}
+            />
+          ))}
+        </div>
       </section>
 
-      <section className="border-line bg-surface border p-8 max-sm:p-6">
-        <div className="grid gap-8 lg:grid-cols-[.98fr_1.02fr]">
+      <section className="border-line bg-surface border p-6 max-sm:p-5">
+        <div className="grid items-start gap-6 lg:grid-cols-[.98fr_1.02fr]">
           <div>
             <p className="text-quiet mb-4 text-xs font-bold tracking-[.16em] uppercase">
               How I work
             </p>
-            <div className="text-muted grid gap-4 text-[1.03rem] leading-8">
+            <div className="text-muted grid max-w-3xl gap-3.5 text-[1rem] leading-[1.9]">
               <p>
-                As a Frontend Engineer and Frontend Developer, I care a lot about structure. I do
-                not see clean architecture as a ceremony or a folder exercise. For me, it means
-                clear ownership, small enough responsibilities, stable interfaces between modules,
-                and code that still makes sense six months later when the team needs to change it.
-                That matters in product development because speed without structure only moves
-                problems forward.
+                The main idea is simple:{' '}
+                <strong className="text-fg font-semibold">
+                  make the code easier to change, not just faster to ship
+                </strong>
+                . The best products I have worked on were not the ones with the most abstractions,
+                but the ones where the team could understand the system, extend it safely and keep
+                quality high under pressure.
               </p>
-              <p>
-                I usually work on products with non-trivial UI: dashboards, onboarding flows,
-                internal platforms, multi-step forms, realtime surfaces, subscription products and
-                mobile applications with a lot of state. In those systems, frontend architecture
-                matters because weak boundaries quickly turn into regressions, duplicated logic and
-                expensive rework. I prefer derived state over duplicated state, early returns over
-                nesting, and straightforward components over abstractions that look reusable but
-                hide business rules.
-              </p>
-              <p>
-                Performance optimization is part of implementation, not a final cleanup pass. I
-                think about rendering cost, network behavior, bundle weight, image handling, data
-                fetching and perceived speed while building the feature. The same applies to
-                accessibility. Keyboard behavior, semantics, focus management, color contrast and
-                readable content are basic product quality requirements. Good UX is not only a
-                design outcome; it depends on engineering decisions that keep the interface
-                responsive, understandable and predictable for real users.
-              </p>
-              <p>
-                I also spend a lot of time collaborating rather than coding in isolation. Working
-                well inside product teams means communicating tradeoffs clearly, translating design
-                intent into implementation details, and resolving backend constraints without drama.
-                With designers, I try to preserve the product idea while making states, edge cases
-                and responsiveness concrete. With backend developers, I care about API contracts,
-                failure states, pagination, authorization boundaries and realistic data shapes so
-                the frontend is not forced into brittle assumptions later.
-              </p>
-              <p>
-                AI-assisted development is part of modern engineering now, and I use it
-                pragmatically. It helps with iteration speed, code exploration, pattern discovery
-                and repetitive tasks. But AI does not remove the need for reasoning about product
-                behavior, performance, naming, boundaries, accessibility or long-term
-                maintainability. I am comfortable both using AI productively and cleaning up
-                AI-generated code when the output is not ready for production.
-              </p>
+            </div>
+
+            <div className="mt-5 grid gap-3.5">
+              {aboutWorkStyle.map((item) => (
+                <AboutWorkStyleCard
+                  key={item.title}
+                  title={item.title}
+                  summary={item.summary}
+                  points={item.points}
+                  icon={getAboutIcon(item.icon)}
+                />
+              ))}
             </div>
           </div>
 
-          <div className="grid gap-5">
+          <div className="grid gap-4 self-start">
             {aboutTechnologyGroups.map((group) => (
-              <article key={group.title} className="border-line bg-surface-2/35 border p-6">
+              <article key={group.title} className="border-line bg-surface-2/35 border p-5">
                 <p className="text-quiet mb-4 text-xs font-bold tracking-[.16em] uppercase">
                   {group.title}
                 </p>
@@ -268,7 +282,7 @@ export function AboutPage() {
                       key={item}
                       className="border-line bg-bg/55 flex items-center gap-3 border px-4 py-3"
                     >
-                      <TechIcon name={item} className="text-accent h-5 w-5" />
+                      <TechIcon name={item} className="text-accent h-4.5 w-4.5" />
                       <span className="text-sm font-medium">{item}</span>
                     </div>
                   ))}
@@ -276,19 +290,19 @@ export function AboutPage() {
               </article>
             ))}
 
-            <article className="border-line bg-surface border p-6">
+            <article className="border-line bg-surface border p-5">
               <p className="text-quiet mb-4 text-xs font-bold tracking-[.16em] uppercase">
                 Why React and Next.js
               </p>
               <p className="text-muted text-sm leading-7">
                 I chose React because it scales well from small interfaces to large product surfaces
                 when the component model is used with discipline. I chose Next.js because it gives a
-                strong production foundation for routing, rendering strategy, metadata, performance
-                work and deployment without fighting the React model.
+                strong production foundation for routing, rendering, metadata, performance and
+                deployment without fighting the React model.
               </p>
             </article>
 
-            <article className="bg-inverse text-inverse-fg p-6">
+            <article className="bg-inverse text-inverse-fg p-5">
               <p className="text-accent mb-3 text-xs font-bold tracking-[.16em] uppercase">
                 Next step
               </p>
