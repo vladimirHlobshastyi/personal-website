@@ -33,12 +33,12 @@ export function ImageCarousel({
 
   return (
     <figure className="border-line bg-surface shadow-card overflow-hidden border">
-      <figcaption className="border-line bg-surface-2/50 flex items-center justify-between gap-4 border-b px-5 py-3.5 max-sm:px-4">
+      <figcaption className="border-line bg-surface-2/50 flex items-center justify-between gap-4 border-b px-5 py-3.5 max-sm:flex-col max-sm:items-start max-sm:px-4">
         <span className="text-accent inline-flex items-center gap-3 text-[0.7rem] font-bold tracking-[.18em] uppercase before:block before:h-px before:w-7 before:bg-accent/50">
           {label}
         </span>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 max-sm:w-full max-sm:justify-between">
           {blurScreenshots && (
             <button
               type="button"
@@ -51,13 +51,13 @@ export function ImageCarousel({
             </button>
           )}
 
-          <span className="text-[0.72rem] font-bold tracking-[.12em] tabular-nums uppercase">
+          <span className="text-[0.72rem] font-bold tracking-[.12em] tabular-nums uppercase whitespace-nowrap">
             <span className="text-accent">{String(active + 1).padStart(2, '0')}</span>
             <span className="text-quiet"> / {String(allImages.length).padStart(2, '0')}</span>
           </span>
 
           {multiple && (
-            <div className="flex gap-2">
+            <div className="flex shrink-0 gap-2">
               <button
                 onClick={prev}
                 className="border-line text-fg hover:border-accent hover:text-accent grid h-9 w-9 place-items-center border transition-colors"

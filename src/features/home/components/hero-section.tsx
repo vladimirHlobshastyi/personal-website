@@ -30,18 +30,22 @@ export function HeroSection() {
           Software Engineer for web, mobile and AI products.
         </h1>
 
-        <p className="text-muted mt-7 max-w-[36rem] text-[1.0625rem] leading-[1.7]">
-          I&apos;m Vladimir Hlobchastyi — a Software Engineer with 5+ years of commercial
-          experience building fast, maintainable web applications with{' '}
-          <strong className="text-fg font-semibold">React</strong>,{' '}
-          <strong className="text-fg font-semibold">Next.js</strong> and{' '}
-          <strong className="text-fg font-semibold">TypeScript</strong>, backend services with
-          <strong className="text-fg font-semibold"> Node.js</strong>, and cross-platform mobile
-          apps with <strong className="text-fg font-semibold">React Native</strong>. I deliver
-          products end-to-end: implementation, AI system integration, deployment and release to
-          the web, the App Store and Google Play. I also rescue AI-generated and vibe-coded
-          codebases that need restored structure before they can reach production.
-        </p>
+        <div className="text-muted mt-7 grid max-w-[36rem] gap-4 text-[1.0625rem] leading-[1.7]">
+          <p>
+            I&apos;m Vladimir Hlobchastyi — a Software Engineer with 5+ years of commercial
+            experience building fast, maintainable web applications with{' '}
+            <strong className="text-fg font-semibold">React</strong>,{' '}
+            <strong className="text-fg font-semibold">Next.js</strong> and{' '}
+            <strong className="text-fg font-semibold">TypeScript</strong>, backend services with
+            <strong className="text-fg font-semibold"> Node.js</strong>, and cross-platform mobile
+            apps with <strong className="text-fg font-semibold">React Native</strong>.
+          </p>
+          <p>
+            I deliver products end-to-end: implementation, AI system integration, deployment and
+            release to the web, the App Store and Google Play. I also rescue AI-generated and
+            vibe-coded codebases that need restored structure before they can reach production.
+          </p>
+        </div>
 
         <div className="mt-9 flex flex-wrap gap-3">
           <Link
