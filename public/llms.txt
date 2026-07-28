@@ -1,17 +1,18 @@
-# Vladimir Hlobchastyi — Software Engineer
+# Vladimir Hlobchastyi — Senior Software Engineer
 
-> Software Engineer building production web, mobile and backend applications, AI-powered
-> systems and end-to-end product delivery. 5+ years of commercial experience across EdTech,
-> healthcare, real estate, logistics, e-commerce, social and realtime products. Available for
-> the right collaborations.
+> Senior Software Engineer building production web, mobile and AI-assisted products. 5+
+> years of commercial experience across EdTech, healthcare, real estate, logistics,
+> e-commerce, social and realtime products. Available for frontend architecture,
+> cross-platform delivery, AI project analysis, codebase audit, recovery and refactoring.
 
 ## About
 - **Name:** Vladimir Hlobchastyi
-- **Role:** Software Engineer / React Developer / Node.js Developer / React Native Developer
+- **Role:** Senior Software Engineer / React Developer / Node.js Developer / React Native Developer
 - **Location:** Remote · Europe-friendly hours
 - **Languages:** English (B2), Ukrainian (Native), Russian (Native)
 - **Availability:** Available for the right collaborations
 - **Delivery:** Web deployment, App Store release, Google Play release
+- **Resume:** /Volodymyr_Hlobchastyi_Senior_Software_Engineer_CV.pdf
 
 ## Core technologies
 - **Web:** React, Next.js, TypeScript, JavaScript, Tailwind CSS, TanStack Query, TanStack
@@ -70,6 +71,7 @@
 ## Contact
 - **Email:** vladimirhlobchastyi@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/vladimir-globchastyi/
+- **GitHub:** https://github.com/vladimirHlobshastyi
 - **Telegram:** https://t.me/Vladimir_Ua_dev
 - **X / Twitter:** https://x.com/Vladi_Dev_ua
 

@@ -1,9 +1,9 @@
 export const aboutSnapshot = [
-  ['Role', 'Software Engineer focused on frontend architecture and product delivery'],
-  ['Primary stack', 'React, Next.js, TypeScript, JavaScript, React Native'],
+  ['Role', 'Senior Software Engineer with a frontend core'],
+  ['Primary stack', 'React, Next.js, React Native, TypeScript, Node.js'],
   ['Commercial experience', '5+ years across product teams and existing codebases'],
   ['Platforms', 'Web, iOS and Android'],
-  ['Domains', 'Healthcare, EdTech, e-commerce, logistics, social and operations'],
+  ['Domains', 'Healthcare, EdTech, e-commerce, logistics, social, ops and realtime'],
   ['Collaboration', 'Design, frontend, backend and product collaboration'],
   ['Location', 'Remote, Europe-friendly hours'],
   ['Availability', 'Available for the right collaborations'],
@@ -13,7 +13,7 @@ export const aboutExpertise = [
   {
     title: 'Frontend architecture',
     summary:
-      'I design React and Next.js applications around clear boundaries, predictable state and code that stays easy to extend.',
+      'I design React and Next.js systems around clear boundaries, predictable state, and code that stays easy to extend.',
     points: [
       'Clear feature boundaries, reusable UI primitives and maintainable component structure.',
       'Data flow shaped for real product complexity, not only happy-path demos.',
@@ -24,7 +24,7 @@ export const aboutExpertise = [
   {
     title: 'Mobile development',
     summary:
-      'I build and maintain React Native products for iOS and Android, from shared TypeScript logic to release-ready flows.',
+      'I build and improve React Native products for iOS and Android, from shared TypeScript logic to release-ready flows.',
     points: [
       'Cross-platform product delivery with attention to device-specific behavior and performance.',
       'Comfortable with release readiness, app stability and long-term support.',
@@ -33,25 +33,25 @@ export const aboutExpertise = [
     icon: 'mobile',
   },
   {
-    title: 'Backend integration',
+    title: 'AI project analysis and refactoring',
     summary:
-      'I am comfortable beyond the frontend: APIs, auth, payments, realtime flows, maps, monitoring and deployment.',
+      'I review AI-generated codebases, identify structural risks, and turn unstable implementations into maintainable product systems.',
     points: [
-      'REST and GraphQL integration with realistic contracts, failure states and rollout concerns.',
-      'Comfortable wiring product UI into the systems that make it work in production.',
+      'Codebase audit, targeted support, and focused refactoring instead of blind cleanup.',
+      'Comfortable restoring structure while keeping delivery moving toward production.',
     ],
-    tags: ['GraphQL', 'Stripe', 'WebRTC'],
+    tags: ['AI audit', 'Refactoring', 'Production hardening'],
     icon: 'integration',
   },
   {
-    title: 'AI-assisted development',
+    title: 'Integrations and product systems',
     summary:
-      'I use AI to accelerate research, scaffolding and repetitive work, but quality still depends on engineering judgment.',
+      'I work confidently across APIs, auth, payments, realtime flows, maps, monitoring, and release processes.',
     points: [
-      'AI helps with speed, but architecture, naming and correctness still need an experienced engineer.',
-      'Comfortable stabilizing AI-generated code before it reaches production.',
+      'REST and GraphQL integration with realistic contracts, failure states, and rollout concerns.',
+      'Comfortable wiring product UI into the systems that make it work in production.',
     ],
-    tags: ['AI systems', 'Code rescue', 'Maintainability'],
+    tags: ['GraphQL', 'Stripe', 'WebRTC'],
     icon: 'ai',
   },
 ] as const;
@@ -67,7 +67,7 @@ export const aboutTechnologyGroups = [
   },
   {
     title: 'Product integrations',
-    items: ['GraphQL', 'Stripe', 'Mapbox', 'WebRTC', 'Sentry', 'Vercel'],
+    items: ['GraphQL', 'Stripe', 'Mapbox', 'WebRTC', 'Sentry', 'OpenAI'],
   },
 ] as const;
 
@@ -77,16 +77,12 @@ export const aboutWhoIAmSignals = [
     text: 'Most of my work is product-facing engineering built with React, Next.js, TypeScript and modern JavaScript.',
   },
   {
-    title: 'Commercial product experience',
-    text: 'I work in live products and existing codebases, not only greenfield demos or isolated landing pages.',
+    title: 'Cross-platform delivery',
+    text: 'I work across web, mobile, integrations, and release flows when the product needs end-to-end execution.',
   },
   {
-    title: 'Cross-boundary delivery',
-    text: 'I can move between frontend, mobile, backend integration, release work and product collaboration when needed.',
-  },
-  {
-    title: 'Maintainability matters',
-    text: 'I optimize for code that stays understandable under product pressure, team growth and future changes.',
+    title: 'AI codebase recovery',
+    text: 'I can assess AI-generated code, find risky structure, support delivery, and refactor unstable areas into maintainable systems.',
   },
 ] as const;
 
@@ -104,7 +100,7 @@ export const aboutWorkStyle = [
   {
     title: 'Complex product UI',
     summary:
-      'I am most useful on non-trivial interfaces: dashboards, onboarding, forms, maps, subscription flows and realtime surfaces.',
+      'I am most useful on non-trivial interfaces: dashboards, onboarding, forms, maps, subscriptions, and realtime surfaces.',
     points: [
       'I care about state ownership, edge cases and UI logic staying manageable.',
       'The goal is not just shipping screens, but shipping stable product behavior.',
@@ -127,18 +123,8 @@ export const aboutWorkStyle = [
       'I work closely with designers, backend engineers and product teams to keep decisions concrete and implementable.',
     points: [
       'With designers, I focus on states, edge cases, responsiveness and interaction quality.',
-      'With backend engineers, I focus on contracts, failure states, pagination and data shape realism.',
+      'With backend engineers, I focus on contracts, failure states, and realistic data flow.',
     ],
     icon: 'collaboration',
-  },
-  {
-    title: 'AI-assisted development',
-    summary:
-      'I use AI pragmatically for speed and exploration while keeping architecture and correctness under control.',
-    points: [
-      'AI can accelerate execution, but it does not replace engineering judgment.',
-      'I am comfortable cleaning up AI-generated code when it lacks structure or production quality.',
-    ],
-    icon: 'ai',
   },
 ] as const;

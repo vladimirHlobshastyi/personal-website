@@ -32,7 +32,7 @@ export function SiteHeader() {
               Vladimir Hlobchastyi
             </span>
             <span className="text-quiet mt-1 text-[0.6875rem] font-semibold tracking-[.12em] uppercase">
-              Software Engineer
+              Senior Software Engineer
             </span>
           </span>
         </Link>

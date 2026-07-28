@@ -16,34 +16,33 @@ export function HeroSection() {
             Vladimir Hlobchastyi
           </strong>
           <span className="text-[0.8125rem] font-medium text-white/60">
-            Software Engineer · Web · Mobile · AI Systems
+            Senior Software Engineer · Web · Mobile · AI
           </span>
         </div>
       </div>
 
       <div>
         <div className="text-accent before:bg-accent/50 mb-7 inline-flex items-center gap-3 text-[0.6875rem] font-bold tracking-[.14em] uppercase before:block before:h-px before:w-10">
-          Software Engineer · Available for collaboration
+          Senior Software Engineer · Open to collaboration
         </div>
 
         <h1 className="tracking-tightest text-[clamp(3rem,7vw,5.75rem)] leading-[.9] font-semibold">
-          Software Engineer for web, mobile and AI products.
+          Senior Software Engineer for web, mobile, and AI-assisted products.
         </h1>
 
         <div className="text-muted mt-7 grid max-w-[36rem] gap-4 text-[1.0625rem] leading-[1.7]">
           <p>
-            I&apos;m Vladimir Hlobchastyi — a Software Engineer with 5+ years of commercial
-            experience building fast, maintainable web applications with{' '}
-            <strong className="text-fg font-semibold">React</strong>,{' '}
-            <strong className="text-fg font-semibold">Next.js</strong> and{' '}
-            <strong className="text-fg font-semibold">TypeScript</strong>, backend services with
-            <strong className="text-fg font-semibold"> Node.js</strong>, and cross-platform mobile
-            apps with <strong className="text-fg font-semibold">React Native</strong>.
+            I have 5+ years of commercial experience building and stabilizing production products
+            with <strong className="text-fg font-semibold">React</strong>,{' '}
+            <strong className="text-fg font-semibold">Next.js</strong>,{' '}
+            <strong className="text-fg font-semibold">React Native</strong>,{' '}
+            <strong className="text-fg font-semibold">TypeScript</strong>, and{' '}
+            <strong className="text-fg font-semibold">Node.js</strong>.
           </p>
           <p>
-            I deliver products end-to-end: implementation, AI system integration, deployment and
-            release to the web, the App Store and Google Play. I also rescue AI-generated and
-            vibe-coded codebases that need restored structure before they can reach production.
+            My strongest areas are frontend architecture, cross-platform delivery, and AI project
+            analysis: auditing AI-generated codebases, identifying structural risks, supporting
+            ongoing delivery, and refactoring unstable systems into production-ready products.
           </p>
         </div>
 

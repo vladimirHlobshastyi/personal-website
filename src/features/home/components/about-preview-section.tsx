@@ -12,7 +12,7 @@ const pillars = [
   },
   {
     title: 'Backend-aware execution',
-    text: 'API contracts, auth, payments, realtime features, maps, monitoring and delivery across product boundaries.',
+    text: 'API contracts, auth, payments, realtime features, maps, and product integrations that have to work in production.',
   },
 ];
 
@@ -25,14 +25,14 @@ export function AboutPreviewSection() {
             About
           </p>
           <h2 className="tracking-tightest max-w-3xl text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.02] font-semibold">
-            Frontend engineering that makes sense to teams, recruiters and modern search systems.
+            Frontend-first engineering for complex product teams.
           </h2>
         </div>
         <div>
           <p className="text-muted text-lg leading-8">
-            I work as a Software Engineer across web, mobile and supporting backend concerns, with a
-            strong focus on frontend architecture, maintainability, accessibility, performance and
-            product clarity.
+            I build production web and mobile products with a strong frontend core, and I work
+            confidently across integrations, release flows, and AI-generated codebase recovery when
+            the product needs it.
           </p>
           <Link
             href="/about"

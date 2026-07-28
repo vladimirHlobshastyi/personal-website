@@ -4,13 +4,14 @@ import { CONTACTS } from '@/config/contacts';
 export const metadata = {
   title: 'Contact Vladimir Hlobchastyi',
   description:
-    'Contact Vladimir Hlobchastyi for web, mobile, backend and AI systems work. Available for the right collaborations, including deployment and store release; fastest reply by email or Telegram.',
+    'Contact Vladimir Hlobchastyi for senior web, mobile, and AI codebase work. Fastest reply by email or Telegram.',
   alternates: { canonical: '/contact' },
 };
 
 const socials = [
   { name: 'email', ...CONTACTS.email },
   { name: 'linkedin', ...CONTACTS.linkedin },
+  { name: 'github', ...CONTACTS.github },
   { name: 'telegram', ...CONTACTS.telegram },
   { name: 'x', ...CONTACTS.x },
 ];
@@ -27,7 +28,7 @@ const quickFacts = [
   ['Response time', 'Within 24 hours'],
 ];
 
-const workFocus = ['Web / Backend', 'React Native', 'AI Systems', 'Deployment & Release'];
+const workFocus = ['Web and Mobile', 'Frontend Architecture', 'AI Codebase Audit', 'Refactoring and Recovery'];
 
 export default function ContactPage() {
   return (
@@ -38,12 +39,16 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="tracking-tightest max-w-3xl text-[clamp(2.5rem,6vw,4.75rem)] leading-[.92] font-semibold">
-            Contact for web, mobile, backend and AI product work.
+            Contact for senior web, mobile, and AI codebase work.
           </h1>
           <p className="text-inverse-fg/70 mt-5 max-w-2xl text-lg leading-8">
-            I work on web, mobile and backend products: React, Next.js, Node.js, React Native,
-            dashboards, AI integrations, deployment and store release. The fastest response is by
-            email or Telegram.
+            I help teams build, stabilize, and refactor production products with React, Next.js,
+            React Native, TypeScript, and Node.js.
+          </p>
+          <p className="text-inverse-fg/70 mt-4 max-w-2xl text-lg leading-8">
+            I also analyze AI-generated codebases, identify structural risks, support ongoing
+            delivery, and refactor unstable systems into production-ready software. The fastest
+            response is by email or Telegram.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">
@@ -71,7 +76,7 @@ export default function ContactPage() {
             Best ways to reach me
           </p>
           <p className="text-muted mb-6 text-sm leading-7">
-            Use any option below. External profiles open in a new tab so the portfolio stays open.
+            Email or Telegram usually get the fastest reply.
           </p>
           <div className="grid gap-3">
             {socials.map((social) => (
@@ -97,6 +102,14 @@ export default function ContactPage() {
               </a>
             ))}
           </div>
+          <a
+            href={CONTACTS.resume.href}
+            download
+            className="bg-fg text-bg mt-6 inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5"
+          >
+            {CONTACTS.resume.label}
+            <ArrowIcon className="h-4 w-4 -rotate-45" />
+          </a>
         </div>
       </section>
 
@@ -108,7 +121,7 @@ export default function ContactPage() {
           <div className="grid gap-4 md:grid-cols-2">
             <div className="border-line bg-surface-2/35 border p-4">
               <h2 className="text-lg font-semibold tracking-[-0.03em]">
-                Product UI that has to work
+                Complex product interfaces
               </h2>
               <p className="text-muted mt-2 text-sm leading-7">
                 SaaS dashboards, admin panels, complex forms, maps, onboarding and multi-step
@@ -116,10 +129,12 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="border-line bg-surface-2/35 border p-4">
-              <h2 className="text-lg font-semibold tracking-[-0.03em]">Delivery and release</h2>
+              <h2 className="text-lg font-semibold tracking-[-0.03em]">
+                AI project recovery
+              </h2>
               <p className="text-muted mt-2 text-sm leading-7">
-                Web, backend and mobile delivery with deployment, App Store release and Google Play
-                publication when the product is ready.
+                Codebase audit, structural cleanup, focused support, refactoring, and production
+                hardening for AI-generated or AI-assisted projects.
               </p>
             </div>
           </div>

@@ -1,11 +1,12 @@
-import Link from 'next/link';
 import { CONTACTS } from '@/config/contacts';
 
 const links = [
   { label: CONTACTS.email.label, href: CONTACTS.email.href, external: true },
   { label: CONTACTS.linkedin.label, href: CONTACTS.linkedin.href, external: true },
+  { label: CONTACTS.github.label, href: CONTACTS.github.href, external: true },
   { label: CONTACTS.telegram.label, href: CONTACTS.telegram.href, external: true },
   { label: CONTACTS.x.label, href: CONTACTS.x.href, external: true },
+  { label: CONTACTS.resume.label, href: CONTACTS.resume.href, external: false, download: true },
 ];
 
 export function SiteFooter() {
@@ -21,8 +22,8 @@ export function SiteFooter() {
               Have a product to build? Let&apos;s talk.
             </h2>
             <p className="text-inverse-fg/60 mt-6 max-w-xl text-lg leading-8">
-              Available for the right collaborations — web platforms, mobile apps, dashboards and
-              complex product interfaces.
+              Senior web, mobile, and AI codebase support for teams that need clean execution and
+              less chaos.
             </p>
           </div>
 
@@ -41,13 +42,14 @@ export function SiteFooter() {
                   {link.label}
                 </a>
               ) : (
-                <Link
+                <a
                   key={link.label}
                   className="text-inverse-fg/90 hover:border-accent hover:text-accent border border-white/12 px-5 py-3 text-sm font-bold transition-colors"
                   href={link.href}
+                  download
                 >
                   {link.label}
-                </Link>
+                </a>
               ),
             )}
           </div>
@@ -55,7 +57,7 @@ export function SiteFooter() {
 
         <div className="text-inverse-fg/40 mt-16 flex items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs font-medium tracking-[.04em] max-sm:flex-col max-sm:items-start max-sm:gap-2">
           <span>© {new Date().getFullYear()} Vladimir Hlobchastyi</span>
-          <span>Software Engineer · React · Next.js · Node.js · React Native</span>
+          <span>Senior Software Engineer · React · Next.js · Node.js · React Native</span>
         </div>
       </div>
     </footer>

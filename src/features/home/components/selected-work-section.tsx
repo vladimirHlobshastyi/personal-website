@@ -28,9 +28,8 @@ export function SelectedWorkSection() {
           Selected work
         </h2>
         <p className="text-muted text-lg leading-8">
-          Commercial web, mobile and product systems built as a Software Engineer — from
-          rescuing AI-generated and vibe-coded codebases to launching apps across web, backend,
-          iOS and Android.
+          Production web, mobile, and product systems across complex UI, real-time workflows, and
+          AI-generated codebase recovery.
         </p>
       </div>
 

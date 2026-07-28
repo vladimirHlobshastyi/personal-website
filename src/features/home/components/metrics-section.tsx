@@ -1,7 +1,7 @@
 const metrics = [
   ['5+ years', 'Commercial product engineering'],
-  ['10+ products', 'Shipped to web, iOS and Android'],
-  ['6 domains', 'EdTech, health, logistics, social, ops & realtime'],
+  ['10+ products', 'Built or stabilized across web, iOS, and Android'],
+  ['AI project analysis', 'Audit, recovery, support, and refactoring'],
 ];
 
 export function MetricsSection() {

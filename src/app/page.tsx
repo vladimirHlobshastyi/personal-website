@@ -26,7 +26,7 @@ export default function HomePage() {
         '@type': 'ProfilePage',
         '@id': `${SITE.url}/#profile`,
         url: SITE.url,
-        name: `${SITE.name} — Software Engineer`,
+        name: `${SITE.name} — Senior Software Engineer`,
         inLanguage: 'en',
         isPartOf: { '@id': `${SITE.url}/#website` },
         mainEntity: { '@id': `${SITE.url}/#person` },

@@ -25,7 +25,7 @@ import {
 import { AboutWorkStyleCard } from './components/about-work-style-card';
 
 const roleTags = [
-  'Software Engineer',
+  'Senior Software Engineer',
   'Frontend Engineer',
   'React Developer',
   'Next.js Developer',
@@ -87,11 +87,9 @@ function getSignalIcon(title: string) {
   switch (title) {
     case 'Strong frontend core':
       return <LayeredBlocksIcon className={className} />;
-    case 'Commercial product experience':
-      return <BriefcaseIcon className={className} />;
-    case 'Cross-boundary delivery':
+    case 'Cross-platform delivery':
       return <ConnectedNodesIcon className={className} />;
-    case 'Maintainability matters':
+    case 'AI codebase recovery':
       return <CheckShieldIcon className={className} />;
     default:
       return <LayeredBlocksIcon className={className} />;
@@ -110,10 +108,18 @@ export function AboutPage() {
         url: aboutUrl,
         name: 'About Vladimir Hlobchastyi',
         description:
-          'About Vladimir Hlobchastyi, a Software Engineer focused on frontend architecture, product development, mobile delivery and backend integration.',
+          'About Vladimir Hlobchastyi, a Senior Software Engineer focused on frontend architecture, mobile delivery, and AI-generated codebase recovery.',
         isPartOf: { '@id': `${SITE.url}/#website` },
         about: { '@id': `${SITE.url}/#person` },
         mainEntity: { '@id': `${SITE.url}/#person` },
+      },
+      {
+        '@type': 'ProfilePage',
+        '@id': `${aboutUrl}#profile`,
+        url: aboutUrl,
+        name: 'Vladimir Hlobchastyi',
+        mainEntity: { '@id': `${SITE.url}/#person` },
+        isPartOf: { '@id': `${SITE.url}/#website` },
       },
       {
         '@type': 'BreadcrumbList',
@@ -138,17 +144,17 @@ export function AboutPage() {
             About
           </p>
           <h1 className="tracking-tightest max-w-4xl text-[clamp(2.35rem,5.1vw,4.2rem)] leading-[.95] font-semibold">
-            Frontend-focused Software Engineer for web, mobile and product delivery.
+            Senior Software Engineer with a frontend core and strong product delivery experience.
           </h1>
           <div className="mt-5 max-w-3xl space-y-3.5 text-[1rem] leading-[1.9] text-white/74">
             <p>
-              I am Vladimir Hlobchastyi, a Software Engineer with 5+ years of commercial experience
-              across web development, mobile development, backend integration and product delivery.
+              I am a Senior Software Engineer with 5+ years of commercial experience building and
+              stabilizing production web and mobile products.
             </p>
             <p>
-              My core is frontend engineering with React, Next.js, TypeScript and modern JavaScript,
-              but I also work across mobile, backend integration, deployment and release when the
-              product needs end-to-end execution.
+              My core is frontend engineering with React, Next.js, TypeScript, and modern
+              JavaScript, but I also work across mobile delivery, backend integration, release
+              flows, and AI-assisted product work when end-to-end execution is needed.
             </p>
           </div>
 
@@ -192,23 +198,20 @@ export function AboutPage() {
           </div>
           <div className="text-muted grid gap-2.5 p-4 text-left text-[1rem] leading-[1.8]">
             <p>
-              I work as a <strong className="text-fg font-semibold">Software Engineer</strong> with
-              a <strong className="text-fg font-semibold">strong frontend core</strong>. Most of my
-              day-to-day work is product-facing engineering with{' '}
+              Most of my work is in <strong className="text-fg font-semibold">real products</strong>{' '}
+              with existing codebases, complex UI, and long-term delivery needs. I am strongest
+              where teams need clear frontend architecture, reliable execution, and code that
+              remains maintainable as the system grows.
+            </p>
+            <p>
+              I have a <strong className="text-fg font-semibold">strong frontend core</strong> with{' '}
               <strong className="text-fg font-semibold">React</strong>,{' '}
               <strong className="text-fg font-semibold">Next.js</strong>,{' '}
               <strong className="text-fg font-semibold">TypeScript</strong> and modern{' '}
-              <strong className="text-fg font-semibold">JavaScript</strong>, but I also move
-              comfortably into <strong className="text-fg font-semibold">mobile delivery</strong>,{' '}
-              <strong className="text-fg font-semibold">backend integration</strong> and release
-              work when the product requires it.
-            </p>
-            <p>
-              My experience comes from{' '}
-              <strong className="text-fg font-semibold">live products</strong>, existing codebases
-              and teams that need software to keep evolving, not just look good once. I care about
-              the engineering shape of the product: how the code is structured, how reliable the
-              flows are and whether the system will still be easy for a team to extend later.
+              <strong className="text-fg font-semibold">JavaScript</strong>, and I also work well
+              with AI-heavy or AI-generated projects: assessing code quality, finding structural
+              risks, supporting ongoing development, and refactoring unstable areas into
+              production-ready systems.
             </p>
           </div>
 
@@ -251,9 +254,8 @@ export function AboutPage() {
                 <strong className="text-fg font-semibold">
                   make the code easier to change, not just faster to ship
                 </strong>
-                . The best products I have worked on were not the ones with the most abstractions,
-                but the ones where the team could understand the system, extend it safely and keep
-                quality high under pressure.
+                . I prefer explicit boundaries, predictable data flow, and practical architecture
+                over clever abstractions.
               </p>
             </div>
 
@@ -290,28 +292,14 @@ export function AboutPage() {
               </article>
             ))}
 
-            <article className="border-line bg-surface border p-5">
-              <p className="text-quiet mb-4 text-xs font-bold tracking-[.16em] uppercase">
-                Why React and Next.js
-              </p>
-              <p className="text-muted text-sm leading-7">
-                I chose React because it scales well from small interfaces to large product surfaces
-                when the component model is used with discipline. I chose Next.js because it gives a
-                strong production foundation for routing, rendering, metadata, performance and
-                deployment without fighting the React model.
-              </p>
-            </article>
-
             <article className="bg-inverse text-inverse-fg p-5">
               <p className="text-accent mb-3 text-xs font-bold tracking-[.16em] uppercase">
                 Next step
               </p>
               <p className="text-inverse-fg/74 text-sm leading-7">
-                I am looking for strong teams, useful products and ambitious frontend or
-                cross-functional product work. I am a good fit for companies that need a React
-                Developer, Next.js Developer, TypeScript Developer, React Native Developer or more
-                broadly a Software Engineer who can ship across boundaries without overcomplicating
-                the codebase.
+                I am a good fit for teams that need a Senior Software Engineer who can build strong
+                frontend systems, ship across web and mobile, and bring structure to AI-generated
+                or fast-moving product codebases without overcomplicating them.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
                 <Link

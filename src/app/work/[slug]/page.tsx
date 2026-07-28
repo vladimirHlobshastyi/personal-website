@@ -121,7 +121,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         image: coverUrl,
         keywords: [...(project.keywords ?? []), ...project.stack].join(', '),
         author: { '@type': 'Person', '@id': `${SITE.url}/#person`, name: SITE.name },
-        offers: { '@type': 'Offer', availability: 'https://schema.org/InStock' },
       }
     : null;
 

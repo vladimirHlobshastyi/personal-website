@@ -9,6 +9,11 @@ export const CONTACTS = {
     value: 'linkedin.com/in/vladimir-globchastyi',
     href: 'https://www.linkedin.com/in/vladimir-globchastyi/',
   },
+  github: {
+    label: 'GitHub',
+    value: 'github.com/vladimirHlobshastyi',
+    href: 'https://github.com/vladimirHlobshastyi',
+  },
   telegram: {
     label: 'Telegram',
     value: '@Vladimir_Ua_dev',
@@ -18,5 +23,10 @@ export const CONTACTS = {
     label: 'X',
     value: '@Vladi_Dev_ua',
     href: 'https://x.com/Vladi_Dev_ua',
+  },
+  resume: {
+    label: 'Download CV',
+    value: 'Volodymyr_Hlobchastyi_Senior_Software_Engineer_CV.pdf',
+    href: '/Volodymyr_Hlobchastyi_Senior_Software_Engineer_CV.pdf',
   },
 } as const;

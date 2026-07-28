@@ -3,20 +3,20 @@ import { ArrowIcon } from '@/components/ui';
 
 const services = [
   {
-    title: 'End-to-end product delivery',
-    text: 'From idea to production — product logic, implementation, deployment and release to web, App Store and Google Play.',
+    title: 'Frontend architecture',
+    text: 'React and Next.js applications built to stay clear, maintainable, and scalable in real product teams.',
   },
   {
-    title: 'AI project rescue',
-    text: 'I stabilize, refactor and restore structure in AI-generated and vibe-coded codebases until they become maintainable production software.',
+    title: 'Web and mobile delivery',
+    text: 'Production delivery across web, iOS, and Android with React, Next.js, React Native, and TypeScript.',
   },
   {
-    title: 'Features, support & fixes',
-    text: 'Join an existing team to ship new features, fix what is broken and bring apps to a healthy, releasable state.',
+    title: 'AI project analysis and recovery',
+    text: 'Audit AI-generated codebases, identify weak architecture and risky areas, then stabilize and refactor them for production use.',
   },
   {
-    title: 'AI systems & integrations',
-    text: 'AI system integration, realtime (WebRTC, sockets), payments, maps, backend workflows and production rollout wired in when the product needs them.',
+    title: 'Integrations and product systems',
+    text: 'Real-time flows, maps, payments, auth, analytics, and backend-aware product delivery when the product needs it.',
   },
 ];
 
@@ -29,7 +29,7 @@ export function ServicesSection() {
             What I do
           </p>
           <h2 className="tracking-tightest max-w-2xl text-[clamp(2.25rem,5vw,3.625rem)] leading-[1.04] font-semibold">
-            Products built end-to-end — and rescued when they&apos;re on fire.
+            Senior product delivery without bloated architecture.
           </h2>
         </div>
         <Link

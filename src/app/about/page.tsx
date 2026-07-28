@@ -5,7 +5,7 @@ import { AboutPage } from '@/features/about';
 export const metadata: Metadata = {
   title: 'About Vladimir Hlobchastyi',
   description:
-    'About Vladimir Hlobchastyi, a Software Engineer specializing in frontend architecture, React, Next.js, TypeScript, React Native, product development and backend integration.',
+    'About Vladimir Hlobchastyi, a Senior Software Engineer focused on frontend architecture, React, Next.js, TypeScript, React Native, and AI-generated codebase recovery.',
   keywords: [
     'Software Engineer',
     'Frontend Engineer',
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     url: `${SITE.url}/about`,
     title: 'About Vladimir Hlobchastyi',
     description:
-      'Software Engineer focused on maintainable frontend systems, mobile delivery, backend integration and product engineering.',
+      'Senior Software Engineer focused on frontend systems, mobile delivery, and AI-generated codebase recovery.',
     images: [{ url: '/og.webp', width: 1200, height: 630, alt: 'Vladimir Hlobchastyi — About' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Vladimir Hlobchastyi',
     description:
-      'Software Engineer focused on React, Next.js, TypeScript, React Native and maintainable product systems.',
+      'Senior Software Engineer focused on React, Next.js, TypeScript, React Native, and production-ready product systems.',
     images: ['/og.webp'],
   },
 };

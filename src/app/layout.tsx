@@ -63,7 +63,7 @@ const jsonLd = {
       name: SITE.name,
       givenName: 'Vladimir',
       familyName: 'Hlobchastyi',
-      jobTitle: 'Software Engineer',
+      jobTitle: 'Senior Software Engineer',
       description: SITE.description,
       url: SITE.url,
       image: `${SITE.url}/og.webp`,
@@ -72,6 +72,12 @@ const jsonLd = {
       knowsAbout: [...SITE.knowsAbout],
       knowsLanguage: ['en', 'uk', 'ru'],
       worksFor: { '@type': 'Organization', name: 'Independent / Freelance' },
+      subjectOf: {
+        '@type': 'CreativeWork',
+        name: CONTACTS.resume.label,
+        url: `${SITE.url}${CONTACTS.resume.href}`,
+        encodingFormat: 'application/pdf',
+      },
     },
     {
       '@type': 'WebSite',
