@@ -1,13 +1,19 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowIcon } from '@/components/ui';
-import { posts, ROUTES, SITE } from '@/constants';
+import { posts, ROUTES } from '@/constants';
 import { getPostBySlug, getPostReadMin } from '@/utils';
 import { PostBody } from '../_components/post-body';
 import { PostCard } from '../_components/post-card';
 import { PostHero } from '../_components/post-hero';
 import { ShareRow } from '../_components/share-row';
 import { BLOG_RELATED_POST_LIMIT } from '../_constants/blog.constants';
+import {
+  createPostJsonLd,
+  createPostMetadata,
+  getPostUrl,
+  getRelatedPosts,
+} from '../_utils/blog-page';
 
 type PostPageProps = {
   params: Promise<{ slug: string }>;
@@ -19,30 +25,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PostPageProps) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
-  if (!post) return {};
-
-  const url = `${SITE.url}${ROUTES.blog}/${post.slug}`;
-  const title = post.title;
-  const description = post.description;
-
-  return {
-    title,
-    description,
-    keywords: [...post.tags, 'Vladimir Hlobchastyi', 'Software Engineer'],
-    alternates: { canonical: `${ROUTES.blog}/${post.slug}` },
-    openGraph: {
-      type: 'article',
-      url,
-      title,
-      description,
-      // opengraph-image.tsx beside this file generates the actual image.
-      publishedTime: post.publishedAt,
-      authors: [SITE.name],
-      tags: post.tags,
-    },
-    twitter: { card: 'summary_large_image', title, description, creator: '@Vladi_Dev_ua' },
-  };
+  return createPostMetadata(getPostBySlug(slug));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
@@ -50,40 +33,12 @@ export default async function PostPage({ params }: PostPageProps) {
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const url = `${SITE.url}${ROUTES.blog}/${post.slug}`;
+  const url = getPostUrl(post.slug);
   const readMin = getPostReadMin(post);
-
-  const breadcrumb = {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.url}${ROUTES.blog}` },
-      { '@type': 'ListItem', position: 3, name: post.title, item: url },
-    ],
-  };
-
-  const blogPosting = {
-    '@type': 'BlogPosting',
-    '@id': `${url}#blogposting`,
-    mainEntityOfPage: url,
-    headline: post.title,
-    description: post.description,
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    timeRequired: `PT${readMin}M`,
-    keywords: post.tags.join(', '),
-    image: `${SITE.url}${post.cover}`,
-    url,
-    author: { '@type': 'Person', '@id': `${SITE.url}/#person`, name: SITE.name },
-    publisher: { '@id': `${SITE.url}/#person` },
-  };
-
-  const jsonLd = { '@context': 'https://schema.org', '@graph': [breadcrumb, blogPosting] };
+  const jsonLd = createPostJsonLd(post, readMin);
 
   // Pick up to 2 "read next" posts that aren't the current one.
-  const readNext = posts
-    .filter((candidate) => candidate.slug !== post.slug)
-    .slice(0, BLOG_RELATED_POST_LIMIT);
+  const readNext = getRelatedPosts(posts, post.slug, BLOG_RELATED_POST_LIMIT);
 
   return (
     <main>

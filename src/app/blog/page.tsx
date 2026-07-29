@@ -1,56 +1,11 @@
-import { posts, ROUTES, SITE } from '@/constants';
+import { posts } from '@/constants';
 import { PostCard } from './_components/post-card';
+import { blogIndexMetadata, createBlogIndexJsonLd } from './_utils/blog-page';
 
-export const metadata = {
-  title: 'Blog — Practical software notes',
-  description:
-    'Practical notes from Vladimir Hlobchastyi on building, improving and shipping software products.',
-  keywords: [
-    'React blog',
-    'Next.js blog',
-    'React Native blog',
-    'TypeScript',
-    'AI engineering',
-    'Software engineering',
-    'Portfolio',
-    'Web Application Development',
-    'Mobile App Development',
-  ],
-  alternates: { canonical: ROUTES.blog },
-  openGraph: {
-    type: 'website',
-    url: `${SITE.url}${ROUTES.blog}`,
-    title: 'Blog — Vladimir Hlobchastyi',
-    description: 'Practical notes on building, improving and shipping software products.',
-    images: [{ url: '/og.webp', width: 1200, height: 630, alt: 'Vladimir Hlobchastyi — Blog' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Blog — Vladimir Hlobchastyi',
-    description: 'Practical notes on building, improving and shipping software products.',
-    images: ['/og.webp'],
-  },
-};
+export const metadata = blogIndexMetadata;
 
 export default function BlogIndexPage() {
-  const blogLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: 'Vladimir Hlobchastyi — Blog',
-    url: `${SITE.url}${ROUTES.blog}`,
-    description: metadata.description,
-    author: { '@type': 'Person', '@id': `${SITE.url}/#person`, name: SITE.name },
-    blogPost: posts.map((post) => ({
-      '@type': 'BlogPosting',
-      headline: post.title,
-      description: post.description,
-      url: `${SITE.url}${ROUTES.blog}/${post.slug}`,
-      datePublished: post.publishedAt,
-      author: { '@type': 'Person', '@id': `${SITE.url}/#person` },
-      image: `${SITE.url}${post.cover}`,
-      keywords: post.tags.join(', '),
-    })),
-  };
+  const blogLd = createBlogIndexJsonLd(posts);
 
   return (
     <main>

@@ -1,57 +1,12 @@
 import { ConfidentialityNotice } from '@/components/features';
-import { projects, ROUTES, SITE } from '@/constants';
+import { projects } from '@/constants';
 import { WorkGallery } from './_components/work-gallery';
+import { createWorkCollectionJsonLd, workIndexMetadata } from './_utils/work-page';
 
-export const metadata = {
-  title: 'Selected Web & Mobile Projects',
-  description:
-    'Selected case studies across social media, e-commerce, mental health, logistics, real estate, enterprise operations and realtime products.',
-  keywords: [
-    'Software Engineer',
-    'React Developer',
-    'Next.js Developer',
-    'Node.js Developer',
-    'React Native Developer',
-    'TypeScript Developer',
-    'Web Application Development',
-    'Backend Development',
-    'Mobile App Development',
-  ],
-  alternates: { canonical: ROUTES.work },
-  openGraph: {
-    type: 'website',
-    url: `${SITE.url}${ROUTES.work}`,
-    title: 'Selected Web & Mobile Projects',
-    description:
-      'Case studies across social media, e-commerce, mental health, logistics, real estate, enterprise operations and realtime products.',
-    images: [{ url: '/og.webp', width: 1200, height: 630, alt: 'Vladimir Hlobchastyi — Work' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Selected Web & Mobile Projects',
-    description:
-      'Selected product case studies built with React, Next.js, React Native and TypeScript.',
-    images: ['/og.webp'],
-  },
-};
+export const metadata = workIndexMetadata;
 
 export default function WorkPage() {
-  const collectionLd = {
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: 'Selected projects',
-    description:
-      'Selected web and mobile product case studies by Vladimir Hlobchastyi.',
-    url: `${SITE.url}${ROUTES.work}`,
-    hasPart: projects.map((project) => ({
-      '@type': 'CreativeWork',
-      name: project.title,
-      headline: `${project.title} — ${project.category}`,
-      url: `${SITE.url}${ROUTES.work}/${project.slug}`,
-      keywords: [...(project.keywords ?? []), ...project.stack].join(', '),
-      author: { '@type': 'Person', '@id': `${SITE.url}/#person` },
-    })),
-  };
+  const collectionLd = createWorkCollectionJsonLd(projects);
 
   return (
     <main>
