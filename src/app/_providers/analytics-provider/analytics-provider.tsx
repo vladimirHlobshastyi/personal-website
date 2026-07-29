@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
-import { GA_MEASUREMENT_ID } from '../_constants/analytics.constants';
-import { getProjectSlugFromPath } from '../_utils/analytics';
+import { GA_MEASUREMENT_ID } from '../../_constants/analytics.constants';
+import { getProjectSlugFromPath } from '../../_utils/analytics';
 
 declare global {
   interface Window {

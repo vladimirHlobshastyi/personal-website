@@ -42,6 +42,11 @@ src/
 │   ├── layout.tsx
 │   ├── page.tsx
 │   ├── globals.css
+│   ├── _providers/
+│   │   └── analytics-provider/
+│   │       ├── analytics-provider.tsx
+│   │       ├── analytics-script-tags.tsx
+│   │       └── index.ts
 │   │
 │   ├── contact/
 │   │   ├── page.tsx
@@ -55,6 +60,11 @@ src/
 │   └── ...
 │
 ├── components/
+│   ├── layout/
+│   │   ├── site-header.tsx
+│   │   ├── site-footer.tsx
+│   │   └── index.ts
+│   │
 │   ├── ui/
 │   │   ├── avatar.tsx
 │   │   ├── badge.tsx
@@ -143,6 +153,23 @@ app/contact/
 
 Private folders are intentionally excluded from routing and make the architectural boundary explicit.
 
+Root app-level providers that are only mounted by `app/layout.tsx` should live in `app/_providers`.
+Each non-trivial provider should use a folder with the provider implementation file and an `index.ts`
+barrel.
+
+Example:
+
+```text
+app/_providers/analytics-provider/
+├── analytics-provider.tsx
+├── analytics-script-tags.tsx
+└── index.ts
+```
+
+Provider-adjacent utilities, script builders, constants, and transformations should not accumulate
+inside the provider component. Keep them in the narrowest valid app-level folder such as
+`app/_utils` or `app/_constants`.
+
 ### Use route groups only for route organization
 
 Route groups use parentheses:
@@ -210,11 +237,27 @@ Global reusable components live in:
 
 ```text
 components/
+├── layout/
 ├── ui/
 └── features/
 ```
 
-These two categories have different responsibilities.
+These categories have different responsibilities.
+
+## `components/layout`
+
+`components/layout` contains reusable application shell components used by the root layout or by
+multiple layout surfaces.
+
+Typical layout components:
+
+- `site-header`;
+- `site-footer`;
+- global navigation;
+- layout-level wrappers that are not route-specific.
+
+Layout components may know about app navigation and site-level content, but they should not contain
+route-specific page sections or provider side effects.
 
 ---
 
@@ -790,9 +833,7 @@ Then:
 
 ```tsx
 <div className={projectCardStyles.root}>
-  <div className={projectCardStyles.content}>
-    ...
-  </div>
+  <div className={projectCardStyles.content}>...</div>
 </div>
 ```
 
@@ -934,12 +975,15 @@ Move genuinely shared data to the correct shared location.
 Use the following default rule:
 
 ### First occurrence
+
 Keep code local.
 
 ### Second real reuse
+
 Evaluate whether it should be promoted.
 
 ### Multiple independent consumers
+
 Promote to a shared scope.
 
 Do not abstract purely because two lines happen to look similar.
@@ -1117,15 +1161,15 @@ types/
 
 # 25. Architecture Decision Table
 
-| Code | One component | One route | Multiple routes |
-|---|---|---|---|
-| UI component | component-local | `app/<route>/_components` | `components/ui` |
-| Domain component | component-local | `app/<route>/_components` | `components/features` or `features/<feature>/components` |
-| Hook | component folder | `app/<route>/_hooks` | `hooks` |
-| Utility | component folder | `app/<route>/_utils` | `utils` |
-| Constant | component folder | `app/<route>/_constants` | `constants` |
-| Type | component folder | `app/<route>/_types` | `types` |
-| Styles/variants | component folder | closest owning component | shared only if genuinely reusable |
+| Code             | One component    | One route                 | Multiple routes                                          |
+| ---------------- | ---------------- | ------------------------- | -------------------------------------------------------- |
+| UI component     | component-local  | `app/<route>/_components` | `components/ui`                                          |
+| Domain component | component-local  | `app/<route>/_components` | `components/features` or `features/<feature>/components` |
+| Hook             | component folder | `app/<route>/_hooks`      | `hooks`                                                  |
+| Utility          | component folder | `app/<route>/_utils`      | `utils`                                                  |
+| Constant         | component folder | `app/<route>/_constants`  | `constants`                                              |
+| Type             | component folder | `app/<route>/_types`      | `types`                                                  |
+| Styles/variants  | component folder | closest owning component  | shared only if genuinely reusable                        |
 
 This table should be used as the default decision mechanism.
 

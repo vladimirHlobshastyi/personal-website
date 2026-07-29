@@ -1,12 +1,10 @@
 import { Suspense } from 'react';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
+import { SiteFooter, SiteHeader } from '@/components/layout';
 import { ROUTES, SITE } from '@/constants';
 import { getThemeInitScript } from '@/utils';
-import { AnalyticsProvider } from './_components/analytics-provider';
-import { AnalyticsScripts } from './_components/analytics-scripts';
-import { SiteFooter } from './_components/site-footer';
-import { SiteHeader } from './_components/site-header';
+import { AnalyticsProvider, AnalyticsScriptTags } from './_providers/analytics-provider';
 import { createRootJsonLd, rootMetadata } from './_utils/root-layout';
 
 const jakarta = Plus_Jakarta_Sans({
@@ -41,7 +39,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans" suppressHydrationWarning>
-        <AnalyticsScripts />
+        <AnalyticsScriptTags />
         <Suspense fallback={null}>
           <AnalyticsProvider />
         </Suspense>
