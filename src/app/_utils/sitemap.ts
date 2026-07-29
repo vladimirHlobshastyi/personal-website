@@ -24,7 +24,9 @@ export function buildSitemap(): MetadataRoute.Sitemap {
   const aboutLastModified = getLatestModified([
     'src/app/about/page.tsx',
     'src/app/about/_components/about-page.tsx',
-    'src/app/about/_constants/about.constants.ts',
+    'src/app/about/_constants/about-hero.constants.ts',
+    'src/app/about/_constants/about-expertise.constants.ts',
+    'src/app/about/_constants/about-work-style.constants.ts',
   ]);
 
   const workLastModified = getLatestModified([

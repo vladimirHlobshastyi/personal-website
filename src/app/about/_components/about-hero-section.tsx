@@ -1,5 +1,5 @@
 import { Tag } from '@/components/ui';
-import { ABOUT_ROLE_TAGS, aboutSnapshot } from '../_constants/about.constants';
+import { ABOUT_ROLE_TAGS, aboutSnapshot } from '../_constants/about-hero.constants';
 import { getAboutIcon } from './about-icons';
 
 export function AboutHeroSection() {
@@ -18,9 +18,9 @@ export function AboutHeroSection() {
             stabilizing production web and mobile products.
           </p>
           <p>
-            My core is frontend engineering with React, Next.js, TypeScript, and modern
-            JavaScript, but I also work across mobile delivery, backend integration, release
-            flows, and AI-assisted product work when end-to-end execution is needed.
+            My core is frontend engineering with React, Next.js, TypeScript, and modern JavaScript,
+            but I also work across mobile delivery, backend integration, release flows, and
+            AI-assisted product work when end-to-end execution is needed.
           </p>
         </div>
 

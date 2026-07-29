@@ -1,21 +1,4 @@
-type AboutIconProps = {
-  className?: string;
-};
-
-export type AboutIconName =
-  | 'architecture'
-  | 'briefcase'
-  | 'clock'
-  | 'collaboration'
-  | 'compass'
-  | 'conversation'
-  | 'globe'
-  | 'layers'
-  | 'mobile'
-  | 'nodes'
-  | 'shield'
-  | 'spark'
-  | 'speed';
+import type { AboutIconProps } from './about-icon.types';
 
 export function LayeredBlocksIcon({ className }: AboutIconProps) {
   return (
@@ -190,35 +173,4 @@ export function CheckShieldIcon({ className }: AboutIconProps) {
       />
     </svg>
   );
-}
-
-export function getAboutIcon(name: AboutIconName, className: string) {
-  switch (name) {
-    case 'architecture':
-    case 'layers':
-      return <LayeredBlocksIcon className={className} />;
-    case 'mobile':
-      return <MobileStackIcon className={className} />;
-    case 'collaboration':
-    case 'conversation':
-      return <ConversationIcon className={className} />;
-    case 'nodes':
-      return <ConnectedNodesIcon className={className} />;
-    case 'spark':
-      return <SparkFrameIcon className={className} />;
-    case 'compass':
-      return <CompassStrokeIcon className={className} />;
-    case 'speed':
-      return <SpeedLinesIcon className={className} />;
-    case 'briefcase':
-      return <BriefcaseIcon className={className} />;
-    case 'globe':
-      return <GlobeStrokeIcon className={className} />;
-    case 'clock':
-      return <ClockStrokeIcon className={className} />;
-    case 'shield':
-      return <CheckShieldIcon className={className} />;
-    default:
-      return <LayeredBlocksIcon className={className} />;
-  }
 }

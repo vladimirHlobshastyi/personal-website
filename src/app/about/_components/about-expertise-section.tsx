@@ -1,4 +1,4 @@
-import { aboutExpertise, aboutWhoIAmSignals } from '../_constants/about.constants';
+import { aboutExpertise, aboutWhoIAmSignals } from '../_constants/about-expertise.constants';
 import { AboutCapabilityCard } from './about-capability-card';
 import { getAboutIcon } from './about-icons';
 
@@ -14,19 +14,19 @@ export function AboutExpertiseSection() {
         <div className="text-muted grid gap-2.5 p-4 text-left text-[1rem] leading-[1.8]">
           <p>
             Most of my work is in <strong className="text-fg font-semibold">real products</strong>{' '}
-            with existing codebases, complex UI, and long-term delivery needs. I am strongest
-            where teams need clear frontend architecture, reliable execution, and code that
-            remains maintainable as the system grows.
+            with existing codebases, complex UI, and long-term delivery needs. I am strongest where
+            teams need clear frontend architecture, reliable execution, and code that remains
+            maintainable as the system grows.
           </p>
           <p>
             I have a <strong className="text-fg font-semibold">strong frontend core</strong> with{' '}
             <strong className="text-fg font-semibold">React</strong>,{' '}
             <strong className="text-fg font-semibold">Next.js</strong>,{' '}
             <strong className="text-fg font-semibold">TypeScript</strong> and modern{' '}
-            <strong className="text-fg font-semibold">JavaScript</strong>, and I also work well
-            with AI-heavy or AI-generated projects: assessing code quality, finding structural
-            risks, supporting ongoing development, and refactoring unstable areas into
-            production-ready systems.
+            <strong className="text-fg font-semibold">JavaScript</strong>, and I also work well with
+            AI-heavy or AI-generated projects: assessing code quality, finding structural risks,
+            supporting ongoing development, and refactoring unstable areas into production-ready
+            systems.
           </p>
         </div>
 
