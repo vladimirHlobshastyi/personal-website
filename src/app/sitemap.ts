@@ -2,6 +2,7 @@ import { statSync } from 'node:fs';
 import path from 'node:path';
 import type { MetadataRoute } from 'next';
 import { SITE } from '@/config/site';
+import { posts } from '@/features/blog';
 import { projects } from '@/features/project';
 
 function getLatestModified(files: string[]) {
@@ -38,6 +39,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'src/config/contacts.ts',
   ]);
 
+  const blogLastModified = getLatestModified([
+    'src/app/blog/page.tsx',
+    'src/app/blog/[slug]/page.tsx',
+    'src/features/blog/posts.data.ts',
+    'src/features/blog/components/post-card.tsx',
+    'src/features/blog/components/post-hero.tsx',
+    'src/features/blog/components/post-body.tsx',
+  ]);
+
   const projectsLastModified = getLatestModified([
     'src/app/work/[slug]/page.tsx',
     'src/features/project/projects.data.ts',
@@ -68,6 +78,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${SITE.url}/blog`,
+      lastModified: blogLastModified,
+      changeFrequency: 'weekly',
+      priority: 0.75,
+    },
+    {
       url: `${SITE.url}/Volodymyr_Hlobchastyi_Senior_Software_Engineer_CV.pdf`,
       lastModified: resumeLastModified,
       changeFrequency: 'yearly',
@@ -82,5 +98,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...projectRoutes];
+  const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${SITE.url}/blog/${post.slug}`,
+    lastModified: new Date(`${post.publishedAt}T00:00:00Z`),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...projectRoutes, ...blogRoutes];
 }

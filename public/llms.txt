@@ -9,6 +9,7 @@
 - **Name:** Vladimir Hlobchastyi
 - **Role:** Senior Software Engineer / React Developer / Node.js Developer / React Native Developer
 - **Location:** Remote · Europe-friendly hours
+- **Service area:** Worldwide
 - **Languages:** English (B2), Ukrainian (Native), Russian (Native)
 - **Availability:** Available for the right collaborations
 - **Delivery:** Web deployment, App Store release, Google Play release
@@ -66,7 +67,18 @@
 - Home: /
 - About: /about
 - Work archive: /work
+- Blog: /blog
 - Contact: /contact
+
+## Blog
+Practical notes on building, improving and shipping software products. Index lives at /blog;
+individual articles at /blog/<slug>.
+- **The end of the click-only era: making your business visible in AI search**
+  (/blog/seo-apocalypse-end-of-click-era)
+- **AI Agents 2026: how to manage AI agents without drowning in almost-right code**
+  (/blog/ai-agents-2026-almost-right-code)
+- **Digital Face Control: why AI is erasing your brand from search**
+  (/blog/digital-face-control-ai-search)
 
 ## Contact
 - **Email:** vladimirhlobchastyi@gmail.com

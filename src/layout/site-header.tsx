@@ -8,6 +8,7 @@ import { CONTACTS } from '@/config/contacts';
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/work', label: 'Work' },
+  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];

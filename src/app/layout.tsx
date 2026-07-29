@@ -6,6 +6,7 @@ import { AnalyticsProvider } from '@/components/analytics/analytics-provider';
 import { AnalyticsScripts } from '@/components/analytics/analytics-scripts';
 import { SiteHeader, SiteFooter } from '@/layout';
 import { CONTACTS } from '@/config/contacts';
+import { SERVICE_OFFERS } from '@/config/services';
 import { SITE } from '@/config/site';
 
 const jakarta = Plus_Jakarta_Sans({
@@ -78,6 +79,14 @@ const jsonLd = {
         url: `${SITE.url}${CONTACTS.resume.href}`,
         encodingFormat: 'application/pdf',
       },
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'business inquiries',
+          email: CONTACTS.email.value,
+          availableLanguage: ['en', 'uk', 'ru'],
+        },
+      ],
     },
     {
       '@type': 'WebSite',
@@ -87,6 +96,33 @@ const jsonLd = {
       description: SITE.description,
       inLanguage: 'en',
       publisher: { '@id': `${SITE.url}/#person` },
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${SITE.url}/#professional-service`,
+      name: `${SITE.name} — Software Engineering Services`,
+      description: SITE.description,
+      url: SITE.url,
+      image: `${SITE.url}/og.webp`,
+      provider: { '@id': `${SITE.url}/#person` },
+      areaServed: [{ '@type': 'Place', name: 'Worldwide' }],
+      availableLanguage: ['en', 'uk', 'ru'],
+      serviceType: SERVICE_OFFERS.map((service) => service.title),
+      sameAs: SITE.sameAs,
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Software engineering services',
+        itemListElement: SERVICE_OFFERS.map((service) => ({
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: service.title,
+            description: service.text,
+            areaServed: { '@type': 'Place', name: 'Worldwide' },
+            provider: { '@id': `${SITE.url}/#person` },
+          },
+        })),
+      },
     },
   ],
 };
@@ -104,6 +140,12 @@ export default function RootLayout({
     <html lang="en" className={jakarta.variable} suppressHydrationWarning>
       <head>
         <link rel="alternate" type="application/llms.txt" href="/llms.txt" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title={`${SITE.name} Blog Feed`}
+          href="/feed.xml"
+        />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
           type="application/ld+json"

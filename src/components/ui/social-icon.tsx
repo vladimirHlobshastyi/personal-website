@@ -1,4 +1,4 @@
-import { siGithub, siGmail, siTelegram, siX } from 'simple-icons';
+import { siFacebook, siGithub, siGmail, siTelegram, siWhatsapp, siX } from 'simple-icons';
 import { cn } from '@/lib/cn';
 
 // LinkedIn was removed from Simple Icons for brand reasons — keep its glyph inline.
@@ -8,8 +8,10 @@ const LINKEDIN_PATH =
 const ICONS: Record<string, string> = {
   linkedin: LINKEDIN_PATH,
   x: siX.path,
+  facebook: siFacebook.path,
   github: siGithub.path,
   telegram: siTelegram.path,
+  whatsapp: siWhatsapp.path,
   email: siGmail.path,
 };
 
@@ -25,7 +27,12 @@ export function SocialIcon({ name, className }: SocialIconProps) {
   }
 
   return (
-    <svg viewBox="0 0 24 24" className={cn('shrink-0', className)} fill="currentColor" aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      className={cn('shrink-0', className)}
+      fill="currentColor"
+      aria-hidden="true"
+    >
       <path d={path} />
     </svg>
   );
