@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowIcon, Tag, TechIcon } from '@/components/ui';
-import { ROUTES, SITE } from '@/constants';
+import { ROUTES } from '@/constants';
 import {
   ABOUT_ROLE_TAGS,
   aboutExpertise,
@@ -9,44 +9,13 @@ import {
   aboutWhoIAmSignals,
   aboutWorkStyle,
 } from '../_constants/about.constants';
+import { createAboutPageJsonLd } from '../_utils/about-page';
 import { AboutCapabilityCard } from './about-capability-card';
 import { getAboutIcon } from './about-icons';
 import { AboutWorkStyleCard } from './about-work-style-card';
 
 export function AboutPage() {
-  const aboutUrl = `${SITE.url}/about`;
-
-  const aboutPageLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'AboutPage',
-        '@id': `${aboutUrl}#about`,
-        url: aboutUrl,
-        name: 'About Vladimir Hlobchastyi',
-        description:
-          'About Vladimir Hlobchastyi, a Senior Software Engineer focused on frontend architecture, mobile delivery, and AI-generated codebase recovery.',
-        isPartOf: { '@id': `${SITE.url}/#website` },
-        about: { '@id': `${SITE.url}/#person` },
-        mainEntity: { '@id': `${SITE.url}/#person` },
-      },
-      {
-        '@type': 'ProfilePage',
-        '@id': `${aboutUrl}#profile`,
-        url: aboutUrl,
-        name: 'Vladimir Hlobchastyi',
-        mainEntity: { '@id': `${SITE.url}/#person` },
-        isPartOf: { '@id': `${SITE.url}/#website` },
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
-          { '@type': 'ListItem', position: 2, name: 'About', item: aboutUrl },
-        ],
-      },
-    ],
-  };
+  const aboutPageLd = createAboutPageJsonLd();
 
   return (
     <main className="grid gap-4">
