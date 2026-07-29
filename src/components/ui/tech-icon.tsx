@@ -40,7 +40,7 @@ import {
   siVite,
   siZod,
 } from 'simple-icons';
-import { cn } from '@/lib/cn';
+import { cn } from '@/utils';
 
 type SimpleIcon = { path: string };
 

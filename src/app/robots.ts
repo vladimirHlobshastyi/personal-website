@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { SITE } from '@/config/site';
+import { SITE } from '@/constants';
 
 // Allow every crawler — including AI/answer engines (GPTBot, ClaudeBot,
 // PerplexityBot, Google-Extended, etc.) — so the site can be indexed and cited.

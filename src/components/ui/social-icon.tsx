@@ -1,5 +1,5 @@
 import { siFacebook, siGithub, siGmail, siTelegram, siWhatsapp, siX } from 'simple-icons';
-import { cn } from '@/lib/cn';
+import { cn } from '@/utils';
 
 // LinkedIn was removed from Simple Icons for brand reasons — keep its glyph inline.
 const LINKEDIN_PATH =

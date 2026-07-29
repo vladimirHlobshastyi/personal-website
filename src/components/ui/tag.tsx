@@ -1,4 +1,4 @@
-import { cn } from '@/lib/cn';
+import { cn } from '@/utils';
 import { TechIcon } from './tech-icon';
 
 type TagProps = {

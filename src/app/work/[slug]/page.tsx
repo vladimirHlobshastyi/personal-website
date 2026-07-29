@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowIcon } from '@/components/ui';
-import { SITE } from '@/config/site';
+import { projects, ROUTES, SITE } from '@/constants';
+import { getProjectBySlug, getProjectPreviewPath } from '@/utils';
+import { ProjectHero } from '../_components/project-hero';
+import { ProjectStory } from '../_components/project-story';
 import {
-  projects,
-  getProjectBySlug,
-  getProjectPreviewPath,
-  ProjectHero,
-  ProjectStory,
-} from '@/features/project';
+  MOBILE_CATEGORY_KEYWORDS,
+  SOFTWARE_PLATFORM_BY_CATEGORY,
+  WEB_CATEGORY_KEYWORDS,
+} from '../_constants/work.constants';
 
 type ProjectPageProps = {
   params: Promise<{
@@ -44,10 +45,10 @@ export async function generateMetadata({ params }: ProjectPageProps) {
     title,
     description,
     keywords,
-    alternates: { canonical: `/work/${project.slug}` },
+    alternates: { canonical: `${ROUTES.work}/${project.slug}` },
     openGraph: {
       type: 'article',
-      url: `${SITE.url}/work/${project.slug}`,
+      url: `${SITE.url}${ROUTES.work}/${project.slug}`,
       title: `${project.title} — ${project.category} Case Study`,
       description,
       images: [{ url: cover, width: 1600, height: 1000, alt: project.title }],
@@ -61,11 +62,6 @@ export async function generateMetadata({ params }: ProjectPageProps) {
   };
 }
 
-const SOFTWARE_PLATFORM_BY_CATEGORY: Record<string, string> = {
-  Mobile: 'iOS, Android',
-  Web: 'Web',
-};
-
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
@@ -74,19 +70,18 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  const projectUrl = `${SITE.url}/work/${project.slug}`;
+  const projectUrl = `${SITE.url}${ROUTES.work}/${project.slug}`;
   const coverUrl = `${SITE.url}${getProjectPreviewPath(project.slug)}`;
   const category = project.category.toLowerCase();
-  const isMobile =
-    category.includes('mobile') || category.includes('ios') || category.includes('android');
-  const isWeb = category.includes('web');
+  const isMobile = MOBILE_CATEGORY_KEYWORDS.some((keyword) => category.includes(keyword));
+  const isWeb = WEB_CATEGORY_KEYWORDS.some((keyword) => category.includes(keyword));
   const isSoftwareApplication = isMobile || isWeb;
 
   const breadcrumb = {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
-      { '@type': 'ListItem', position: 2, name: 'Work', item: `${SITE.url}/work` },
+      { '@type': 'ListItem', position: 2, name: 'Work', item: `${SITE.url}${ROUTES.work}` },
       { '@type': 'ListItem', position: 3, name: project.title, item: projectUrl },
     ],
   };
@@ -140,7 +135,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Link
-        href="/work"
+        href={ROUTES.work}
         className="text-muted hover:text-fg group mb-9 inline-flex items-center gap-2 font-bold transition-colors"
       >
         <ArrowIcon className="h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-1" />

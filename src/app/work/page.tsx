@@ -1,7 +1,6 @@
-import { ConfidentialityNotice } from '@/components/ui';
-import { SITE } from '@/config/site';
-import { projects } from '@/features/project';
-import { WorkGallery } from '@/features/work';
+import { ConfidentialityNotice } from '@/components/features';
+import { projects, ROUTES, SITE } from '@/constants';
+import { WorkGallery } from './_components/work-gallery';
 
 export const metadata = {
   title: 'Selected Web & Mobile Projects',
@@ -18,10 +17,10 @@ export const metadata = {
     'Backend Development',
     'Mobile App Development',
   ],
-  alternates: { canonical: '/work' },
+  alternates: { canonical: ROUTES.work },
   openGraph: {
     type: 'website',
-    url: `${SITE.url}/work`,
+    url: `${SITE.url}${ROUTES.work}`,
     title: 'Selected Web & Mobile Projects',
     description:
       'Case studies across social media, e-commerce, mental health, logistics, real estate, enterprise operations and realtime products.',
@@ -43,12 +42,12 @@ export default function WorkPage() {
     name: 'Selected projects',
     description:
       'Selected web and mobile product case studies by Vladimir Hlobchastyi.',
-    url: `${SITE.url}/work`,
+    url: `${SITE.url}${ROUTES.work}`,
     hasPart: projects.map((project) => ({
       '@type': 'CreativeWork',
       name: project.title,
       headline: `${project.title} — ${project.category}`,
-      url: `${SITE.url}/work/${project.slug}`,
+      url: `${SITE.url}${ROUTES.work}/${project.slug}`,
       keywords: [...(project.keywords ?? []), ...project.stack].join(', '),
       author: { '@type': 'Person', '@id': `${SITE.url}/#person` },
     })),

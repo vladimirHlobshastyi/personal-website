@@ -1,5 +1,5 @@
-import { SITE } from '@/config/site';
-import { PostCard, posts } from '@/features/blog';
+import { posts, ROUTES, SITE } from '@/constants';
+import { PostCard } from './_components/post-card';
 
 export const metadata = {
   title: 'Blog — Practical software notes',
@@ -16,10 +16,10 @@ export const metadata = {
     'Web Application Development',
     'Mobile App Development',
   ],
-  alternates: { canonical: '/blog' },
+  alternates: { canonical: ROUTES.blog },
   openGraph: {
     type: 'website',
-    url: `${SITE.url}/blog`,
+    url: `${SITE.url}${ROUTES.blog}`,
     title: 'Blog — Vladimir Hlobchastyi',
     description: 'Practical notes on building, improving and shipping software products.',
     images: [{ url: '/og.webp', width: 1200, height: 630, alt: 'Vladimir Hlobchastyi — Blog' }],
@@ -37,14 +37,14 @@ export default function BlogIndexPage() {
     '@context': 'https://schema.org',
     '@type': 'Blog',
     name: 'Vladimir Hlobchastyi — Blog',
-    url: `${SITE.url}/blog`,
+    url: `${SITE.url}${ROUTES.blog}`,
     description: metadata.description,
     author: { '@type': 'Person', '@id': `${SITE.url}/#person`, name: SITE.name },
     blogPost: posts.map((post) => ({
       '@type': 'BlogPosting',
       headline: post.title,
       description: post.description,
-      url: `${SITE.url}/blog/${post.slug}`,
+      url: `${SITE.url}${ROUTES.blog}/${post.slug}`,
       datePublished: post.publishedAt,
       author: { '@type': 'Person', '@id': `${SITE.url}/#person` },
       image: `${SITE.url}${post.cover}`,

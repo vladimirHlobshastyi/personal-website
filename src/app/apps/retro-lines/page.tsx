@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { SITE } from '@/config/site';
-import { RetroLinesPage } from '@/features/retro-lines/retro-lines-page';
+import { SITE } from '@/constants';
+import { RetroLinesPage } from './_components/retro-lines-page';
 
 export const metadata: Metadata = {
   title: 'Retro Lines | Android Puzzle Game',

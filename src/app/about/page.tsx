@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { SITE } from '@/config/site';
-import { AboutPage } from '@/features/about';
+import { SITE } from '@/constants';
+import { AboutPage } from './_components/about-page';
 
 export const metadata: Metadata = {
   title: 'About Vladimir Hlobchastyi',

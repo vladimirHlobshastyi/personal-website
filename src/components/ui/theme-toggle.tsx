@@ -1,10 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import {
+  SYSTEM_DARK_MEDIA_QUERY,
+  THEME_LEGACY_STORAGE_KEY,
+  THEME_PREFERENCE_STORAGE_KEY,
+} from '@/constants';
 
 type Theme = 'light' | 'dark';
-const STORAGE_KEY = 'theme-preference';
-const LEGACY_STORAGE_KEY = 'theme';
 
 function getInitialTheme(): Theme {
   if (typeof document === 'undefined') {
@@ -18,7 +21,9 @@ function getStoredPreference(): Theme | null {
     return null;
   }
 
-  const saved = window.localStorage.getItem(STORAGE_KEY) ?? window.localStorage.getItem(LEGACY_STORAGE_KEY);
+  const saved =
+    window.localStorage.getItem(THEME_PREFERENCE_STORAGE_KEY) ??
+    window.localStorage.getItem(THEME_LEGACY_STORAGE_KEY);
   return saved === 'dark' || saved === 'light' ? saved : null;
 }
 
@@ -38,7 +43,7 @@ export function ThemeToggle() {
       return;
     }
 
-    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    const media = window.matchMedia(SYSTEM_DARK_MEDIA_QUERY);
     const syncWithSystem = (event: MediaQueryListEvent | MediaQueryList) => {
       const next = event.matches ? 'dark' : 'light';
       setTheme(next);
@@ -62,8 +67,8 @@ export function ThemeToggle() {
     document.documentElement.setAttribute('data-theme', next);
 
     try {
-      localStorage.setItem(STORAGE_KEY, next);
-      localStorage.removeItem(LEGACY_STORAGE_KEY);
+      localStorage.setItem(THEME_PREFERENCE_STORAGE_KEY, next);
+      localStorage.removeItem(THEME_LEGACY_STORAGE_KEY);
     } catch {
       // ignore storage failures (private mode, etc.)
     }

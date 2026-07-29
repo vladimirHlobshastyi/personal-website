@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { cn } from '@/lib/cn';
+import { cn } from '@/utils';
 import { ArrowIcon } from './icon';
 
 type ImageCarouselProps = {

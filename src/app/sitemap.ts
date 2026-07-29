@@ -1,9 +1,7 @@
 import { statSync } from 'node:fs';
 import path from 'node:path';
 import type { MetadataRoute } from 'next';
-import { SITE } from '@/config/site';
-import { posts } from '@/features/blog';
-import { projects } from '@/features/project';
+import { posts, projects, ROUTES, SITE } from '@/constants';
 
 function getLatestModified(files: string[]) {
   return files.reduce((latest, file) => {
@@ -16,41 +14,45 @@ function getLatestModified(files: string[]) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const homeLastModified = getLatestModified([
     'src/app/page.tsx',
-    'src/features/home/components/hero-section.tsx',
-    'src/features/home/components/services-section.tsx',
-    'src/features/home/components/about-preview-section.tsx',
-    'src/features/home/components/selected-work-section.tsx',
-    'src/features/home/components/metrics-section.tsx',
+    'src/app/_components/home/hero-section.tsx',
+    'src/app/_components/home/services-section.tsx',
+    'src/app/_components/home/about-preview-section.tsx',
+    'src/app/_components/home/selected-work-section.tsx',
+    'src/app/_components/home/metrics-section.tsx',
   ]);
 
   const aboutLastModified = getLatestModified([
     'src/app/about/page.tsx',
-    'src/features/about/about-page.tsx',
-    'src/features/about/about-content.ts',
+    'src/app/about/_components/about-page.tsx',
+    'src/app/about/_constants/about.constants.ts',
   ]);
 
   const workLastModified = getLatestModified([
     'src/app/work/page.tsx',
-    'src/features/project/projects.data.ts',
+    'src/constants/projects.data.ts',
+    'src/app/work/_components/work-gallery.tsx',
   ]);
 
   const contactLastModified = getLatestModified([
     'src/app/contact/page.tsx',
-    'src/config/contacts.ts',
+    'src/app/contact/_components/contact-page.tsx',
+    'src/app/contact/_constants/contact.constants.ts',
   ]);
 
   const blogLastModified = getLatestModified([
     'src/app/blog/page.tsx',
     'src/app/blog/[slug]/page.tsx',
-    'src/features/blog/posts.data.ts',
-    'src/features/blog/components/post-card.tsx',
-    'src/features/blog/components/post-hero.tsx',
-    'src/features/blog/components/post-body.tsx',
+    'src/constants/posts.data.ts',
+    'src/app/blog/_components/post-card.tsx',
+    'src/app/blog/_components/post-hero.tsx',
+    'src/app/blog/_components/post-body.tsx',
   ]);
 
   const projectsLastModified = getLatestModified([
     'src/app/work/[slug]/page.tsx',
-    'src/features/project/projects.data.ts',
+    'src/constants/projects.data.ts',
+    'src/app/work/_components/project-hero.tsx',
+    'src/app/work/_components/project-story.tsx',
   ]);
 
   const resumeLastModified = getLatestModified([
@@ -60,25 +62,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: SITE.url, lastModified: homeLastModified, changeFrequency: 'monthly', priority: 1 },
     {
-      url: `${SITE.url}/about`,
+      url: `${SITE.url}${ROUTES.about}`,
       lastModified: aboutLastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${SITE.url}/work`,
+      url: `${SITE.url}${ROUTES.work}`,
       lastModified: workLastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${SITE.url}/contact`,
+      url: `${SITE.url}${ROUTES.contact}`,
       lastModified: contactLastModified,
       changeFrequency: 'yearly',
       priority: 0.6,
     },
     {
-      url: `${SITE.url}/blog`,
+      url: `${SITE.url}${ROUTES.blog}`,
       lastModified: blogLastModified,
       changeFrequency: 'weekly',
       priority: 0.75,
@@ -92,14 +94,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const projectRoutes: MetadataRoute.Sitemap = projects.map((project) => ({
-    url: `${SITE.url}/work/${project.slug}`,
+    url: `${SITE.url}${ROUTES.work}/${project.slug}`,
     lastModified: projectsLastModified,
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `${SITE.url}/blog/${post.slug}`,
+    url: `${SITE.url}${ROUTES.blog}/${post.slug}`,
     lastModified: new Date(`${post.publishedAt}T00:00:00Z`),
     changeFrequency: 'monthly',
     priority: 0.7,

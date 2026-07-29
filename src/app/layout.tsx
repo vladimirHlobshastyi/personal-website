@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
-import { AnalyticsProvider } from '@/components/analytics/analytics-provider';
-import { AnalyticsScripts } from '@/components/analytics/analytics-scripts';
-import { SiteHeader, SiteFooter } from '@/layout';
-import { CONTACTS } from '@/config/contacts';
-import { SERVICE_OFFERS } from '@/config/services';
-import { SITE } from '@/config/site';
+import { CONTACTS, ROUTES, SERVICE_OFFERS, SITE } from '@/constants';
+import { getThemeInitScript } from '@/utils';
+import { AnalyticsProvider } from './_components/analytics-provider';
+import { AnalyticsScripts } from './_components/analytics-scripts';
+import { SiteFooter } from './_components/site-footer';
+import { SiteHeader } from './_components/site-header';
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -127,10 +127,6 @@ const jsonLd = {
   ],
 };
 
-// Runs before paint to resolve theme. By default it follows the system scheme;
-// once the user toggles manually, that explicit choice is persisted.
-const themeScript = `(function(){try{var k='theme-preference';var legacy=localStorage.getItem('theme');var saved=localStorage.getItem(k)||((legacy==='light'||legacy==='dark')?legacy:null);if(saved==='light'||saved==='dark'){document.documentElement.setAttribute('data-theme',saved);return;}var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',dark?'dark':'light');}catch(e){var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',dark?'dark':'light');}})();`;
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -139,14 +135,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={jakarta.variable} suppressHydrationWarning>
       <head>
-        <link rel="alternate" type="application/llms.txt" href="/llms.txt" />
+        <link rel="alternate" type="application/llms.txt" href={ROUTES.llms} />
         <link
           rel="alternate"
           type="application/rss+xml"
           title={`${SITE.name} Blog Feed`}
-          href="/feed.xml"
+          href={ROUTES.feed}
         />
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script dangerouslySetInnerHTML={{ __html: getThemeInitScript() }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,11 +1,9 @@
-import { SITE } from '@/config/site';
-import {
-  AboutPreviewSection,
-  HeroSection,
-  MetricsSection,
-  SelectedWorkSection,
-  ServicesSection,
-} from '@/features/home';
+import { ROUTES, SITE } from '@/constants';
+import { AboutPreviewSection } from './_components/home/about-preview-section';
+import { HeroSection } from './_components/home/hero-section';
+import { MetricsSection } from './_components/home/metrics-section';
+import { SelectedWorkSection } from './_components/home/selected-work-section';
+import { ServicesSection } from './_components/home/services-section';
 
 export default function HomePage() {
   const homePageLd = {
@@ -20,7 +18,11 @@ export default function HomePage() {
         isPartOf: { '@id': `${SITE.url}/#website` },
         about: { '@id': `${SITE.url}/#person` },
         mainEntity: { '@id': `${SITE.url}/#person` },
-        significantLink: [`${SITE.url}/about`, `${SITE.url}/work`, `${SITE.url}/contact`],
+        significantLink: [
+          `${SITE.url}${ROUTES.about}`,
+          `${SITE.url}${ROUTES.work}`,
+          `${SITE.url}${ROUTES.contact}`,
+        ],
       },
       {
         '@type': 'ProfilePage',

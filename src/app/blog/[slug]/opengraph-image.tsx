@@ -1,6 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { SITE } from '@/config/site';
-import { getPostBySlug } from '@/features/blog/posts.data';
+import { posts, SITE } from '@/constants';
 
 export const runtime = 'edge';
 export const alt = 'Blog post preview';
@@ -13,7 +12,7 @@ export default async function OpenGraphImage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = posts.find((entry) => entry.slug === slug);
 
   const title = post?.ogTitle ?? post?.title ?? 'Vladimir Hlobchastyi';
   const tags = post?.tags ?? [];

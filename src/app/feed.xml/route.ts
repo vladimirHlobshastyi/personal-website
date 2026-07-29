@@ -1,5 +1,4 @@
-import { SITE } from '@/config/site';
-import { posts } from '@/features/blog';
+import { posts, ROUTES, SITE } from '@/constants';
 
 function escapeXml(value: string) {
   return value
@@ -13,12 +12,12 @@ function escapeXml(value: string) {
 export function GET() {
   const items = posts
     .map((post) => {
-      const url = `${SITE.url}/blog/${post.slug}`;
+      const url = `${SITE.url}${ROUTES.blog}/${post.slug}`;
       const title = escapeXml(post.title);
       const description = escapeXml(post.description);
       const pubDate = new Date(`${post.publishedAt}T00:00:00Z`).toUTCString();
 
-      return `
+    return `
         <item>
           <title>${title}</title>
           <link>${url}</link>
@@ -33,7 +32,7 @@ export function GET() {
 <rss version="2.0">
   <channel>
     <title>${escapeXml(`${SITE.name} Blog`)}</title>
-    <link>${SITE.url}/blog</link>
+    <link>${SITE.url}${ROUTES.blog}</link>
     <description>${escapeXml('Practical notes on building, improving and shipping software products.')}</description>
     <language>en-US</language>
     ${items}

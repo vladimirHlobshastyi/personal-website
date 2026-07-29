@@ -1,10 +1,8 @@
 export { Avatar } from './avatar';
 export { Badge } from './badge';
-export { ConfidentialityNotice } from './disclaimer';
 export { ArrowIcon } from './icon';
 export { ImageCarousel } from './image-carousel';
 export { InfoCard } from './info-card';
-export { Logo } from './logo';
 export { SocialIcon } from './social-icon';
 export { Tag } from './tag';
 export { TechIcon } from './tech-icon';

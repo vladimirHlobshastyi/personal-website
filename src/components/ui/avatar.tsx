@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import { cn } from '@/lib/cn';
+import { cn } from '@/utils';
 
 type AvatarProps = {
-  src?: string;
-  alt?: string;
+  src: string;
+  alt: string;
   className?: string;
   size?: number;
 };
@@ -11,8 +11,8 @@ type AvatarProps = {
 // Circular avatar with the face anchored near the top of the photo,
 // so only the visible portion is the face (not the full image).
 export function Avatar({
-  src = '/images/main_photo.webp',
-  alt = 'Vladimir Hlobchastyi',
+  src,
+  alt,
   className,
   size = 40,
 }: AvatarProps) {

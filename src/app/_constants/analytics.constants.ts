@@ -1,0 +1,5 @@
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+export const CLARITY_PROJECT_ID = process.env.NEXT_PUBLIC_CLARITY_PROJECT_ID;
+
+export const ANALYTICS_PROJECT_ROUTE_PREFIX = '/work/';
+export const ANALYTICS_PROJECT_ROUTE_DEPTH = 2;
