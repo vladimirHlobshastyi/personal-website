@@ -20,21 +20,20 @@ export function ImageCarousel({
 }: ImageCarouselProps) {
   const [active, setActive] = useState(0);
   const [revealed, setRevealed] = useState(false);
-  const allImages = images.length > 0 ? images : [];
 
-  if (allImages.length === 0) {
+  if (images.length === 0) {
     return null;
   }
 
-  const multiple = allImages.length > 1;
-  const prev = () => setActive((s) => (s === 0 ? allImages.length - 1 : s - 1));
-  const next = () => setActive((s) => (s === allImages.length - 1 ? 0 : s + 1));
+  const multiple = images.length > 1;
+  const prev = () => setActive((s) => (s === 0 ? images.length - 1 : s - 1));
+  const next = () => setActive((s) => (s === images.length - 1 ? 0 : s + 1));
   const blurApplied = blurScreenshots && !revealed;
 
   return (
     <figure className="border-line bg-surface shadow-card overflow-hidden border">
       <figcaption className="border-line bg-surface-2/50 flex items-center justify-between gap-4 border-b px-5 py-3.5 max-sm:flex-col max-sm:items-start max-sm:px-4">
-        <span className="text-accent inline-flex items-center gap-3 text-[0.7rem] font-bold tracking-[.18em] uppercase before:block before:h-px before:w-7 before:bg-accent/50">
+        <span className="text-accent before:bg-accent/50 inline-flex items-center gap-3 text-[0.7rem] font-bold tracking-[.18em] uppercase before:block before:h-px before:w-7">
           {label}
         </span>
 
@@ -51,9 +50,9 @@ export function ImageCarousel({
             </button>
           )}
 
-          <span className="text-[0.72rem] font-bold tracking-[.12em] tabular-nums uppercase whitespace-nowrap">
+          <span className="text-[0.72rem] font-bold tracking-[.12em] whitespace-nowrap uppercase tabular-nums">
             <span className="text-accent">{String(active + 1).padStart(2, '0')}</span>
-            <span className="text-quiet"> / {String(allImages.length).padStart(2, '0')}</span>
+            <span className="text-quiet"> / {String(images.length).padStart(2, '0')}</span>
           </span>
 
           {multiple && (
@@ -84,7 +83,7 @@ export function ImageCarousel({
           className="flex transition-transform duration-[600ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
           style={{ transform: `translateX(-${active * 100}%)` }}
         >
-          {allImages.map((img, i) => (
+          {images.map((img, i) => (
             <div key={img} className="relative aspect-[16/9] w-full shrink-0 overflow-hidden">
               <Image
                 src={img}
@@ -111,7 +110,7 @@ export function ImageCarousel({
 
       {multiple && (
         <div className="border-line flex gap-3 overflow-x-auto border-t p-4 max-sm:p-3">
-          {allImages.map((img, i) => (
+          {images.map((img, i) => (
             <button
               key={img}
               onClick={() => setActive(i)}

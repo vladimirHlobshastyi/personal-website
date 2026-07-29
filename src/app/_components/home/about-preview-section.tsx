@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { HOME_ABOUT_PILLARS } from '@/app/_constants/home.constants';
 import { ROUTES } from '@/constants';
 import { ArrowIcon } from '@/components/ui';
+import { HOME_ABOUT_PILLARS } from '../../_constants/home.constants';
 
 export function AboutPreviewSection() {
   return (

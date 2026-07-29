@@ -1,4 +1,4 @@
-import { HOME_METRICS } from '@/app/_constants/home.constants';
+import { HOME_METRICS } from '../../_constants/home.constants';
 
 export function MetricsSection() {
   return (

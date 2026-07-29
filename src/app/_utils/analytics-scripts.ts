@@ -5,7 +5,7 @@ export function getGoogleAnalyticsScriptSrc() {
     return null;
   }
 
-  return `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  return `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_MEASUREMENT_ID)}`;
 }
 
 export function getGoogleAnalyticsInitScript() {
@@ -13,12 +13,14 @@ export function getGoogleAnalyticsInitScript() {
     return null;
   }
 
+  const measurementId = JSON.stringify(GA_MEASUREMENT_ID);
+
   return `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     window.gtag = gtag;
     gtag('js', new Date());
-    gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });
+    gtag('config', ${measurementId}, { send_page_view: false });
   `;
 }
 
@@ -27,11 +29,13 @@ export function getClarityInitScript() {
     return null;
   }
 
+  const projectId = JSON.stringify(CLARITY_PROJECT_ID);
+
   return `
     (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "${CLARITY_PROJECT_ID}");
+    })(window, document, "clarity", "script", ${projectId});
   `;
 }

@@ -4,10 +4,7 @@ import { ConfidentialityNotice } from '@/components/features';
 import { mediaOverlay, ROUTES } from '@/constants';
 import { ArrowIcon, Tag } from '@/components/ui';
 import { getProjectBySlug, getProjectPlatform, getProjectPreviewPath } from '@/utils';
-import {
-  FEATURED_PROJECT_SLUG,
-  SUPPORTING_PROJECT_SLUGS,
-} from '@/app/_constants/home.constants';
+import { FEATURED_PROJECT_SLUG, SUPPORTING_PROJECT_SLUGS } from '../../_constants/home.constants';
 
 function requireProject(slug: string) {
   const project = getProjectBySlug(slug);

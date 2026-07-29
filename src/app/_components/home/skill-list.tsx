@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import * as Collapsible from '@radix-ui/react-collapsible';
 import { ArrowIcon, Tag } from '@/components/ui';
-import { HOME_ADDITIONAL_SKILLS, HOME_CORE_SKILLS } from '@/app/_constants/home.constants';
+import { HOME_ADDITIONAL_SKILLS, HOME_CORE_SKILLS } from '../../_constants/home.constants';
 
 export function SkillList() {
   const [open, setOpen] = useState(false);

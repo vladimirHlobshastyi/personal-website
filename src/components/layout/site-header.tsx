@@ -60,7 +60,7 @@ export function SiteHeader() {
             data-analytics-label="header_email"
             className="group border-line bg-surface text-fg hover:border-accent hover:text-accent inline-flex items-center gap-2 border px-4 py-2 text-sm font-semibold transition-colors max-lg:hidden"
           >
-            {"Let's talk"}
+            Let&apos;s talk
             <ArrowIcon className="h-3.5 w-3.5 -rotate-45 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <ThemeToggle />
