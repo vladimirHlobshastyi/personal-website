@@ -2,6 +2,120 @@ import type { Post } from '@/types';
 
 const rawPosts: Omit<Post, never>[] = [
   {
+    slug: 'ai-agent-insider-threat',
+    title: 'The Trojan horse in your CRM: how companies get hacked through one AI-readable field',
+    description:
+      'A single AI-readable lead field can become the entry point to CRM exposure, data exfiltration and broader agent abuse when business tools trust hostile input.',
+    cover: '/images/blog/ai-agent-insider-threat-cover.webp',
+    tags: ['ai-security', 'prompt-injection', 'ai-agents', 'cybersecurity'],
+    publishedAt: '2026-08-06',
+    ogTitle: 'The Trojan horse in your CRM',
+    content: `The old AI risk model was simple: the model said something wrong, and a human decided whether to trust it. That was bad enough. The 2026 model is harder, because the agent is no longer only talking. It is reading inboxes, inspecting CRM records, browsing the web, writing files, running commands and sometimes chaining those actions by itself.
+
+That changes the failure mode completely. A bad answer is one thing. An agent with access, context and outbound channels is another.
+
+Picture the ordinary workflow. A salesperson asks an agent to summarize a new lead. A manager asks Copilot to summarize the morning inbox. A developer asks a coding agent to inspect a README, propose a fix, and update local configuration. None of those prompts sound dangerous. The risk appears when the agent reads attacker-controlled content and cannot reliably tell the difference between trusted instructions and untrusted data.
+
+> Once an agent can read private data, consume hostile content and act on connected tools, it starts looking less like an assistant and more like an insider with weak judgment.
+
+## The shift: from assistant to actor
+
+This is the real transition businesses are underestimating. Modern agents are crossing from passive interface to active operator.
+
+The security problem is not only model quality. It is agency. The moment an agent can:
+
+- access internal systems
+- ingest untrusted external content
+- send data or actions back out
+
+you get a dangerous combination. OWASP's GenAI guidance still places prompt injection at the top of the risk list, but the impact becomes much larger when the model is wired into business tools instead of only chat. Recent research goes even further and argues that prompt injection may remain a persistent class of failure for agents, not a bug that clean prompt separators will simply solve.
+
+## Three attack paths matter most in practice
+
+The following patterns are the ones I would assume are relevant today, even if your organization has not yet observed an incident.
+
+| Attack path | What the attacker controls | What the agent gets wrong |
+| --- | --- | --- |
+| Indirect prompt injection | Email, PDF, CRM field, webpage, ticket description | Treats hostile content as instructions rather than data |
+| Silent egress via metadata or previews | URL previews, HTML title, meta description, Open Graph tags | Leaks data through a side-channel the user never intended to activate |
+| Memory poisoning / sleeper behavior | Long-lived memory, saved preferences, persistent notes | Carries attacker influence forward into later tasks |
+
+The first category is the one most teams now recognize: a malicious instruction is hidden in content the agent later reads. The second is more subtle. The 2026 *Silent Egress* paper shows that agents can be manipulated through elements users never see directly, including HTML titles, meta descriptions and Open Graph metadata. In other words, a link preview can become part of the attack surface.
+
+The third category is what makes this feel like an insider problem. Long-term memory and persistent task context are useful features, but they also create a place for delayed influence. If an agent can remember a poisoned preference, a copied address, or a fraudulent "always do X" instruction, the compromise no longer has to pay off immediately.
+
+## These cases are already real
+
+The reason this topic deserves business attention is that public cases have already crossed from theory into product reality.
+
+### EchoLeak: inbox summary becomes exfiltration
+
+Microsoft tracks CVE-2025-32711 in Microsoft 365 Copilot. Public writeups described it as a zero-click style exfiltration chain: an attacker sends crafted email content, the user asks Copilot to summarize the inbox, and the agent processes hostile instructions buried in the email context. The important lesson is not the brand name. It is the shape of the failure: untrusted content entered a trusted summary flow.
+
+### ForcedLeak: the CRM lead field becomes the payload
+
+Noma Security's ForcedLeak research on Salesforce Agentforce showed the same pattern in a different business surface. Instead of attacking a chat box directly, the attacker used a lead description field. When a sales rep asked the agent to analyze that lead, the hostile prompt rode along with legitimate CRM data. The agent then had both the business context and the connected access needed to expose more than it should.
+
+### CurXecute: coding agents can become execution paths
+
+CVE-2025-54135, documented in the NVD and analyzed publicly by Cato Networks, pushed the risk into developer tooling. In that chain, prompt injection plus unsafe configuration behavior created a route to remote code execution in Cursor workflows. Again, the core issue was not "AI hallucinated." The issue was that an agent was granted enough write capability that prompt manipulation could change the system itself.
+
+## Why this is a business problem, not only a security-team problem
+
+The operational bill is broader than a single exploit class.
+
+First, the same agent that boosts productivity can multiply blast radius. If it can touch customer data, financial workflows, internal documents or source code, mistakes become expensive fast.
+
+Second, these failures are hard to notice early. A malicious CRM summary or a poisoned memory entry may look like normal workflow behavior until data has already moved.
+
+Third, the regulatory environment is no longer hypothetical. The European Commission announced that from **August 2, 2026** it starts enforcing AI Act rules and new transparency requirements. That does not mean every agent deployment suddenly falls into the same legal category, but it does mean governance, logging, human oversight and system design are becoming harder to treat as optional hygiene.
+
+## What I would defend first
+
+Static guardrails inside the prompt are not enough. The control plane has to sit deeper in the system.
+
+### 1. Put authorization at the data and tool layer
+
+If a user is not entitled to a dataset, the agent should not be able to fetch it just because the prompt sounds convincing. Prompt-level intent checks are useful, but they cannot be the last line of defense.
+
+### 2. Require human confirmation for high-impact actions
+
+Money movement, deletion, permission changes, outbound sending and sensitive exports should require a second factor of approval from an actual human. The more autonomy an agent gets, the more important explicit stop-points become.
+
+### 3. Isolate execution environments
+
+Coding agents, browsing agents and workflow agents should not share unrestricted access to internal networks and long-lived credentials. Sandboxes, scoped secrets and segmented environments matter more than polished instructions.
+
+### 4. Treat external content as hostile by default
+
+Emails, PDFs, tickets, websites, metadata, pasted links and lead descriptions should be modeled as untrusted input. The question is not whether they look harmless. The question is whether the agent is allowed to treat them as instructions.
+
+### 5. Audit memory and persistent state
+
+If the agent can remember, then memory becomes part of the security boundary. You need visibility into what gets persisted, what can influence future tasks, and when that state is reset.
+
+## The practical question every team should ask now
+
+Do we still know where control lives?
+
+That is the real management question behind agent adoption. Not "which model is smartest?" Not "which vendor demo looks best?" Control.
+
+If the agent can read private information, browse hostile content, and write or send on your behalf, then you are no longer deploying a convenience feature. You are adding a semi-autonomous operator to the stack.
+
+That is why I would frame the 2026 risk clearly: the convenient AI workflow can become a Trojan horse inside systems the business already trusts. Not because the agent is malicious by itself, but because it can be manipulated through the same inputs your teams treat as routine.
+
+## Sources
+
+- [OWASP GenAI Security Project: LLM01 Prompt Injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/)
+- [AI Agents May Always Fall for Prompt Injections](https://arxiv.org/abs/2605.17634)
+- [Silent Egress: When Implicit Prompt Injection Makes LLM Agents Leak Without a Trace](https://arxiv.org/abs/2602.22450)
+- [Microsoft Security Response Center: CVE-2025-32711](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711)
+- [Noma Security: ForcedLeak in Salesforce Agentforce](https://noma.security/noma-labs/forcedleak/)
+- [NVD: CVE-2025-54135](https://nvd.nist.gov/vuln/detail/CVE-2025-54135)
+- [Cato Networks: CurXecute RCE in Cursor](https://www.catonetworks.com/blog/curxecute-rce/)
+- [European Commission: enforcement from August 2, 2026](https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august)`,
+  },
+  {
     slug: 'digital-face-control-ai-search',
     title: 'Digital Face Control: why AI is erasing your brand from search',
     description:

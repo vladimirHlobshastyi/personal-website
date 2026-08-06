@@ -73,6 +73,8 @@
 ## Blog
 Practical notes on building, improving and shipping software products. Index lives at /blog;
 individual articles at /blog/<slug>.
+- **The Trojan horse in your CRM: how companies get hacked through one AI-readable field**
+  (/blog/ai-agent-insider-threat)
 - **The end of the click-only era: making your business visible in AI search**
   (/blog/seo-apocalypse-end-of-click-era)
 - **AI Agents 2026: how to manage AI agents without drowning in almost-right code**
