@@ -11,7 +11,7 @@ export function ServicesSection() {
             What I build and improve
           </p>
           <h2 className="tracking-tightest max-w-2xl text-[clamp(2.25rem,5vw,3.625rem)] leading-[1.04] font-semibold">
-            Senior software engineering across the product, not just the interface.
+            I build the systems around the interface, too.
           </h2>
         </div>
         <Link

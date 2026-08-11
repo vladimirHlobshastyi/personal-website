@@ -12,7 +12,7 @@ export const SERVICE_OFFERS = [
     text: 'Business logic, Node.js, APIs, auth, payments, realtime features, data flows, and integrations that work together.',
   },
   {
-    title: 'AI-assisted product development',
+    title: 'AI-assisted products',
     text: 'Audit and stabilize AI-generated products, fix unreliable flows, and turn fast prototypes into codebases that can be safely extended and maintained.',
   },
 ] as const;

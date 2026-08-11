@@ -28,7 +28,7 @@ export function HeroSection() {
         </div>
 
         <h1 className="tracking-tightest text-[clamp(3rem,7vw,5.75rem)] leading-[.9] font-semibold">
-          Senior Software Engineer building web and mobile products across the stack.
+          Senior Software Engineer for web, mobile, and AI-assisted products.
         </h1>
 
         <div className="text-muted mt-7 grid max-w-[36rem] gap-4 text-[1.0625rem] leading-[1.7]">
