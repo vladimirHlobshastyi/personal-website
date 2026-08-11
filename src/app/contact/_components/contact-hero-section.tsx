@@ -1,43 +1,38 @@
-import { Tag } from '@/components/ui';
-import { CONTACT_QUICK_FACTS, CONTACT_WORK_FOCUS } from '../_constants/contact.constants';
+import { CONTACT_QUICK_FACTS } from '../_constants/contact.constants';
 
 export function ContactHeroSection() {
   return (
-    <div className="bg-inverse text-inverse-fg p-10 max-sm:p-7">
+    <div className="p-10 max-sm:p-6 lg:p-12">
       <p className="text-accent before:bg-accent/50 mb-6 inline-flex items-center gap-3 text-xs font-bold tracking-[.18em] uppercase before:block before:h-px before:w-10">
-        Contact
+        Contact · Start a conversation
       </p>
-      <h1 className="tracking-tightest max-w-3xl text-[clamp(2.5rem,6vw,4.75rem)] leading-[.92] font-semibold">
-        Have a product to build or untangle?
+      <h1 className="tracking-tightest max-w-3xl text-[clamp(2.65rem,5vw,4.25rem)] leading-[.98] font-semibold">
+        Tell me what you are building and where the work is stuck.
       </h1>
-      <p className="text-inverse-fg/70 mt-5 max-w-2xl text-lg leading-8">
-        I help teams turn business rules and product ideas into working web and mobile software with
-        React, Next.js, React Native, TypeScript, and Node.js.
-      </p>
-      <p className="text-inverse-fg/70 mt-4 max-w-2xl text-lg leading-8">
-        My strongest area is frontend architecture, but I also work across product flows, APIs,
-        integrations, edge cases, and release work. If an AI-generated codebase has become hard to
-        change, I can help with that too. The fastest response is by email or Telegram.
-      </p>
-
-      <div className="mt-8 flex flex-wrap gap-2">
-        {CONTACT_WORK_FOCUS.map((item) => (
-          <Tag key={item} variant="onMedia" icon={false}>
-            {item}
-          </Tag>
-        ))}
+      <div className="text-muted mt-7 max-w-2xl space-y-4 text-[1.025rem] leading-[1.85]">
+        <p>
+          A useful first message can be short: what the product does, its current stage, the main
+          technical or delivery problem, and the outcome you need.
+        </p>
+        <p>
+          I work on complex frontend systems, web and mobile delivery, integrations, and careful
+          recovery of existing codebases. Email and Telegram are the fastest ways to reach me.
+        </p>
       </div>
 
-      <div className="mt-10 grid gap-3 sm:grid-cols-3">
+      <dl className="border-line mt-10 grid border-y sm:grid-cols-3">
         {CONTACT_QUICK_FACTS.map((item) => (
-          <div key={item.label} className="border border-white/12 bg-white/4 p-4">
-            <p className="text-inverse-fg/50 text-[0.72rem] font-bold tracking-[.14em] uppercase">
+          <div
+            key={item.label}
+            className="border-line border-b py-4 last:border-b-0 sm:border-r sm:border-b-0 sm:px-4 sm:first:pl-0 sm:last:border-r-0 sm:last:pr-0"
+          >
+            <dt className="text-quiet text-[0.7rem] font-bold tracking-[.14em] uppercase">
               {item.label}
-            </p>
-            <p className="mt-2 text-sm leading-6 font-medium">{item.value}</p>
+            </dt>
+            <dd className="mt-2 text-sm leading-6 font-medium">{item.value}</dd>
           </div>
         ))}
-      </div>
+      </dl>
     </div>
   );
 }

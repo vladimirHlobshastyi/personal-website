@@ -11,7 +11,7 @@ const links = [
 
 export function SiteFooter() {
   return (
-    <footer className="bg-inverse text-inverse-fg mt-32 w-full">
+    <footer className="bg-inverse text-inverse-fg mt-[clamp(4.5rem,7vw,6rem)] w-full">
       <div className="mx-auto w-[min(73.75rem,calc(100%-3rem))] py-16 max-sm:w-[min(100%-1.75rem,73.75rem)] max-sm:py-12">
         <div className="grid grid-cols-[1fr_auto] items-end gap-10 max-lg:grid-cols-1">
           <div>

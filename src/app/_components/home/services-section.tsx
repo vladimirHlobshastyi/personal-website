@@ -4,7 +4,7 @@ import { ROUTES, SERVICE_OFFERS } from '@/constants';
 
 export function ServicesSection() {
   return (
-    <section className="mt-28">
+    <section className="mt-[clamp(3.75rem,6vw,5rem)]">
       <div className="mb-12 grid grid-cols-[1fr_auto] items-end gap-8 max-md:grid-cols-1 max-md:items-start">
         <div>
           <p className="text-accent before:bg-accent/50 mb-6 inline-flex items-center gap-3 text-xs font-bold tracking-[.16em] uppercase before:block before:h-px before:w-10">

@@ -2,9 +2,9 @@ import { CONTACTS } from '@/constants';
 
 export const CONTACT_SOCIALS = [
   { name: 'email', ...CONTACTS.email },
+  { name: 'telegram', ...CONTACTS.telegram },
   { name: 'linkedin', ...CONTACTS.linkedin },
   { name: 'github', ...CONTACTS.github },
-  { name: 'telegram', ...CONTACTS.telegram },
   { name: 'x', ...CONTACTS.x },
 ] as const;
 
@@ -15,16 +15,9 @@ export const CONTACT_LANGUAGES = [
 ] as const;
 
 export const CONTACT_QUICK_FACTS = [
-  { label: 'Availability', value: 'Available for the right collaborations' },
-  { label: 'Location', value: 'Remote · Europe-friendly hours' },
-  { label: 'Response time', value: 'Within 24 hours' },
-] as const;
-
-export const CONTACT_WORK_FOCUS = [
-  'Product Discovery',
-  'Web and Mobile',
-  'Product Flows and Integrations',
-  'Codebase Recovery',
+  { label: 'Availability', value: 'Project-based or long-term' },
+  { label: 'Location', value: 'Remote · Europe-friendly' },
+  { label: 'Response', value: 'Usually within 24 hours' },
 ] as const;
 
 export const CONTACT_HELP_AREAS = [

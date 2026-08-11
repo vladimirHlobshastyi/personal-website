@@ -1,36 +1,35 @@
 export const aboutExpertise = [
   {
-    title: 'Product thinking in code',
+    title: 'Complex frontend systems',
     summary:
-      'I start with what the product needs to do, then make the rules visible in the flow and the data.',
+      'React and Next.js applications with business rules, data-heavy screens, reusable UI, and long-term maintenance.',
     points: [
-      'Turn incomplete requirements into user flows, states, and acceptance criteria.',
-      'Keep business rules out of accidental UI behavior so they can change safely.',
+      'Dashboards, subscriptions, onboarding, forms, maps, and realtime interfaces.',
+      'Clear state ownership and feature boundaries that keep new work predictable.',
     ],
-    tags: ['Flows', 'Business logic'],
+    tags: ['React', 'Next.js', 'Architecture'],
     icon: 'architecture',
   },
   {
     title: 'Web and mobile delivery',
     summary:
-      'I build complex product surfaces across web, iOS, and Android, keeping the experience coherent between them.',
+      'Web and mobile versions of the same product, with consistent flows and platform-specific behavior where needed.',
     points: [
-      'Dashboards, subscriptions, maps, realtime interactions, onboarding, and forms.',
-      'Connect UI states, API data, errors, and release behavior instead of treating them as separate tasks.',
+      'React Native delivery with attention to platform behavior and performance.',
+      'API states, device behavior, and release readiness handled as part of the feature.',
     ],
     tags: ['React', 'React Native', 'TypeScript'],
     icon: 'mobile',
   },
   {
-    title: 'Systems that survive delivery',
+    title: 'Integrations and codebase recovery',
     summary:
-      'I care about what happens after the first demo: integration failures, changing requirements, and the next engineer touching the code.',
+      'I connect product features to the services behind them and make unstable code safer to change.',
     points: [
-      'Structure APIs, auth, payments, realtime, monitoring, and frontend boundaries around real use.',
-      'Recover unstable or AI-generated codebases when speed has created more risk than progress.',
-      'Use AI for product research, testing, debugging, documentation, and faster implementation while validating the result myself.',
+      'Auth, payments, realtime, maps, monitoring, REST, and GraphQL integrations.',
+      'Targeted refactoring of unstable or AI-generated code without a blind rewrite.',
     ],
-    tags: ['Architecture', 'Integrations', 'AI-assisted'],
+    tags: ['Integrations', 'Refactoring', 'AI-assisted'],
     icon: 'nodes',
   },
 ] as const;

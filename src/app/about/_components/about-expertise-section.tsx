@@ -4,23 +4,26 @@ import { getAboutIcon } from './about-icons';
 
 export function AboutExpertiseSection() {
   return (
-    <section className="grid gap-4">
-      <article className="border-line bg-surface border px-4 py-5 max-sm:px-4 max-sm:py-5">
-        <div className="flex px-4">
-          <p className="text-quiet mb-2 text-[0.72rem] font-semibold tracking-[.16em] uppercase">
-            In practice
+    <section aria-labelledby="about-expertise-title">
+      <div className="mb-10 grid items-end gap-6 lg:grid-cols-[1.15fr_.85fr]">
+        <div>
+          <p className="text-accent before:bg-accent/50 mb-5 inline-flex items-center gap-3 text-xs font-bold tracking-[.16em] uppercase before:block before:h-px before:w-10">
+            What I can own
           </p>
+          <h2
+            id="about-expertise-title"
+            className="tracking-tightest max-w-3xl text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.02] font-semibold"
+          >
+            The product flow, the interface, and the systems behind it.
+          </h2>
         </div>
-        <div className="text-muted p-4 text-left text-[1rem] leading-[1.8]">
-          <p>
-            I am usually most useful when requirements are incomplete, the happy path is not enough,
-            and the product has to keep moving. I make decisions concrete in the interface and data
-            flow, including the states users hit when things go wrong.
-          </p>
-        </div>
-      </article>
+        <p className="text-muted max-w-2xl text-[1rem] leading-8 lg:justify-self-end">
+          Frontend is my main area, but I do not stop at the component boundary. I follow the
+          feature through API integration, error states, and release.
+        </p>
+      </div>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-3">
         {aboutExpertise.map((item) => (
           <AboutCapabilityCard
             key={item.title}

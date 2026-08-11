@@ -1,28 +1,17 @@
-export const ABOUT_ROLE_TAGS = [
-  'Senior Software Engineer (Product-Minded)',
-  'Web and Mobile',
-  'Frontend Architecture',
-] as const;
-
-export const aboutSnapshot = [
+export const aboutClientSignals = [
   {
-    label: 'Role',
-    value: 'Senior Software Engineer (Product-Minded)',
-    icon: 'briefcase',
+    title: 'The product has complex flows',
+    text: 'The interface includes many states, roles, business rules, or data-heavy screens.',
+    icon: 'architecture',
   },
   {
-    label: 'Scope',
-    value: 'Business logic, user flows, APIs, and interfaces',
-    icon: 'nodes',
-  },
-  {
-    label: 'Main tools',
-    value: 'React, Next.js, React Native, TypeScript, Node.js',
-    icon: 'layers',
-  },
-  {
-    label: 'Experience',
-    value: '5+ years across web, iOS, Android, and existing products',
+    title: 'The existing code is slowing delivery',
+    text: 'New changes create regressions, duplicated logic, or uncertainty about what is safe to touch.',
     icon: 'shield',
+  },
+  {
+    title: 'Web and mobile need to stay aligned',
+    text: 'The same product must behave consistently across web, iOS, and Android.',
+    icon: 'mobile',
   },
 ] as const;

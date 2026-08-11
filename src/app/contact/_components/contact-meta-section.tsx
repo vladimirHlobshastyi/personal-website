@@ -2,7 +2,7 @@ import { CONTACT_LANGUAGES, CONTACT_WORKING_STYLE } from '../_constants/contact.
 
 export function ContactMetaSection() {
   return (
-    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-1">
+    <div className="grid gap-5 md:grid-cols-2">
       <article className="border-line bg-surface border p-8 max-sm:p-6">
         <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">Languages</p>
         <ul className="grid gap-3">

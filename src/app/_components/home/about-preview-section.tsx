@@ -5,7 +5,7 @@ import { HOME_ABOUT_PILLARS } from '../../_constants/home.constants';
 
 export function AboutPreviewSection() {
   return (
-    <section className="mt-28">
+    <section className="mt-[clamp(3.75rem,6vw,5rem)]">
       <div className="mb-12 grid grid-cols-[1.02fr_.98fr] items-end gap-10 max-lg:grid-cols-1">
         <div>
           <p className="text-accent before:bg-accent/50 mb-6 inline-flex items-center gap-3 text-xs font-bold tracking-[.16em] uppercase before:block before:h-px before:w-10">

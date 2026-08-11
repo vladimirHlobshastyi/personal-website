@@ -21,7 +21,7 @@ export function SelectedWorkSection() {
   const supporting = SUPPORTING_PROJECT_SLUGS.map(requireProject);
 
   return (
-    <section className="mt-32">
+    <section className="mt-[clamp(3.75rem,6vw,5rem)]">
       <div className="mb-14 grid grid-cols-[1.08fr_.92fr] items-end gap-12 max-lg:grid-cols-1">
         <h2 className="tracking-tightest text-[clamp(2.625rem,6.6vw,5.125rem)] leading-[.92] font-semibold">
           Selected work

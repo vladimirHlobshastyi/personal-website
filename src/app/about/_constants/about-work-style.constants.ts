@@ -1,53 +1,29 @@
-export const aboutTechnologyGroups = [
-  {
-    title: 'Core web stack',
-    items: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'JavaScript',
-      'TanStack Query',
-      'Node.js',
-      'Express.js',
-    ],
-  },
-  {
-    title: 'Backend and data',
-    items: ['GraphQL', 'REST APIs', 'Supabase', 'PostgreSQL', 'MongoDB', 'Prisma'],
-  },
-  {
-    title: 'Mobile and integrations',
-    items: ['React Native', 'Ionic', 'Expo', 'Capacitor', 'Stripe', 'Mapbox', 'WebRTC', 'Sentry'],
-  },
-] as const;
-
 export const aboutWorkStyle = [
   {
-    title: 'Make complexity visible',
-    summary:
-      'I prefer explicit boundaries and predictable data flow over clever abstractions that hide the real rules.',
+    title: 'Agree on the behavior before coding',
+    summary: 'I clarify the flow, the data, and what the team will consider complete.',
     points: [
-      'Clean architecture means the next decision is easier to make.',
-      'I avoid local fixes that make the product harder to evolve later.',
+      'Fewer assumptions hidden inside the interface.',
+      'An architecture based on actual use, not imagined scale.',
     ],
     icon: 'architecture',
   },
   {
-    title: 'Build for real use',
-    summary: 'The work is not finished when the happy path looks good in a screenshot.',
+    title: 'Build the states users actually meet',
+    summary:
+      'Loading, empty, error, permission, and mobile states are part of the feature from the start.',
     points: [
-      'I think through loading, empty, error, permission, and mobile states.',
-      'Performance, accessibility, and interaction quality are part of implementation.',
+      'No demo-only behavior that breaks in normal use.',
+      'Performance and accessibility included in implementation.',
     ],
     icon: 'compass',
   },
   {
-    title: 'Stay close to the decisions',
-    summary:
-      'I work with product, design, and backend teammates to keep the system understandable and the trade-offs visible.',
+    title: 'Stay close to the team during delivery',
+    summary: 'I keep product, design, and backend decisions connected while implementation moves.',
     points: [
-      'With design, I clarify states, edge cases, responsiveness, and interaction quality.',
-      'With backend and product, I clarify contracts, failure states, and what success means.',
+      'Clear contracts, edge cases, and trade-offs.',
+      'Less rework during integration and release.',
     ],
     icon: 'collaboration',
   },
