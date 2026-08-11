@@ -21,22 +21,27 @@ export const CONTACT_QUICK_FACTS = [
 ] as const;
 
 export const CONTACT_WORK_FOCUS = [
+  'Product Discovery',
   'Web and Mobile',
-  'Frontend Architecture',
-  'AI Codebase Audit',
-  'Refactoring and Recovery',
+  'Product Flows and Integrations',
+  'Codebase Recovery',
 ] as const;
 
 export const CONTACT_HELP_AREAS = [
   {
-    title: 'Complex product interfaces',
+    title: 'From business rules to product flows',
     description:
-      'SaaS dashboards, admin panels, complex forms, maps, onboarding and multi-step product flows.',
+      'Turn unclear requirements into user flows, states, forms, dashboards, maps, onboarding, and other product behavior.',
   },
   {
-    title: 'AI project recovery',
+    title: 'Web, mobile, and product systems',
     description:
-      'Codebase audit, structural cleanup, focused support, refactoring, and production hardening for AI-generated or AI-assisted projects.',
+      'Build and connect the frontend, APIs, auth, payments, realtime features, and release details that make the product work.',
+  },
+  {
+    title: 'AI-generated codebase recovery',
+    description:
+      'Review an AI-built project, find architectural and reliability risks, fix broken flows, and prepare the codebase for continued development.',
   },
 ] as const;
 

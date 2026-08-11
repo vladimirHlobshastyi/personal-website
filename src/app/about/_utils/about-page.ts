@@ -4,11 +4,11 @@ import { SITE } from '@/constants';
 export const aboutMetadata: Metadata = {
   title: 'About Vladimir Hlobchastyi',
   description:
-    'About Vladimir Hlobchastyi, a Senior Software Engineer focused on frontend architecture, React, Next.js, TypeScript, React Native, and AI-generated codebase recovery.',
+    'About Vladimir Hlobchastyi, a Senior Software Engineer (Product-Minded) helping turn business rules into working web and mobile products.',
   keywords: [
     'Software Engineer',
-    'Frontend Engineer',
-    'Frontend Developer',
+    'Product-Minded Software Engineer',
+    'Full-Stack Product Development',
     'React Developer',
     'Next.js Developer',
     'TypeScript Developer',
@@ -17,7 +17,6 @@ export const aboutMetadata: Metadata = {
     'Web Development',
     'Mobile Development',
     'Product Development',
-    'UI Engineering',
     'Frontend Architecture',
   ],
   alternates: { canonical: '/about' },
@@ -26,14 +25,14 @@ export const aboutMetadata: Metadata = {
     url: `${SITE.url}/about`,
     title: 'About Vladimir Hlobchastyi',
     description:
-      'Senior Software Engineer focused on frontend systems, mobile delivery, and AI-generated codebase recovery.',
+      'Senior Software Engineer (Product-Minded) focused on business logic, product flows, web and mobile delivery, and frontend architecture.',
     images: [{ url: '/og.webp', width: 1200, height: 630, alt: 'Vladimir Hlobchastyi — About' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Vladimir Hlobchastyi',
     description:
-      'Senior Software Engineer focused on React, Next.js, TypeScript, React Native, and production-ready product systems.',
+      'Senior Software Engineer (Product-Minded) focused on React, Next.js, TypeScript, React Native, and working product systems.',
     images: ['/og.webp'],
   },
 };
@@ -50,7 +49,7 @@ export function createAboutPageJsonLd() {
         url: aboutUrl,
         name: 'About Vladimir Hlobchastyi',
         description:
-          'About Vladimir Hlobchastyi, a Senior Software Engineer focused on frontend architecture, mobile delivery, and AI-generated codebase recovery.',
+          'About Vladimir Hlobchastyi, a Senior Software Engineer (Product-Minded) helping turn business rules into working web and mobile products.',
         isPartOf: { '@id': `${SITE.url}/#website` },
         about: { '@id': `${SITE.url}/#person` },
         mainEntity: { '@id': `${SITE.url}/#person` },

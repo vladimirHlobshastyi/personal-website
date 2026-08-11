@@ -22,8 +22,8 @@ export function SiteFooter() {
               Have a product to build? Let&apos;s talk.
             </h2>
             <p className="text-inverse-fg/60 mt-6 max-w-xl text-lg leading-8">
-              Senior web, mobile, and AI codebase support for teams that need clean execution and
-              less chaos.
+              Product engineering for teams that need to turn business logic into working web and
+              mobile software.
             </p>
           </div>
 
@@ -57,7 +57,9 @@ export function SiteFooter() {
 
         <div className="text-inverse-fg/40 mt-16 flex items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs font-medium tracking-[.04em] max-sm:flex-col max-sm:items-start max-sm:gap-2">
           <span>© {new Date().getFullYear()} Vladimir Hlobchastyi</span>
-          <span>Senior Software Engineer · React · Next.js · Node.js · React Native</span>
+          <span>
+            Senior Software Engineer · Product-Minded · React · Next.js · Node.js · React Native
+          </span>
         </div>
       </div>
     </footer>

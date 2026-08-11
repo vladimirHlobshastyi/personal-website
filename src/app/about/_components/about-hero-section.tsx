@@ -10,17 +10,18 @@ export function AboutHeroSection() {
           About
         </p>
         <h1 className="tracking-tightest max-w-4xl text-[clamp(2.35rem,5.1vw,4.2rem)] leading-[.95] font-semibold">
-          Senior Software Engineer with a frontend core and strong product delivery experience.
+          Senior Software Engineer (Product-Minded) for complex web and mobile products.
         </h1>
         <div className="mt-5 max-w-3xl space-y-3.5 text-[1rem] leading-[1.9] text-white/74">
           <p>
-            I am a Senior Software Engineer with 5+ years of commercial experience building and
-            stabilizing production web and mobile products.
+            I have <strong className="font-semibold text-white">5+ years</strong> of commercial
+            experience building and stabilizing production products. My strongest area is frontend
+            architecture, but I work across business logic, APIs, backend systems, mobile delivery,
+            and release work.
           </p>
           <p>
-            My core is frontend engineering with React, Next.js, TypeScript, and modern JavaScript,
-            but I also work across mobile delivery, backend integration, release flows, and
-            AI-assisted product work when end-to-end execution is needed.
+            I work with React, Next.js, React Native, TypeScript, Node.js, and the integrations that
+            connect product behavior to real users.
           </p>
         </div>
 
@@ -35,9 +36,7 @@ export function AboutHeroSection() {
 
       <div className="grid gap-4">
         <article className="border-line bg-surface border p-6 max-sm:p-5">
-          <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">
-            At a glance
-          </p>
+          <p className="text-quiet mb-5 text-xs font-bold tracking-[.16em] uppercase">In brief</p>
           <div className="grid gap-3.5 md:grid-cols-2">
             {aboutSnapshot.map((item) => (
               <div key={item.label} className="border-line bg-surface-2/35 border p-4">

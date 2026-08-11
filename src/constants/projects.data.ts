@@ -12,10 +12,12 @@ const rawProjects: Project[] = [
     eyebrow: 'Clinical Learning Platform · Web',
     badge: 'AI / vibe-coded rescue · architecture refactor',
     shortDescription:
-      'Frontend Developer on a clinical learning platform: stabilized a vibe-coded AI-generated codebase, restored structure and refactored it into a maintainable React + TypeScript product.',
+      'Recovered a clinical learning platform after vibe coding: restored access control, tenant scope, routes, and maintainable feature boundaries.',
     subtitle:
       'Web platform for clinical training, assessment and AI-assisted learning workflows, rebuilt into a production-ready React architecture.',
     role: 'Frontend Developer',
+    ownership:
+      'Owned frontend architecture recovery, access-control flows, tenant scoping, route cleanup, and production hardening as part of the product team.',
     keywords: [
       'React Developer',
       'TypeScript Developer',
@@ -76,10 +78,12 @@ const rawProjects: Project[] = [
     eyebrow: 'Wellness Subscription Platform · Web',
     badge: 'Quiz funnel · Stripe subscriptions',
     shortDescription:
-      'Frontend Developer on a wellness subscription platform: quiz funnel, Stripe billing and onboarding localized into 10 languages.',
+      'Built the quiz-to-subscription flow with Stripe billing, localized onboarding, and clear states across 10 languages.',
     subtitle:
       'Web platform for personalized quiz funnels, subscription billing and localized onboarding.',
     role: 'Frontend Developer',
+    ownership:
+      'Owned the quiz funnel, Stripe checkout and subscription states, localization, and API-connected product flows.',
     keywords: [
       'React Developer',
       'TypeScript Developer',
@@ -141,10 +145,12 @@ const rawProjects: Project[] = [
     eyebrow: 'Health & Wellness Mobile App · iOS & Android',
     badge: 'Cross-platform mobile app',
     shortDescription:
-      'React Native Developer on a health and wellness app: new features, refactoring and cross-platform delivery for iOS and Android.',
+      'Shipped and refactored cross-platform tracking, scanning, and content flows for iOS and Android.',
     subtitle:
       'Cross-platform wellness app for iOS and Android built with React Native and TypeScript.',
     role: 'React Native Developer',
+    ownership:
+      'Owned new tracking, scanning, and content flows, shared logic refactors, and cross-platform stability within the mobile team.',
     keywords: [
       'React Native Developer',
       'TypeScript Developer',
@@ -201,10 +207,12 @@ const rawProjects: Project[] = [
     eyebrow: 'E-commerce Subscription Platform · Web',
     badge: 'Quiz funnel · Subscriptions',
     shortDescription:
-      'Frontend Developer on a subscription e-commerce platform: multi-step quiz funnel, Stripe billing and onboarding localized into 10 languages.',
+      'Built the quiz-to-subscription flow with Stripe billing, localized onboarding, and a conversion-focused checkout path.',
     subtitle:
       'E-commerce platform with a personalized quiz funnel, subscription billing and localized onboarding.',
     role: 'Frontend Developer',
+    ownership:
+      'Owned the quiz funnel, Stripe checkout and subscription states, localization, and API-connected product flows.',
     keywords: [
       'React Developer',
       'TypeScript Developer',
@@ -266,10 +274,12 @@ const rawProjects: Project[] = [
     eyebrow: 'Mental Health Support App · iOS & Android',
     badge: 'WebRTC realtime · React Native',
     shortDescription:
-      'React Native Developer on a confidential mental health support app: realtime audio/video calls, on-device transcription and identity verification.',
+      'Built the realtime support-call flow with WebRTC, on-device transcription, identity verification, and safety states.',
     subtitle:
       'Confidential mobile app for realtime peer support, secure onboarding and on-device transcription.',
     role: 'React Native Developer',
+    ownership:
+      'Owned call lifecycle screens, permissions, WebRTC session states, on-device transcription, onboarding, and safety flows.',
     keywords: [
       'React Native Developer',
       'Mobile App Development',
@@ -342,10 +352,12 @@ const rawProjects: Project[] = [
     eyebrow: 'Social Media App · iOS & Android',
     badge: 'React Native social app',
     shortDescription:
-      'React Native Developer on a social media app: feed, stories, posts, chat and calls, plus creator analytics and subscriptions.',
+      'Built core social flows: feed, stories, content creation, chat, calls, business accounts, analytics, and subscriptions.',
     subtitle:
       'Mobile social platform for content creation, messaging, profiles, creator analytics and subscriptions.',
     role: 'React Native Developer',
+    ownership:
+      'Owned feed and story surfaces, content creation, chat and calls, notifications, business profiles, subscriptions, and moderation flows.',
     keywords: [
       'React Native Developer',
       'TypeScript Developer',
@@ -409,10 +421,12 @@ const rawProjects: Project[] = [
     category: 'Admin · Web',
     eyebrow: 'Operations Admin Dashboard · Web',
     shortDescription:
-      'Frontend Developer on an admin dashboard for managing backups, instances, organizations, users and access settings.',
+      'Built operational screens for backups, instances, organizations, users, and role-based access.',
     subtitle:
       'Administrative web application for operational data, account management and role-based access control.',
     role: 'Frontend Developer',
+    ownership:
+      'Owned operational screens, form and validation flows, API-driven states, and reusable dashboard UI within the team.',
     keywords: [
       'React Developer',
       'TypeScript Developer',
@@ -433,8 +447,7 @@ const rawProjects: Project[] = [
       'React Hook Form',
       'Sass',
     ],
-    focus:
-      'Auth flows, admin screens, tabular data, forms, analytics and reusable dashboard UI.',
+    focus: 'Auth flows, admin screens, tabular data, forms, analytics and reusable dashboard UI.',
     cover: '/images/case-08-cover.webp',
     images: ['/images/case-08-01.webp', '/images/case-08-02.webp', '/images/case-08-03.webp'],
     overview:
@@ -472,10 +485,11 @@ const rawProjects: Project[] = [
     category: 'Logistics · Web',
     eyebrow: 'Freight Rate Platform · Web',
     shortDescription:
-      'Next.js Developer on a freight rate platform: instant carrier pricing, route mapping and shipment booking workflows.',
-    subtitle:
-      'Logistics platform for carrier pricing, rate comparison and shipment booking.',
+      'Built rate search, carrier comparison, route mapping, RFQ, and shipment-booking flows for a logistics product.',
+    subtitle: 'Logistics platform for carrier pricing, rate comparison and shipment booking.',
     role: 'Frontend Developer',
+    ownership:
+      'Owned rate search, route mapping, carrier and RFQ workflows, role-aware dashboard structure, and content surfaces.',
     keywords: [
       'Next.js Developer',
       'React Developer',
@@ -499,11 +513,7 @@ const rawProjects: Project[] = [
     focus:
       'Product dashboard, rate search flows, carrier comparison tables, route visualization and role-based access.',
     cover: '/images/case-01-cover.webp',
-    images: [
-      '/images/case-01-03.webp',
-      '/images/case-01-01.webp',
-      '/images/case-01-02.webp',
-    ],
+    images: ['/images/case-01-03.webp', '/images/case-01-01.webp', '/images/case-01-02.webp'],
     overview:
       'Contributed to a logistics management platform providing instant carrier pricing for shippers and brokers. The product supports rate search by route, side-by-side carrier comparison, route maps with distance overlays and direct booking. The frontend handles complex search flows, rate tables, accessorial breakdowns and a content-driven blog section.',
     challenge:
@@ -545,10 +555,11 @@ const rawProjects: Project[] = [
     eyebrow: 'Property Marketplace · Web',
     badge: 'Property marketplace',
     shortDescription:
-      'Frontend Developer on a property marketplace for discovering, comparing and buying pre-construction and assignment-sale properties.',
-    subtitle:
-      'Real estate marketplace for pre-construction and assignment-sale listings.',
+      'Built property search, comparison, listing pages, favorites, and enquiry flows for buyers and developers.',
+    subtitle: 'Real estate marketplace for pre-construction and assignment-sale listings.',
     role: 'Frontend Developer',
+    ownership:
+      'Owned property search and filters, listing grids, project pages, favorites, search history, and buy/contact flows.',
     keywords: [
       'Next.js Developer',
       'React Developer',
@@ -592,10 +603,12 @@ const rawProjects: Project[] = [
     category: 'Enterprise Operations · Web + Mobile',
     eyebrow: 'Enterprise Operations Platform · Web + Mobile',
     shortDescription:
-      'Frontend / Mobile Developer on an enterprise operations platform for managing projects, work bundles, maps, tasks and PDF exports.',
+      'Built project, task, map, form, and export workflows for an operations product on web and mobile.',
     subtitle:
       'Enterprise platform for project workflows, field data, map-based planning and operational exports.',
     role: 'Frontend / Mobile Developer',
+    ownership:
+      'Owned project and task flows, map-based views, forms and dialogs, PDF exports, and dense admin UI across web and mobile.',
     keywords: [
       'React Developer',
       'TypeScript Developer',
@@ -658,10 +671,12 @@ const rawProjects: Project[] = [
     category: 'Realtime · Web (PWA)',
     eyebrow: 'Realtime Messaging App · Web (PWA)',
     shortDescription:
-      'Frontend Developer on a realtime messaging app with JWT auth, WebSocket messaging, online presence and role-based user/admin flows.',
+      'Built realtime messaging, presence, auth, role-based routes, and PWA-ready product surfaces.',
     subtitle:
       'Realtime web messaging product with synchronized dialogs, presence and PWA-ready frontend architecture.',
     role: 'Frontend Developer',
+    ownership:
+      'Owned realtime messaging UI, auth and state flows, role-aware routes, dialogs, profiles, and PWA-ready surfaces.',
     keywords: [
       'React Developer',
       'TypeScript Developer',
@@ -712,16 +727,16 @@ const rawProjects: Project[] = [
 ];
 
 const PROJECT_ORDER = [
-  'social-network-mobile-app',
-  'e-commerce-web-platform',
-  'mental-health-mobile-app',
   'logistics-management-platform',
   'real-estate-platform',
-  'enterprise-management-platform',
-  'real-time-chat-application',
+  'social-network-mobile-app',
   'clinical-education-platform',
-  'react-native-mobile-app',
+  'mental-health-mobile-app',
   'saas-admin-dashboard',
+  'enterprise-management-platform',
+  'e-commerce-web-platform',
+  'real-time-chat-application',
+  'react-native-mobile-app',
   'subscription-web-platform',
 ] as const;
 

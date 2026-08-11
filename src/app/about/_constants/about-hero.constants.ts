@@ -1,51 +1,28 @@
 export const ABOUT_ROLE_TAGS = [
-  'Senior Software Engineer',
-  'Frontend Engineer',
-  'React Developer',
-  'Next.js Developer',
-  'TypeScript Developer',
-  'React Native Developer',
+  'Senior Software Engineer (Product-Minded)',
+  'Web and Mobile',
+  'Frontend Architecture',
 ] as const;
 
 export const aboutSnapshot = [
   {
     label: 'Role',
-    value: 'Senior Software Engineer with a frontend core',
+    value: 'Senior Software Engineer (Product-Minded)',
     icon: 'briefcase',
   },
   {
-    label: 'Primary stack',
+    label: 'Scope',
+    value: 'Business logic, user flows, APIs, and interfaces',
+    icon: 'nodes',
+  },
+  {
+    label: 'Main tools',
     value: 'React, Next.js, React Native, TypeScript, Node.js',
     icon: 'layers',
   },
   {
-    label: 'Commercial experience',
-    value: '5+ years across product teams and existing codebases',
+    label: 'Experience',
+    value: '5+ years across web, iOS, Android, and existing products',
     icon: 'shield',
-  },
-  {
-    label: 'Platforms',
-    value: 'Web, iOS and Android',
-    icon: 'mobile',
-  },
-  {
-    label: 'Domains',
-    value: 'Healthcare, EdTech, e-commerce, logistics, social, ops and realtime',
-    icon: 'globe',
-  },
-  {
-    label: 'Collaboration',
-    value: 'Design, frontend, backend and product collaboration',
-    icon: 'conversation',
-  },
-  {
-    label: 'Location',
-    value: 'Remote, Europe-friendly hours',
-    icon: 'globe',
-  },
-  {
-    label: 'Availability',
-    value: 'Available for the right collaborations',
-    icon: 'clock',
   },
 ] as const;

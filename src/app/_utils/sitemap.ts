@@ -18,7 +18,6 @@ export function buildSitemap(): MetadataRoute.Sitemap {
     'src/app/_components/home/services-section.tsx',
     'src/app/_components/home/about-preview-section.tsx',
     'src/app/_components/home/selected-work-section.tsx',
-    'src/app/_components/home/metrics-section.tsx',
   ]);
 
   const aboutLastModified = getLatestModified([

@@ -50,7 +50,7 @@ export function createRootJsonLd() {
         name: SITE.name,
         givenName: 'Vladimir',
         familyName: 'Hlobchastyi',
-        jobTitle: 'Senior Software Engineer',
+        jobTitle: 'Senior Software Engineer (Product-Minded)',
         description: SITE.description,
         url: SITE.url,
         image: `${SITE.url}/og.webp`,

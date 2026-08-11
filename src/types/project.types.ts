@@ -7,6 +7,7 @@ export type Project = {
   shortDescription: string;
   subtitle: string;
   role: string;
+  ownership: string;
   stack: string[];
   focus: string;
   keywords?: string[];

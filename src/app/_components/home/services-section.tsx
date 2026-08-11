@@ -8,10 +8,10 @@ export function ServicesSection() {
       <div className="mb-12 grid grid-cols-[1fr_auto] items-end gap-8 max-md:grid-cols-1 max-md:items-start">
         <div>
           <p className="text-accent before:bg-accent/50 mb-6 inline-flex items-center gap-3 text-xs font-bold tracking-[.16em] uppercase before:block before:h-px before:w-10">
-            What I do
+            What I build and improve
           </p>
           <h2 className="tracking-tightest max-w-2xl text-[clamp(2.25rem,5vw,3.625rem)] leading-[1.04] font-semibold">
-            Senior product delivery without bloated architecture.
+            Senior software engineering across the product, not just the interface.
           </h2>
         </div>
         <Link

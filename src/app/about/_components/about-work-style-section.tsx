@@ -11,14 +11,14 @@ export function AboutWorkStyleSection() {
       <div className="grid items-start gap-6 lg:grid-cols-[.98fr_1.02fr]">
         <div>
           <p className="text-quiet mb-4 text-xs font-bold tracking-[.16em] uppercase">How I work</p>
+          <h2 className="tracking-tightest max-w-3xl text-[clamp(2rem,4vw,3.25rem)] leading-[1.02] font-semibold">
+            Clear decisions, useful code, fewer surprises.
+          </h2>
           <div className="text-muted grid max-w-3xl gap-3.5 text-[1rem] leading-[1.9]">
             <p>
-              The main idea is simple:{' '}
-              <strong className="text-fg font-semibold">
-                make the code easier to change, not just faster to ship
-              </strong>
-              . I prefer explicit boundaries, predictable data flow, and practical architecture over
-              clever abstractions.
+              My goal is to make the product easier to change, not just faster to ship. I prefer
+              practical architecture, direct communication, and a clear answer to &quot;what happens
+              when this goes wrong?&quot;
             </p>
           </div>
 
@@ -60,9 +60,8 @@ export function AboutWorkStyleSection() {
               Next step
             </p>
             <p className="text-inverse-fg/74 text-sm leading-7">
-              I am a good fit for teams that need a Senior Software Engineer who can build strong
-              frontend systems, ship across web and mobile, and bring structure to AI-generated or
-              fast-moving product codebases without overcomplicating them.
+              If you have a product that needs clearer logic, a stronger frontend, or a careful path
+              from idea to release, let&apos;s talk.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link

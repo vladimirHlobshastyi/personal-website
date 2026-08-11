@@ -19,8 +19,8 @@ export default function WorkPage() {
           Selected projects
         </h1>
         <p className="text-muted text-lg leading-8">
-          Case studies across social media, e-commerce, mental health, logistics, real estate,
-          enterprise operations, admin tools and realtime messaging.
+          Product case studies across logistics, marketplaces, social apps, healthcare,
+          subscriptions, realtime communication, and operational systems.
         </p>
       </section>
 
@@ -32,12 +32,10 @@ export default function WorkPage() {
           Project categories
         </h2>
         <div className="border-line border-r p-6 max-md:border-r-0 max-md:border-b">
-          <p className="text-quiet mb-2 text-[0.7rem] font-bold tracking-[.16em] uppercase">
-            Web
-          </p>
+          <p className="text-quiet mb-2 text-[0.7rem] font-bold tracking-[.16em] uppercase">Web</p>
           <p className="text-fg text-sm leading-7">
-            React, Next.js and TypeScript for SaaS dashboards, marketplaces, logistics, real
-            estate and conversion-driven web applications.
+            React, Next.js, TypeScript, Node.js, APIs, and data-connected workflows for SaaS
+            dashboards, marketplaces, logistics, real estate, and conversion-driven web products.
           </p>
         </div>
         <div className="border-line border-r p-6 max-md:border-r-0 max-md:border-b">
@@ -45,8 +43,8 @@ export default function WorkPage() {
             Mobile
           </p>
           <p className="text-fg text-sm leading-7">
-            React Native and Ionic for iOS and Android — health, social, mental-health and
-            enterprise apps built from a shared TypeScript codebase.
+            React Native and Ionic for iOS and Android, connected to APIs, auth, push notifications,
+            offline data, and release workflows.
           </p>
         </div>
         <div className="p-6">
@@ -54,8 +52,8 @@ export default function WorkPage() {
             Realtime &amp; integrations
           </p>
           <p className="text-fg text-sm leading-7">
-            WebRTC, WebSockets, Stripe, Mapbox, on-device speech-to-text and AI integrations
-            wired into production user flows.
+            Node.js, Express.js, GraphQL, REST APIs, WebRTC, WebSockets, Stripe, Mapbox, and AI
+            integrations wired into production user flows.
           </p>
         </div>
       </section>

@@ -17,33 +17,36 @@ export function HeroSection() {
             Vladimir Hlobchastyi
           </strong>
           <span className="text-[0.8125rem] font-medium text-white/60">
-            Senior Software Engineer · Web · Mobile · AI
+            Senior Software Engineer · Product-Minded · Web · Mobile · Full-Stack
           </span>
         </div>
       </div>
 
       <div>
         <div className="text-accent before:bg-accent/50 mb-7 inline-flex items-center gap-3 text-[0.6875rem] font-bold tracking-[.14em] uppercase before:block before:h-px before:w-10">
-          Senior Software Engineer · Open to collaboration
+          Senior Software Engineer (Product-Minded) · Web · Mobile · Full-Stack
         </div>
 
         <h1 className="tracking-tightest text-[clamp(3rem,7vw,5.75rem)] leading-[.9] font-semibold">
-          Senior Software Engineer for web, mobile, and AI-assisted products.
+          Senior Software Engineer building web and mobile products across the stack.
         </h1>
 
         <div className="text-muted mt-7 grid max-w-[36rem] gap-4 text-[1.0625rem] leading-[1.7]">
           <p>
-            I have 5+ years of commercial experience building and stabilizing production products
-            with <strong className="text-fg font-semibold">React</strong>,{' '}
+            I have <strong className="text-fg font-semibold">5+ years</strong> of commercial
+            experience building and stabilizing production products with{' '}
+            <strong className="text-fg font-semibold">React</strong>,{' '}
             <strong className="text-fg font-semibold">Next.js</strong>,{' '}
             <strong className="text-fg font-semibold">React Native</strong>,{' '}
             <strong className="text-fg font-semibold">TypeScript</strong>, and{' '}
             <strong className="text-fg font-semibold">Node.js</strong>.
           </p>
           <p>
-            My strongest areas are frontend architecture, cross-platform delivery, and AI project
-            analysis: auditing AI-generated codebases, identifying structural risks, supporting
-            ongoing delivery, and refactoring unstable systems into production-ready products.
+            My strongest area is frontend architecture, but I work across business logic, APIs,
+            backend services, auth, payments, realtime features, data flows, and release work. I
+            also audit and refactor AI-generated codebases when they need structure. I use AI for
+            product research, testing, debugging, and faster implementation, while validating the
+            decisions and final code myself.
           </p>
         </div>
 
@@ -58,7 +61,7 @@ export function HeroSection() {
             href={ROUTES.about}
             className="text-fg border-line bg-surface hover:border-line-strong border px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] transition-colors"
           >
-            About me
+            How I work
           </Link>
           <Link
             href={ROUTES.contact}

@@ -12,14 +12,13 @@ export function AboutPreviewSection() {
             About
           </p>
           <h2 className="tracking-tightest max-w-3xl text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.02] font-semibold">
-            Frontend-first engineering for complex product teams.
+            Product-minded software engineering for complex product teams.
           </h2>
         </div>
         <div>
           <p className="text-muted text-lg leading-8">
-            I build production web and mobile products with a strong frontend core, and I work
-            confidently across integrations, release flows, and AI-generated codebase recovery when
-            the product needs it.
+            I build web and mobile products with a strong frontend core, while working across
+            business logic, APIs, backend systems, integrations, and release flows.
           </p>
           <Link
             href={ROUTES.about}

@@ -1,56 +1,53 @@
 export const aboutTechnologyGroups = [
   {
     title: 'Core web stack',
-    items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'TanStack Query', 'Node.js'],
+    items: [
+      'React',
+      'Next.js',
+      'TypeScript',
+      'JavaScript',
+      'TanStack Query',
+      'Node.js',
+      'Express.js',
+    ],
   },
   {
-    title: 'Mobile stack',
-    items: ['React Native', 'iOS', 'Android', 'Expo', 'Ionic', 'Capacitor'],
+    title: 'Backend and data',
+    items: ['GraphQL', 'REST APIs', 'Supabase', 'PostgreSQL', 'MongoDB', 'Prisma'],
   },
   {
-    title: 'Product integrations',
-    items: ['GraphQL', 'Stripe', 'Mapbox', 'WebRTC', 'Sentry', 'OpenAI'],
+    title: 'Mobile and integrations',
+    items: ['React Native', 'Ionic', 'Expo', 'Capacitor', 'Stripe', 'Mapbox', 'WebRTC', 'Sentry'],
   },
 ] as const;
 
 export const aboutWorkStyle = [
   {
-    title: 'Architecture and maintainability',
+    title: 'Make complexity visible',
     summary:
-      'I prefer explicit boundaries, focused responsibilities and predictable data flow over clever abstractions.',
+      'I prefer explicit boundaries and predictable data flow over clever abstractions that hide the real rules.',
     points: [
-      'Clean architecture for me means clarity, not ceremony.',
-      'I avoid local fixes that make the system harder to evolve later.',
+      'Clean architecture means the next decision is easier to make.',
+      'I avoid local fixes that make the product harder to evolve later.',
     ],
     icon: 'architecture',
   },
   {
-    title: 'Complex product UI',
-    summary:
-      'I am most useful on non-trivial interfaces: dashboards, onboarding, forms, maps, subscriptions, and realtime surfaces.',
+    title: 'Build for real use',
+    summary: 'The work is not finished when the happy path looks good in a screenshot.',
     points: [
-      'I care about state ownership, edge cases and UI logic staying manageable.',
-      'The goal is not just shipping screens, but shipping stable product behavior.',
+      'I think through loading, empty, error, permission, and mobile states.',
+      'Performance, accessibility, and interaction quality are part of implementation.',
     ],
     icon: 'compass',
   },
   {
-    title: 'Performance and accessibility',
+    title: 'Stay close to the decisions',
     summary:
-      'Performance and accessibility are part of implementation, not cleanup tasks for later.',
+      'I work with product, design, and backend teammates to keep the system understandable and the trade-offs visible.',
     points: [
-      'I think about rendering cost, perceived speed, semantics, keyboard flow and clarity while building.',
-      'Good UX depends on engineering decisions, not only visual design.',
-    ],
-    icon: 'speed',
-  },
-  {
-    title: 'Team collaboration',
-    summary:
-      'I work closely with designers, backend engineers and product teams to keep decisions concrete and implementable.',
-    points: [
-      'With designers, I focus on states, edge cases, responsiveness and interaction quality.',
-      'With backend engineers, I focus on contracts, failure states, and realistic data flow.',
+      'With design, I clarify states, edge cases, responsiveness, and interaction quality.',
+      'With backend and product, I clarify contracts, failure states, and what success means.',
     ],
     icon: 'collaboration',
   },

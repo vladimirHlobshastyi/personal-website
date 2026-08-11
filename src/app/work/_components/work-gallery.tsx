@@ -11,7 +11,7 @@ function getCardSummary(text: string) {
 export function WorkGallery() {
   return (
     <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <Link
           key={project.slug}
           href={`${ROUTES.work}/${project.slug}`}
@@ -34,10 +34,15 @@ export function WorkGallery() {
             <h3 className="text-fg text-[1.75rem] leading-[1] font-semibold tracking-[-0.05em]">
               {project.title}
             </h3>
-            <p className="text-muted mt-3 text-xs font-bold tracking-[.16em] uppercase">
-              {project.eyebrow}
-            </p>
-            <p className="text-fg/80 mt-4 text-sm leading-6 line-clamp-1">
+            <div className="mt-3 flex items-center gap-3">
+              <span className="text-accent text-sm font-bold tabular-nums">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <p className="text-muted text-xs font-bold tracking-[.16em] uppercase">
+                {project.eyebrow}
+              </p>
+            </div>
+            <p className="text-fg/80 mt-4 line-clamp-1 text-sm leading-6">
               {getCardSummary(project.shortDescription)}
             </p>
 

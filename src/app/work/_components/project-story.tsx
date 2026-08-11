@@ -15,13 +15,18 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
 export function ProjectStory({ project }: ProjectStoryProps) {
   return (
     <section className="mt-12">
-      {/* Lead: the one-paragraph framing of the project. */}
-      <article className="border-line bg-surface border p-8 max-sm:p-6">
-        <Eyebrow>Overview</Eyebrow>
-        <p className="text-fg max-w-4xl text-[clamp(1.1875rem,2.2vw,1.5rem)] leading-[1.55] font-medium tracking-[-0.01em]">
-          {project.overview}
-        </p>
-      </article>
+      <div className="grid gap-5 lg:grid-cols-[.9fr_1.1fr]">
+        <article className="border-line bg-surface border p-8 max-sm:p-6">
+          <Eyebrow>Product context</Eyebrow>
+          <p className="text-fg text-[1.0625rem] leading-8">{project.overview}</p>
+        </article>
+        <article className="bg-inverse text-inverse-fg p-8 max-sm:p-6">
+          <Eyebrow>My scope</Eyebrow>
+          <p className="text-inverse-fg/78 text-[clamp(1.1875rem,2.2vw,1.5rem)] leading-[1.55] font-medium tracking-[-0.01em]">
+            {project.ownership}
+          </p>
+        </article>
+      </div>
 
       {/* Tension and resolution, side by side. */}
       <div className="mt-5 grid grid-cols-2 gap-5 max-lg:grid-cols-1">

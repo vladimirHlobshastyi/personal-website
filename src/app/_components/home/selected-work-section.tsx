@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ConfidentialityNotice } from '@/components/features';
 import { mediaOverlay, ROUTES } from '@/constants';
-import { ArrowIcon, Tag } from '@/components/ui';
+import { ArrowIcon } from '@/components/ui';
 import { getProjectBySlug, getProjectPlatform, getProjectPreviewPath } from '@/utils';
 import { FEATURED_PROJECT_SLUG, SUPPORTING_PROJECT_SLUGS } from '../../_constants/home.constants';
 
@@ -27,8 +27,8 @@ export function SelectedWorkSection() {
           Selected work
         </h2>
         <p className="text-muted text-lg leading-8">
-          Production web, mobile, and product systems across complex UI, real-time workflows, and
-          AI-generated codebase recovery.
+          Product work across logistics, marketplaces, social apps, realtime communication, and
+          operational systems. Each case shows the product problem and my role in solving it.
         </p>
       </div>
 
@@ -60,13 +60,7 @@ export function SelectedWorkSection() {
             <p className="mb-6 max-w-xl text-lg leading-8 text-white/75">
               {featured.shortDescription}
             </p>
-            <div className="flex flex-wrap gap-2">
-              {featured.stack.slice(0, 5).map((tag) => (
-                <Tag key={tag} variant="onMedia">
-                  {tag}
-                </Tag>
-              ))}
-            </div>
+            <p className="text-sm font-semibold text-white/70">{featured.category}</p>
           </div>
         </Link>
 
@@ -94,6 +88,9 @@ export function SelectedWorkSection() {
                   <h3 className="text-[1.5rem] leading-tight font-semibold tracking-[-0.04em]">
                     {project.title}
                   </h3>
+                  <p className="text-quiet mt-2 text-[0.7rem] font-bold tracking-[.12em] uppercase">
+                    {project.category}
+                  </p>
                   <p className="text-muted mt-2 line-clamp-2 text-sm leading-6">
                     {project.shortDescription}
                   </p>

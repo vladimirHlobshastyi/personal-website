@@ -8,16 +8,16 @@ export function ContactHeroSection() {
         Contact
       </p>
       <h1 className="tracking-tightest max-w-3xl text-[clamp(2.5rem,6vw,4.75rem)] leading-[.92] font-semibold">
-        Contact for senior web, mobile, and AI codebase work.
+        Have a product to build or untangle?
       </h1>
       <p className="text-inverse-fg/70 mt-5 max-w-2xl text-lg leading-8">
-        I help teams build, stabilize, and refactor production products with React, Next.js,
-        React Native, TypeScript, and Node.js.
+        I help teams turn business rules and product ideas into working web and mobile software with
+        React, Next.js, React Native, TypeScript, and Node.js.
       </p>
       <p className="text-inverse-fg/70 mt-4 max-w-2xl text-lg leading-8">
-        I also analyze AI-generated codebases, identify structural risks, support ongoing
-        delivery, and refactor unstable systems into production-ready software. The fastest
-        response is by email or Telegram.
+        My strongest area is frontend architecture, but I also work across product flows, APIs,
+        integrations, edge cases, and release work. If an AI-generated codebase has become hard to
+        change, I can help with that too. The fastest response is by email or Telegram.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-2">

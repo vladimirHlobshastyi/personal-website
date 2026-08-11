@@ -23,7 +23,7 @@ export function createHomePageJsonLd() {
         '@type': 'ProfilePage',
         '@id': `${SITE.url}/#profile`,
         url: SITE.url,
-        name: `${SITE.name} — Senior Software Engineer`,
+        name: `${SITE.name} — Senior Software Engineer (Product-Minded)`,
         inLanguage: 'en',
         isPartOf: { '@id': `${SITE.url}/#website` },
         mainEntity: { '@id': `${SITE.url}/#person` },

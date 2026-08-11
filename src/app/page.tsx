@@ -1,6 +1,5 @@
 import { AboutPreviewSection } from './_components/home/about-preview-section';
 import { HeroSection } from './_components/home/hero-section';
-import { MetricsSection } from './_components/home/metrics-section';
 import { SelectedWorkSection } from './_components/home/selected-work-section';
 import { ServicesSection } from './_components/home/services-section';
 import { createHomePageJsonLd } from './_utils/home-page';
@@ -18,7 +17,6 @@ export default function HomePage() {
       <ServicesSection />
       <AboutPreviewSection />
       <SelectedWorkSection />
-      <MetricsSection />
     </main>
   );
 }

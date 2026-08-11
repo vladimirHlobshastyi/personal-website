@@ -5,17 +5,12 @@ import { CONTACTS } from './contacts.constants';
 export const SITE = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://vladimirh.dev',
   name: 'Vladimir Hlobchastyi',
-  role: 'Senior Software Engineer · React, Next.js, Node.js & React Native',
-  title: 'Vladimir Hlobchastyi — Senior Software Engineer for Web, Mobile & AI-Assisted Products',
+  role: 'Senior Software Engineer (Product-Minded) · React, Next.js, Node.js & React Native',
+  title: 'Vladimir Hlobchastyi — Senior Software Engineer (Product-Minded)',
   description:
-    'Senior Software Engineer building web, mobile, and AI-assisted products with React, Next.js, Node.js, React Native, and TypeScript. Available for frontend architecture, cross-platform delivery, AI codebase audit, recovery, and refactoring.',
+    'Senior Software Engineer (Product-Minded) helping turn business rules into working web and mobile products with React, Next.js, Node.js, React Native, and TypeScript. Strong in frontend architecture, product flows, integrations, and release work.',
   locale: 'en_US',
-  sameAs: [
-    CONTACTS.linkedin.href,
-    CONTACTS.github.href,
-    CONTACTS.x.href,
-    CONTACTS.telegram.href,
-  ],
+  sameAs: [CONTACTS.linkedin.href, CONTACTS.github.href, CONTACTS.x.href, CONTACTS.telegram.href],
   keywords: [
     'Vladimir Hlobchastyi',
     'Software Engineer',
@@ -38,6 +33,7 @@ export const SITE = {
     'JavaScript Engineer',
     'Frontend Engineer',
     'Senior Software Engineer',
+    'Product-Minded Software Engineer',
   ],
   knowsAbout: [
     'React',

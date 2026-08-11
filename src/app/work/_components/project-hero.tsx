@@ -54,9 +54,10 @@ export function ProjectHero({ project }: ProjectHeroProps) {
 
       {/* Consolidated, scannable meta panel: aligned label rows. */}
       <div className="border-line bg-surface mb-10 border">
-        <MetaRow label="Role">
+        <MetaRow label="Team role">
           <span className="font-medium">{project.role}</span>
         </MetaRow>
+        <MetaRow label="My scope">{project.ownership}</MetaRow>
         <MetaRow label="Focus">{project.focus}</MetaRow>
         <MetaRow label="Stack">
           <div className="flex flex-wrap gap-2">
