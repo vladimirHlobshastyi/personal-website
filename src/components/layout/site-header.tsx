@@ -10,7 +10,7 @@ export function SiteHeader() {
 
   return (
     <header className="border-line bg-bg/80 supports-[backdrop-filter]:bg-bg/65 sticky top-0 z-40 w-full border-b backdrop-blur-xl">
-      <div className="mx-auto grid w-[min(73.75rem,calc(100%-3rem))] grid-cols-[1fr_auto_1fr] items-center gap-6 py-5 max-lg:grid-cols-[1fr_auto] max-sm:w-[min(100%-1.75rem,73.75rem)]">
+      <div className="mx-auto grid w-[min(73.75rem,calc(100%-3rem))] grid-cols-[1fr_auto_1fr] items-center gap-6 py-3 max-lg:grid-cols-[1fr_auto] max-sm:w-[min(100%-1.75rem,73.75rem)]">
         <Link
           href={ROUTES.home}
           aria-label="Vladimir Hlobchastyi — Home"
@@ -19,7 +19,7 @@ export function SiteHeader() {
           <Avatar
             src="/images/main_photo.webp"
             alt="Vladimir Hlobchastyi"
-            size={40}
+            size={52}
             className="transition-transform duration-300 group-hover:-translate-y-0.5"
           />
           <span className="flex flex-col leading-none">
@@ -44,7 +44,7 @@ export function SiteHeader() {
                 className={`after:bg-accent relative py-1 text-sm font-medium transition-colors after:absolute after:-bottom-0.5 after:left-0 after:h-px after:transition-all after:duration-300 ${
                   isActive
                     ? 'text-fg after:w-full'
-                    : 'text-fg/45 hover:text-fg after:w-0 hover:after:w-full'
+                    : 'text-muted hover:text-fg after:w-0 hover:after:w-full'
                 }`}
               >
                 {item.label}

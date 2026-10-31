@@ -1,11 +1,9 @@
 import { CONTACTS } from '@/constants';
 
 const links = [
-  { label: CONTACTS.email.label, href: CONTACTS.email.href, external: true },
-  { label: CONTACTS.linkedin.label, href: CONTACTS.linkedin.href, external: true },
-  { label: CONTACTS.github.label, href: CONTACTS.github.href, external: true },
-  { label: CONTACTS.telegram.label, href: CONTACTS.telegram.href, external: true },
-  { label: CONTACTS.x.label, href: CONTACTS.x.href, external: true },
+  { label: 'LinkedIn', href: CONTACTS.linkedin.href, external: true },
+  { label: 'GitHub', href: CONTACTS.github.href, external: true },
+  { label: 'Telegram', href: CONTACTS.telegram.href, external: true },
   { label: CONTACTS.resume.label, href: CONTACTS.resume.href, external: false, download: true },
 ];
 
@@ -27,12 +25,20 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-end gap-2 max-lg:justify-start">
+          <div className="flex flex-wrap items-center justify-end gap-x-6 gap-y-3 max-lg:justify-start">
+            <a
+              className="bg-bg text-fg hover:bg-inverse hover:text-inverse-fg inline-flex items-center border border-white/15 px-6 py-4 text-sm font-bold transition-colors hover:border-white/30"
+              href={CONTACTS.email.href}
+              data-analytics-event="contact_click"
+              data-analytics-label="footer_email"
+            >
+              Email me
+            </a>
             {links.map((link) =>
               link.external ? (
                 <a
                   key={link.label}
-                  className="text-inverse-fg/90 hover:border-accent hover:text-accent border border-white/12 px-5 py-3 text-sm font-bold transition-colors"
+                  className="text-inverse-fg/70 hover:text-accent text-sm font-semibold transition-colors"
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -44,7 +50,7 @@ export function SiteFooter() {
               ) : (
                 <a
                   key={link.label}
-                  className="text-inverse-fg/90 hover:border-accent hover:text-accent border border-white/12 px-5 py-3 text-sm font-bold transition-colors"
+                  className="text-inverse-fg/70 hover:text-accent text-sm font-semibold transition-colors"
                   href={link.href}
                   download
                 >
@@ -57,9 +63,7 @@ export function SiteFooter() {
 
         <div className="text-inverse-fg/40 mt-16 flex items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs font-medium tracking-[.04em] max-sm:flex-col max-sm:items-start max-sm:gap-2">
           <span>© {new Date().getFullYear()} Vladimir Hlobchastyi</span>
-          <span>
-            Senior Software Engineer · Product-Minded · React · Next.js · Node.js · React Native
-          </span>
+          <span>Senior Software Engineer · Web · Mobile · Product Engineering</span>
         </div>
       </div>
     </footer>

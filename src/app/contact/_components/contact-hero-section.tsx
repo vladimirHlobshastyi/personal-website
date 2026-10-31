@@ -14,10 +14,6 @@ export function ContactHeroSection() {
           A useful first message can be short: what the product does, its current stage, the main
           technical or delivery problem, and the outcome you need.
         </p>
-        <p>
-          I work on complex frontend systems, web and mobile delivery, integrations, and careful
-          recovery of existing codebases. Email and Telegram are the fastest ways to reach me.
-        </p>
       </div>
 
       <dl className="border-line mt-10 grid border-y sm:grid-cols-3">

@@ -1,8 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { SITE } from '@/constants';
 
-// Allow every crawler — including AI/answer engines (GPTBot, ClaudeBot,
-// PerplexityBot, Google-Extended, etc.) — so the site can be indexed and cited.
+// Keep the public portfolio crawlable. Host and CDN rules must allow crawlers too.
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: '*', allow: '/' }],

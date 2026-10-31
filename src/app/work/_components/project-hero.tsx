@@ -1,5 +1,5 @@
 import { ConfidentialityNotice } from '@/components/features';
-import { ArrowIcon, Badge, ImageCarousel, Tag } from '@/components/ui';
+import { ArrowIcon, Badge, ImageCarousel } from '@/components/ui';
 import type { Project } from '@/types';
 import { getProjectShowcaseImages, hasProjectRealScreenshots } from '@/utils';
 
@@ -21,15 +21,14 @@ export function ProjectHero({ project }: ProjectHeroProps) {
 
   return (
     <>
-      {/* Title leads at the top — strong first impression, no wasted space. */}
-      <header className="mb-10 max-w-4xl">
+      <header className="mb-8 max-w-4xl">
         <div className="mb-6 flex flex-wrap items-center gap-4">
           <span className="text-accent before:bg-accent/50 inline-flex items-center gap-3 text-xs font-bold tracking-[.14em] uppercase before:block before:h-px before:w-10">
             Case Study
           </span>
           {project.badge ? <Badge>{project.badge}</Badge> : null}
         </div>
-        <h1 className="tracking-tightest text-[clamp(3.125rem,7vw,5.625rem)] leading-[.9] font-semibold">
+        <h1 className="tracking-tightest text-[clamp(2.75rem,5.2vw,4.5rem)] leading-[.98] font-semibold">
           {project.title}
         </h1>
         <p className="text-muted mt-6 max-w-2xl text-lg leading-8">{project.subtitle}</p>
@@ -52,20 +51,11 @@ export function ProjectHero({ project }: ProjectHeroProps) {
         ) : null}
       </header>
 
-      {/* Consolidated, scannable meta panel: aligned label rows. */}
       <div className="border-line bg-surface mb-10 border">
         <MetaRow label="Team role">
           <span className="font-medium">{project.role}</span>
         </MetaRow>
         <MetaRow label="My scope">{project.ownership}</MetaRow>
-        <MetaRow label="Focus">{project.focus}</MetaRow>
-        <MetaRow label="Stack">
-          <div className="flex flex-wrap gap-2">
-            {project.stack.map((tech) => (
-              <Tag key={tech}>{tech}</Tag>
-            ))}
-          </div>
-        </MetaRow>
       </div>
 
       <ConfidentialityNotice className="mb-6" />

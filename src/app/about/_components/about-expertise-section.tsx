@@ -29,8 +29,6 @@ export function AboutExpertiseSection() {
             key={item.title}
             title={item.title}
             summary={item.summary}
-            points={item.points}
-            tags={item.tags}
             icon={getAboutIcon(item.icon, 'h-5 w-5')}
           />
         ))}

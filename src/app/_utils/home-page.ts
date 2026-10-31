@@ -19,15 +19,6 @@ export function createHomePageJsonLd() {
           `${SITE.url}${ROUTES.contact}`,
         ],
       },
-      {
-        '@type': 'ProfilePage',
-        '@id': `${SITE.url}/#profile`,
-        url: SITE.url,
-        name: `${SITE.name} — Senior Software Engineer (Product-Minded)`,
-        inLanguage: 'en',
-        isPartOf: { '@id': `${SITE.url}/#website` },
-        mainEntity: { '@id': `${SITE.url}/#person` },
-      },
     ],
   };
 }

@@ -512,7 +512,7 @@ const rawProjects: Project[] = [
     ],
     focus:
       'Product dashboard, rate search flows, carrier comparison tables, route visualization and role-based access.',
-    cover: '/images/case-01-cover.webp',
+    cover: '/images/case-01-02.webp',
     images: ['/images/case-01-03.webp', '/images/case-01-01.webp', '/images/case-01-02.webp'],
     overview:
       'Contributed to a logistics management platform providing instant carrier pricing for shippers and brokers. The product supports rate search by route, side-by-side carrier comparison, route maps with distance overlays and direct booking. The frontend handles complex search flows, rate tables, accessorial breakdowns and a content-driven blog section.',

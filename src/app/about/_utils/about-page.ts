@@ -5,20 +5,6 @@ export const aboutMetadata: Metadata = {
   title: 'About Vladimir Hlobchastyi',
   description:
     'About Vladimir Hlobchastyi, a Senior Software Engineer (Product-Minded) helping turn business rules into working web and mobile products.',
-  keywords: [
-    'Software Engineer',
-    'Product-Minded Software Engineer',
-    'Full-Stack Product Development',
-    'React Developer',
-    'Next.js Developer',
-    'TypeScript Developer',
-    'React Native Developer',
-    'JavaScript Engineer',
-    'Web Development',
-    'Mobile Development',
-    'Product Development',
-    'Frontend Architecture',
-  ],
   alternates: { canonical: '/about' },
   openGraph: {
     type: 'profile',
@@ -53,14 +39,6 @@ export function createAboutPageJsonLd() {
         isPartOf: { '@id': `${SITE.url}/#website` },
         about: { '@id': `${SITE.url}/#person` },
         mainEntity: { '@id': `${SITE.url}/#person` },
-      },
-      {
-        '@type': 'ProfilePage',
-        '@id': `${aboutUrl}#profile`,
-        url: aboutUrl,
-        name: 'Vladimir Hlobchastyi',
-        mainEntity: { '@id': `${SITE.url}/#person` },
-        isPartOf: { '@id': `${SITE.url}/#website` },
       },
       {
         '@type': 'BreadcrumbList',

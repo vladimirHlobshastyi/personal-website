@@ -19,7 +19,7 @@ export default function BlogIndexPage() {
           <p className="text-accent before:bg-accent/50 mb-5 inline-flex items-center gap-3 text-[0.72rem] font-bold tracking-[.16em] uppercase before:block before:h-px before:w-8">
             Notes
           </p>
-          <h1 className="text-[clamp(3.125rem,7vw,5.625rem)] leading-[.9] font-semibold tracking-[-0.08em]">
+          <h1 className="tracking-tightest text-[clamp(2.75rem,5.2vw,4.5rem)] leading-[.98] font-semibold">
             Blog
           </h1>
         </div>

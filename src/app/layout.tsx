@@ -25,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={jakarta.variable} suppressHydrationWarning>
       <head>
-        <link rel="alternate" type="application/llms.txt" href={ROUTES.llms} />
         <link
           rel="alternate"
           type="application/rss+xml"

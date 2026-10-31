@@ -21,17 +21,11 @@ export default function NotFound() {
       </p>
 
       <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-        <Link
-          href="/"
-          className="group bg-fg text-bg inline-flex items-center gap-2 px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] transition-transform hover:-translate-y-0.5"
-        >
+        <Link href="/" className="group bg-fg text-bg inline-flex items-center gap-2 px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] transition-transform hover:-translate-y-0.5">
           <ArrowIcon className="h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-1" />
           Back to home
         </Link>
-        <Link
-          href="/work"
-          className="text-fg border-line bg-surface hover:border-line-strong border px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] transition-colors"
-        >
+        <Link href="/work" className="text-fg border-line bg-surface hover:border-line-strong border px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] transition-colors">
           View work
         </Link>
       </div>

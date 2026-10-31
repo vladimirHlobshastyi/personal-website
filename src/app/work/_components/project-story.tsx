@@ -1,4 +1,5 @@
 import type { Project } from '@/types';
+import { Tag } from '@/components/ui';
 
 type ProjectStoryProps = {
   project: Project;
@@ -20,27 +21,17 @@ export function ProjectStory({ project }: ProjectStoryProps) {
           <Eyebrow>Product context</Eyebrow>
           <p className="text-fg text-[1.0625rem] leading-8">{project.overview}</p>
         </article>
-        <article className="bg-inverse text-inverse-fg p-8 max-sm:p-6">
-          <Eyebrow>My scope</Eyebrow>
-          <p className="text-inverse-fg/78 text-[clamp(1.1875rem,2.2vw,1.5rem)] leading-[1.55] font-medium tracking-[-0.01em]">
-            {project.ownership}
-          </p>
-        </article>
-      </div>
-
-      {/* Tension and resolution, side by side. */}
-      <div className="mt-5 grid grid-cols-2 gap-5 max-lg:grid-cols-1">
         <article className="border-line bg-surface border p-8 max-sm:p-6">
           <Eyebrow>Challenge</Eyebrow>
           <p className="text-muted text-[1.0625rem] leading-8">{project.challenge}</p>
         </article>
-        <article className="border-line bg-surface border p-8 max-sm:p-6">
-          <Eyebrow>Outcome</Eyebrow>
-          <p className="text-muted text-[1.0625rem] leading-8">{project.outcome}</p>
-        </article>
       </div>
 
-      {/* What the work actually consisted of. */}
+      <article className="border-line bg-surface mt-5 border p-8 max-sm:p-6">
+        <Eyebrow>Outcome</Eyebrow>
+        <p className="text-muted text-[1.0625rem] leading-8">{project.outcome}</p>
+      </article>
+
       <div className="mt-16">
         <div className="border-line mb-8 flex items-end justify-between gap-6 border-b pb-5">
           <h2 className="text-[clamp(1.875rem,3.4vw,2.75rem)] leading-none font-semibold tracking-[-0.05em]">
@@ -53,7 +44,10 @@ export function ProjectStory({ project }: ProjectStoryProps) {
 
         <div className="grid grid-cols-2 gap-5 max-lg:grid-cols-1">
           {project.responsibilities.map((item, index) => (
-            <article key={item.title} className="border-line bg-surface border p-8 max-sm:p-6">
+            <article
+              key={item.title}
+              className="border-line bg-surface border p-8 max-sm:p-6"
+            >
               <span className="text-accent text-sm font-bold tabular-nums">
                 {String(index + 1).padStart(2, '0')}
               </span>
@@ -65,6 +59,17 @@ export function ProjectStory({ project }: ProjectStoryProps) {
           ))}
         </div>
       </div>
+
+      <section className="border-line mt-12 border-t pt-7">
+        <h2 className="text-quiet mb-4 text-xs font-bold tracking-[.14em] uppercase">
+          Technologies used
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {project.stack.map((technology) => (
+            <Tag key={technology}>{technology}</Tag>
+          ))}
+        </div>
+      </section>
     </section>
   );
 }

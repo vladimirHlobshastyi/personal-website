@@ -35,11 +35,7 @@ export function ContactReachSection() {
           </a>
         ))}
       </div>
-      <a
-        href={CONTACTS.resume.href}
-        download
-        className="border-line bg-surface hover:border-line-strong mt-6 inline-flex items-center gap-2 border px-5 py-3 text-sm font-semibold transition-colors"
-      >
+      <a href={CONTACTS.resume.href} download className="border-line bg-surface hover:border-line-strong mt-6 inline-flex items-center gap-2 border px-5 py-3 text-sm font-semibold transition-colors">
         {CONTACTS.resume.label}
         <ArrowIcon className="h-4 w-4 -rotate-45" />
       </a>

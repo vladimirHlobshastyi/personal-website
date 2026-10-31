@@ -4,28 +4,33 @@ import { ROUTES, SERVICE_OFFERS } from '@/constants';
 
 export function ServicesSection() {
   return (
-    <section className="mt-[clamp(3.75rem,6vw,5rem)]">
+    <section className="mt-[clamp(3.5rem,7vw,6rem)]">
       <div className="mb-12 grid grid-cols-[1fr_auto] items-end gap-8 max-md:grid-cols-1 max-md:items-start">
         <div>
           <p className="text-accent before:bg-accent/50 mb-6 inline-flex items-center gap-3 text-xs font-bold tracking-[.16em] uppercase before:block before:h-px before:w-10">
-            What I build and improve
+            Where I can help
           </p>
           <h2 className="tracking-tightest max-w-2xl text-[clamp(2.25rem,5vw,3.625rem)] leading-[1.04] font-semibold">
-            I build the systems around the interface, too.
+            From a complex feature to a reliable release.
           </h2>
         </div>
         <Link
-          href={ROUTES.work}
+          href={ROUTES.contact}
           className="group bg-fg text-bg inline-flex shrink-0 items-center gap-2 px-6 py-[0.9375rem] text-[0.8125rem] font-bold tracking-[.02em] transition-transform hover:-translate-y-0.5"
+          data-analytics-event="contact_click"
+          data-analytics-label="home_services_contact"
         >
-          See my work
+          Discuss a project
           <ArrowIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>
 
-      <div className="grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
+      <div className="grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-sm:grid-cols-1">
         {SERVICE_OFFERS.map((service, index) => (
-          <div key={service.title} className="border-line bg-surface flex flex-col border p-6">
+          <div
+            key={service.title}
+            className="border-line bg-surface flex flex-col border p-6"
+          >
             <span className="text-accent text-sm font-bold tabular-nums">
               {String(index + 1).padStart(2, '0')}
             </span>

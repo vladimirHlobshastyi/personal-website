@@ -20,8 +20,7 @@ export function AboutHeroSection() {
           <p>
             I&apos;m Vladimir, a Senior Software Engineer with{' '}
             <strong className="text-fg font-semibold">5+ years</strong> of commercial experience. My
-            core expertise is frontend engineering with React, Next.js, TypeScript, and React
-            Native.
+            core expertise is frontend engineering across web and mobile products.
           </p>
           <p>
             I can take a feature from an unclear requirement to a production release: define the
@@ -31,10 +30,7 @@ export function AboutHeroSection() {
         </div>
 
         <div className="mt-9 flex flex-wrap gap-3">
-          <Link
-            href={ROUTES.work}
-            className="bg-fg text-bg inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5"
-          >
+          <Link href={ROUTES.work} className="bg-fg text-bg inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5">
             View relevant work
             <ArrowIcon className="h-4 w-4" />
           </Link>
@@ -70,15 +66,6 @@ export function AboutHeroSection() {
               </div>
             </article>
           ))}
-        </div>
-
-        <div className="pt-5">
-          <p className="text-quiet text-[0.7rem] font-bold tracking-[.14em] uppercase">
-            Typical ownership
-          </p>
-          <p className="text-muted mt-2 text-sm leading-7">
-            Product flow, interface architecture, API integration, and release readiness.
-          </p>
         </div>
       </aside>
     </section>

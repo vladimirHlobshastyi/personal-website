@@ -1,6 +1,4 @@
-import { ContactHelpSection } from './contact-help-section';
 import { ContactHeroSection } from './contact-hero-section';
-import { ContactMetaSection } from './contact-meta-section';
 import { ContactReachSection } from './contact-reach-section';
 
 export function ContactPageContent() {
@@ -10,11 +8,6 @@ export function ContactPageContent() {
         <span className="bg-accent absolute top-0 left-0 h-1 w-28" aria-hidden="true" />
         <ContactHeroSection />
         <ContactReachSection />
-      </section>
-
-      <section className="grid gap-5">
-        <ContactHelpSection />
-        <ContactMetaSection />
       </section>
     </main>
   );

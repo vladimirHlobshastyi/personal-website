@@ -14,9 +14,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageLd) }}
       />
       <HeroSection />
+      <SelectedWorkSection />
       <ServicesSection />
       <AboutPreviewSection />
-      <SelectedWorkSection />
     </main>
   );
 }

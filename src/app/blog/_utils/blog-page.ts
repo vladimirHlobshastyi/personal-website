@@ -6,17 +6,6 @@ export const blogIndexMetadata: Metadata = {
   title: 'Blog — Practical software notes',
   description:
     'Practical notes from Vladimir Hlobchastyi on building, improving and shipping software products.',
-  keywords: [
-    'React blog',
-    'Next.js blog',
-    'React Native blog',
-    'TypeScript',
-    'AI engineering',
-    'Software engineering',
-    'Portfolio',
-    'Web Application Development',
-    'Mobile App Development',
-  ],
   alternates: { canonical: ROUTES.blog },
   openGraph: {
     type: 'website',
@@ -64,7 +53,6 @@ export function createPostMetadata(post: Post | undefined): Metadata | Record<st
   return {
     title: post.title,
     description: post.description,
-    keywords: [...post.tags, 'Vladimir Hlobchastyi', 'Software Engineer'],
     alternates: { canonical: `${ROUTES.blog}/${post.slug}` },
     openGraph: {
       type: 'article',
@@ -74,6 +62,7 @@ export function createPostMetadata(post: Post | undefined): Metadata | Record<st
       publishedTime: post.publishedAt,
       authors: [SITE.name],
       tags: post.tags,
+      images: [{ url: post.cover, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -103,7 +92,6 @@ export function createPostJsonLd(post: Post, readMin: number) {
     headline: post.title,
     description: post.description,
     datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
     timeRequired: `PT${readMin}M`,
     keywords: post.tags.join(', '),
     image: `${SITE.url}${post.cover}`,

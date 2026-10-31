@@ -13,11 +13,11 @@
   --surface-2: #f2ede3;
   --fg: #1a1714;
   --muted: #6a6258;
-  --quiet: #9c9384;
+  --quiet: #766f63;
   --line: rgba(26, 23, 20, 0.1);
   --line-strong: rgba(26, 23, 20, 0.18);
-  --accent: #9a7b4f;
-  --accent-soft: rgba(154, 123, 79, 0.14);
+  --accent: #85663c;
+  --accent-soft: rgba(133, 102, 60, 0.14);
 
   /* Inverse block (footer / contact) — stays dark in both themes. */
   --inverse-bg: #16120c;

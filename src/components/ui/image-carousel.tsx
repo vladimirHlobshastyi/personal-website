@@ -67,7 +67,7 @@ export function ImageCarousel({
               </button>
               <button
                 onClick={next}
-                className="border-line text-fg hover:border-accent hover:text-accent grid h-9 w-9 place-items-center border transition-colors"
+                className="border-line text-fg hover:border-accent hover:text-accent grid h-11 w-11 place-items-center rounded-md border transition-colors"
                 aria-label="Next screenshot"
                 type="button"
               >

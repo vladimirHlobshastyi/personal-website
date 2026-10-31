@@ -6,7 +6,6 @@ export const ROUTES = {
   contact: '/contact',
   retroLines: '/apps/retro-lines',
   feed: '/feed.xml',
-  llms: '/llms.txt',
 } as const;
 
 export const PRIMARY_NAV_ITEMS = [

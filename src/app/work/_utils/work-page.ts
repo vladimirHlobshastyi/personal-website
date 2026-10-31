@@ -1,27 +1,11 @@
 import type { Metadata } from 'next';
 import type { Project } from '@/types';
 import { ROUTES, SITE } from '@/constants';
-import {
-  MOBILE_CATEGORY_KEYWORDS,
-  SOFTWARE_PLATFORM_BY_CATEGORY,
-  WEB_CATEGORY_KEYWORDS,
-} from '../_constants/work.constants';
 
 export const workIndexMetadata: Metadata = {
   title: 'Selected Web & Mobile Projects',
   description:
     'Selected case studies across social media, e-commerce, mental health, logistics, real estate, enterprise operations and realtime products.',
-  keywords: [
-    'Software Engineer',
-    'React Developer',
-    'Next.js Developer',
-    'Node.js Developer',
-    'React Native Developer',
-    'TypeScript Developer',
-    'Web Application Development',
-    'Backend Development',
-    'Mobile App Development',
-  ],
   alternates: { canonical: ROUTES.work },
   openGraph: {
     type: 'website',
@@ -49,8 +33,8 @@ export function createWorkCollectionJsonLd(projects: Project[]) {
     url: `${SITE.url}${ROUTES.work}`,
     hasPart: projects.map((project) => ({
       '@type': 'CreativeWork',
-      name: project.title,
-      headline: `${project.title} — ${project.category}`,
+      name: `${project.title} Case Study`,
+      headline: `${project.title} — ${project.category} Case Study`,
       url: `${SITE.url}${ROUTES.work}/${project.slug}`,
       keywords: [...(project.keywords ?? []), ...project.stack].join(', '),
       author: { '@type': 'Person', '@id': `${SITE.url}/#person` },
@@ -71,7 +55,6 @@ export function createProjectMetadata(
   return {
     title: `${project.title} Case Study`,
     description,
-    keywords: [...(project.keywords ?? []), ...project.stack, project.category, project.title],
     alternates: { canonical: `${ROUTES.work}/${project.slug}` },
     openGraph: {
       type: 'article',
@@ -91,10 +74,6 @@ export function createProjectMetadata(
 
 export function createProjectJsonLd(project: Project, coverUrl: string) {
   const projectUrl = `${SITE.url}${ROUTES.work}/${project.slug}`;
-  const category = project.category.toLowerCase();
-  const isMobile = MOBILE_CATEGORY_KEYWORDS.some((keyword) => category.includes(keyword));
-  const isWeb = WEB_CATEGORY_KEYWORDS.some((keyword) => category.includes(keyword));
-  const isSoftwareApplication = isMobile || isWeb;
 
   const breadcrumb = {
     '@type': 'BreadcrumbList',
@@ -107,9 +86,9 @@ export function createProjectJsonLd(project: Project, coverUrl: string) {
 
   const creativeWork = {
     '@type': 'CreativeWork',
-    '@id': `${projectUrl}#creativework`,
-    name: project.title,
-    headline: `${project.title} — ${project.category}`,
+    '@id': `${projectUrl}#case-study`,
+    name: `${project.title} Case Study`,
+    headline: `${project.title} — ${project.category} Case Study`,
     description: project.shortDescription,
     abstract: project.overview,
     url: projectUrl,
@@ -121,25 +100,8 @@ export function createProjectJsonLd(project: Project, coverUrl: string) {
     contributor: { '@id': `${SITE.url}/#person` },
   };
 
-  const softwareApplication = isSoftwareApplication
-    ? {
-        '@type': 'SoftwareApplication',
-        '@id': `${projectUrl}#software`,
-        name: project.title,
-        applicationCategory: isMobile ? 'MobileApplication' : 'WebApplication',
-        operatingSystem: isMobile
-          ? SOFTWARE_PLATFORM_BY_CATEGORY.Mobile
-          : SOFTWARE_PLATFORM_BY_CATEGORY.Web,
-        description: project.shortDescription,
-        url: projectUrl,
-        image: coverUrl,
-        keywords: [...(project.keywords ?? []), ...project.stack].join(', '),
-        author: { '@type': 'Person', '@id': `${SITE.url}/#person`, name: SITE.name },
-      }
-    : null;
-
   return {
     '@context': 'https://schema.org',
-    '@graph': [breadcrumb, creativeWork, ...(softwareApplication ? [softwareApplication] : [])],
+    '@graph': [breadcrumb, creativeWork],
   };
 }

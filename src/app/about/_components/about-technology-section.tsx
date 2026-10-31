@@ -13,12 +13,12 @@ export function AboutTechnologySection() {
             id="about-technology-title"
             className="tracking-tightest max-w-3xl text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.02] font-semibold"
           >
-            Frontend is my core. I work across the stack when the product needs it.
+            A practical stack used in shipped products.
           </h2>
         </div>
         <p className="text-muted max-w-2xl text-[1rem] leading-8 lg:justify-self-end">
-          I use these technologies in commercial projects. Backend, data, mobile, and integration
-          experience lets me finish features without unnecessary handoffs.
+          My strongest area is frontend engineering. These supporting tools reflect the work I’ve
+          done connecting interfaces to APIs, data, mobile apps, and product services.
         </p>
       </div>
 
