@@ -1,20 +1,20 @@
 export const aboutExpertise = [
   {
-    title: 'Complex frontend systems',
+    title: 'Product context',
     summary:
-      'Data-heavy screens and complex flows structured for clarity and ongoing product development.',
+      'Understand the business rules, users, and existing system before deciding how a feature should work.',
     icon: 'architecture',
   },
   {
-    title: 'Web and mobile delivery',
+    title: 'Engineering through release',
     summary:
-      'Consistent product flows across web, iOS, and Android, with platform details handled in implementation.',
+      'Build clear interfaces, connect APIs, and handle the states and platform details users encounter.',
     icon: 'mobile',
   },
   {
-    title: 'Integrations and codebase recovery',
+    title: 'AI-assisted development and recovery',
     summary:
-      'Connect product flows to their APIs and services, and make unstable existing code safer to change.',
+      'Use AI with clear context and human review; assess and stabilize AI-generated code when it needs structure.',
     icon: 'nodes',
   },
 ] as const;

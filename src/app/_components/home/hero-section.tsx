@@ -34,8 +34,8 @@ export function HeroSection() {
         </h1>
 
         <p className="text-muted mt-6 max-w-[38rem] text-lg leading-8">
-          I’m Vladimir, a Senior Software Engineer with 5+ years of experience. I help product teams
-          turn complex requirements into clear, production-ready features.
+          I’m Vladimir, a Senior Software Engineer with 5+ years of commercial experience across
+          10+ products. I help teams turn complex requirements into production-ready features.
         </p>
 
         <p className="text-quiet mt-5 text-sm font-medium tracking-wide">

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { ROUTES } from '@/constants';
 import { aboutExpertise } from '../_constants/about-expertise.constants';
 import { AboutCapabilityCard } from './about-capability-card';
 import { getAboutIcon } from './about-icons';
@@ -14,12 +16,12 @@ export function AboutExpertiseSection() {
             id="about-expertise-title"
             className="tracking-tightest max-w-3xl text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.02] font-semibold"
           >
-            The product flow, the interface, and the systems behind it.
+            Context, decisions, and delivery.
           </h2>
         </div>
         <p className="text-muted max-w-2xl text-[1rem] leading-8 lg:justify-self-end">
-          Frontend is my main area, but I do not stop at the component boundary. I follow the
-          feature through API integration, error states, and release.
+          I work across complex product requirements and existing codebases, keeping the business
+          goal and the technical details connected.
         </p>
       </div>
 
@@ -33,6 +35,12 @@ export function AboutExpertiseSection() {
           />
         ))}
       </div>
+      <Link
+        href={`${ROUTES.work}/clinical-education-platform`}
+        className="text-fg hover:text-accent mt-6 inline-flex text-sm font-semibold transition-colors"
+      >
+        See how I recovered an AI-generated codebase →
+      </Link>
     </section>
   );
 }

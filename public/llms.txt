@@ -8,6 +8,7 @@
 - Product work across APIs, integrations, and Node.js services.
 - AI-assisted development, including reviewing and stabilizing AI-generated codebases.
 - Independent mobile product development, from game rules and progression to a published Android release.
+- Working languages: English (B2), Ukrainian and Russian (native).
 
 ## Selected case studies
 - [Retro Lines](/work/retro-lines) — independently designed and published Android puzzle game built with React Native.
@@ -32,4 +33,4 @@
 - [Telegram](https://t.me/Vladimir_Ua_dev)
 
 ## Portfolio note
-Project names are category-based, and some visuals are recreated or anonymized to protect commercial confidentiality. Case studies describe commercial experience; they should not be treated as public access to the underlying client products.
+Commercial case studies use category-based names, and some visuals are recreated or anonymized to protect confidentiality. Retro Lines is Vladimir's independently developed personal project.

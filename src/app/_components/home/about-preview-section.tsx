@@ -10,14 +10,13 @@ export function AboutPreviewSection() {
           About
         </p>
         <h2 className="tracking-tightest max-w-3xl text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.02] font-semibold">
-          Frontend depth, with ownership beyond the screen.
+          Understand the product. Build with purpose.
         </h2>
       </div>
       <div>
         <p className="text-muted text-lg leading-8">
-          My strongest area is frontend engineering. I also take features through API integration,
-          edge cases, and production release, working closely with product and engineering teams
-          along the way.
+          I start by understanding the business rules and the people using the product. That context
+          helps me make practical engineering decisions with product, design, and development teams.
         </p>
         <Link
           href={ROUTES.about}

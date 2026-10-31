@@ -1,9 +1,6 @@
 import type { Project } from '@/types';
 
-// Project descriptions are based on commercial experience.
-// Real client and product names are intentionally replaced with category-based
-// titles for confidentiality. Visuals shown in the carousel are blurred or
-// anonymized and do not expose internal data or proprietary UI.
+// Commercial project names and some visuals are anonymized for confidentiality.
 const rawProjects: Project[] = [
   {
     slug: 'retro-lines',
@@ -37,11 +34,11 @@ const rawProjects: Project[] = [
     images: ['/images/retro-lines-01.webp', '/images/retro-lines-02.webp'],
     showConfidentialityNotice: false,
     overview:
-      'Retro Lines is my independently built Android puzzle game. Players shift a complete row or column by one cell, with blocks wrapping around the board, to line up three or more blocks that share a color and shape. Matches can trigger cascades; each stage adds a score target and a tighter move budget. I shaped the game loop and progression, built the app in React Native, and published it on Google Play.',
+      'Players shift a complete row or column by one cell, with blocks wrapping around the board, to line up three or more blocks that share a color and shape. Matches can trigger cascades; each stage adds a score target and a tighter move budget.',
     challenge:
       'The game needed a clear rule players could understand quickly, while still leaving room to plan ahead. Each move changes a whole line, so the board has to make the next choice legible and cascades must resolve consistently. Progress also needed to feel rewarding without interrupting play.',
     outcome:
-      'A published mobile game with a complete play loop, saved progress, score and achievement tracking, unlockable visual themes, audio and language settings, and optional rewarded access. The project let me own the full product path from deciding how it should play to shipping it to Android players.',
+      'A complete play loop with saved progress, score and achievement tracking, unlockable visual themes, audio and language settings, and optional rewarded access.',
     responsibilities: [
       {
         title: 'Product rules and progression',
@@ -133,12 +130,12 @@ const rawProjects: Project[] = [
     eyebrow: 'Wellness Subscription Platform · Web',
     badge: 'Quiz funnel · Stripe subscriptions',
     shortDescription:
-      'Built the quiz-to-subscription flow with Stripe billing, localized onboarding, and clear states across 10 languages.',
+      'Built personalized wellness onboarding, guiding users from a multi-step quiz to a tailored plan.',
     subtitle:
       'Web platform for personalized quiz funnels, subscription billing and localized onboarding.',
     role: 'Frontend Developer',
     ownership:
-      'Owned the quiz funnel, Stripe checkout and subscription states, localization, and API-connected product flows.',
+      'Built the personalized quiz, plan onboarding, localization, Stripe checkout, and subscription management flows.',
     keywords: [
       'React Developer',
       'TypeScript Developer',
@@ -169,7 +166,7 @@ const rawProjects: Project[] = [
     challenge:
       'A funnel like this lives or dies on flow and trust: each quiz step has to feel effortless, validation must be forgiving, payments have to be reliable, and everything must work identically across 10 locales and unit systems without breaking the conversion path.',
     outcome:
-      'A smooth, animated quiz-to-paywall funnel with reliable Stripe checkout, self-serve subscription management and full localization — a measurable acquisition surface rather than a static marketing page.',
+      'A localized onboarding flow that guides users from their answers to a tailored plan, checkout, and subscription management.',
     responsibilities: [
       {
         title: 'Quiz funnel',
@@ -262,12 +259,12 @@ const rawProjects: Project[] = [
     eyebrow: 'E-commerce Subscription Platform · Web',
     badge: 'Quiz funnel · Subscriptions',
     shortDescription:
-      'Built the quiz-to-subscription flow with Stripe billing, localized onboarding, and a conversion-focused checkout path.',
+      'Developed an e-commerce subscription journey with a personalized quiz, Stripe checkout, and self-service account flows.',
     subtitle:
       'E-commerce platform with a personalized quiz funnel, subscription billing and localized onboarding.',
     role: 'Frontend Developer',
     ownership:
-      'Owned the quiz funnel, Stripe checkout and subscription states, localization, and API-connected product flows.',
+      'Built the storefront quiz, payment and subscription screens, localized UI, and API-connected data flows.',
     keywords: [
       'React Developer',
       'TypeScript Developer',
@@ -294,31 +291,31 @@ const rawProjects: Project[] = [
     cover: '/images/case-05-cover.webp',
     images: ['/images/case-05-01.webp', '/images/case-05-02.webp', '/images/case-05-03.webp'],
     overview:
-      'Contributed to an e-commerce web platform with a personalized multi-step quiz funnel and recurring subscriptions. The application guides visitors through a tailored plan, converts through Stripe checkout and lets users manage their subscription — localized into 10 languages and tuned for conversion.',
+      'Contributed to a subscription e-commerce platform where visitors complete a product quiz, review a tailored plan, and subscribe through Stripe. Customers can manage their subscriptions, and the experience supports 10 languages.',
     challenge:
-      'A funnel-driven storefront lives or dies on flow and trust: each quiz step has to feel effortless, validation must be forgiving, payments have to be reliable, and the experience must work identically across 10 locales without breaking the conversion path.',
+      'The purchase journey needed to carry a user’s choices through multiple steps, present validation clearly, and handle payment and subscription states consistently across locales.',
     outcome:
-      'A smooth, animated quiz-to-paywall funnel with reliable Stripe checkout, self-serve subscription management and full localization — a measurable acquisition surface rather than a static marketing page.',
+      'An API-connected storefront flow combining a localized quiz, checkout, and self-service subscription management.',
     responsibilities: [
       {
-        title: 'Quiz funnel',
+        title: 'Storefront journey',
         description:
-          'Implemented the multi-step personalized quiz with progress UI, unit toggles, validated forms (React Hook Form + Yup) and animated step transitions (Framer Motion).',
+          'Built the multi-step quiz with progress indicators, unit selection, form validation, and animated transitions.',
       },
       {
-        title: 'Payments and subscriptions',
+        title: 'Checkout and account',
         description:
-          'Integrated Stripe checkout, payment review and self-serve subscription management (manage and cancel) with clear states and error handling.',
+          'Connected Stripe payment review and checkout, with subscription management and clear error states.',
       },
       {
-        title: 'Localization',
+        title: 'International experience',
         description:
-          'Wired i18next across 10 languages with locale-aware dates and units, keeping the entire funnel consistent across markets.',
+          'Supported 10 languages with i18next and locale-aware formatting for dates and units.',
       },
       {
-        title: 'Data and reliability',
+        title: 'Connected product UI',
         description:
-          'Connected the UI to the API with React Query, added progress charts and integrated runtime monitoring for production reliability.',
+          'Integrated API data through React Query, implemented progress charts, and added runtime monitoring.',
       },
     ],
   },

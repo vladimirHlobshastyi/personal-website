@@ -9,5 +9,5 @@ export const CONTACT_SOCIALS = [
 export const CONTACT_QUICK_FACTS = [
   { label: 'Availability', value: 'Project-based or long-term' },
   { label: 'Location', value: 'Remote · Europe-friendly' },
-  { label: 'Response', value: 'Usually within 24 hours' },
+  { label: 'Languages', value: 'English B2 · Ukrainian and Russian (native)' },
 ] as const;
