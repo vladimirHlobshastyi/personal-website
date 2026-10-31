@@ -6,6 +6,61 @@ import type { Project } from '@/types';
 // anonymized and do not expose internal data or proprietary UI.
 const rawProjects: Project[] = [
   {
+    slug: 'retro-lines',
+    title: 'Retro Lines',
+    category: 'Indie Game · Android',
+    eyebrow: 'Retro Lines · Android Puzzle Game',
+    badge: 'Personal product · Google Play',
+    shortDescription:
+      'Designed, built and published an original neon puzzle game, owning its gameplay, progression, mobile experience and release.',
+    subtitle:
+      'An original Android puzzle game I took from its core rules through React Native development and Google Play release.',
+    role: 'Solo product developer',
+    ownership:
+      'Owned the product from game rules and progression through the mobile UI, implementation, local save system and store release.',
+    stack: ['React Native', 'Expo', 'TypeScript', 'AsyncStorage', 'React Navigation', 'Expo Audio'],
+    focus:
+      'Independent product development, tactile puzzle mechanics, progression, accessibility settings and Android release.',
+    keywords: [
+      'Android Puzzle Game',
+      'Indie Game Development',
+      'React Native Game',
+      'Mobile Product Development',
+    ],
+    links: [
+      {
+        label: 'Get it on Google Play',
+        href: 'https://play.google.com/store/apps/details?id=com.retrolines.game',
+      },
+    ],
+    cover: '/images/retro-lines-cover.webp',
+    images: ['/images/retro-lines-01.webp', '/images/retro-lines-02.webp'],
+    showConfidentialityNotice: false,
+    overview:
+      'Retro Lines is my independently built Android puzzle game. Players shift a complete row or column by one cell, with blocks wrapping around the board, to line up three or more blocks that share a color and shape. Matches can trigger cascades; each stage adds a score target and a tighter move budget. I shaped the game loop and progression, built the app in React Native, and published it on Google Play.',
+    challenge:
+      'The game needed a clear rule players could understand quickly, while still leaving room to plan ahead. Each move changes a whole line, so the board has to make the next choice legible and cascades must resolve consistently. Progress also needed to feel rewarding without interrupting play.',
+    outcome:
+      'A published mobile game with a complete play loop, saved progress, score and achievement tracking, unlockable visual themes, audio and language settings, and optional rewarded access. The project let me own the full product path from deciding how it should play to shipping it to Android players.',
+    responsibilities: [
+      {
+        title: 'Product rules and progression',
+        description:
+          'Defined the row-and-column shift mechanic, wraparound behavior, match rules, cascade resolution, stage targets and move limits.',
+      },
+      {
+        title: 'Mobile implementation',
+        description:
+          'Built the React Native app, gameplay screens, persistent local progress, settings, statistics and achievement flows.',
+      },
+      {
+        title: 'Release and ongoing play',
+        description:
+          'Prepared and published the Android release, with collectible themes, original in-game audio and optional rewarded video flows.',
+      },
+    ],
+  },
+  {
     slug: 'clinical-education-platform',
     title: 'Clinical Learning Platform',
     category: 'Healthcare · EdTech',
@@ -730,6 +785,7 @@ const PROJECT_ORDER = [
   'logistics-management-platform',
   'real-estate-platform',
   'social-network-mobile-app',
+  'retro-lines',
   'clinical-education-platform',
   'mental-health-mobile-app',
   'saas-admin-dashboard',

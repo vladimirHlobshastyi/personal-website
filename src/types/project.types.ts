@@ -12,6 +12,7 @@ export type Project = {
   focus: string;
   keywords?: string[];
   links?: { label: string; href: string }[];
+  showConfidentialityNotice?: boolean;
   cover: string;
   images: string[];
   overview: string;

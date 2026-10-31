@@ -7,8 +7,10 @@
 - Cross-platform mobile delivery with React Native and Ionic.
 - Product work across APIs, integrations, and Node.js services.
 - AI-assisted development, including reviewing and stabilizing AI-generated codebases.
+- Independent mobile product development, from game rules and progression to a published Android release.
 
 ## Selected case studies
+- [Retro Lines](/work/retro-lines) — independently designed and published Android puzzle game built with React Native.
 - [Clinical Learning Platform](/work/clinical-education-platform) — recovery and restructuring of an AI-generated frontend codebase.
 - [Freight Rate Platform](/work/logistics-management-platform) — carrier pricing, route search, and shipment booking workflows.
 - [Property Marketplace](/work/real-estate-platform) — property search, comparison, listings, and enquiry flows.

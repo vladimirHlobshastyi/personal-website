@@ -52,13 +52,15 @@ export function ProjectHero({ project }: ProjectHeroProps) {
       </header>
 
       <div className="border-line bg-surface mb-10 border">
-        <MetaRow label="Team role">
+        <MetaRow label="Role">
           <span className="font-medium">{project.role}</span>
         </MetaRow>
         <MetaRow label="My scope">{project.ownership}</MetaRow>
       </div>
 
-      <ConfidentialityNotice className="mb-6" />
+      {project.showConfidentialityNotice !== false ? (
+        <ConfidentialityNotice className="mb-6" />
+      ) : null}
 
       <ImageCarousel
         title={project.title}

@@ -14,6 +14,7 @@ const PLATFORM_BY_SLUG: Record<string, string> = {
   'real-estate-platform': 'Web',
   'enterprise-management-platform': 'Web + Mobile',
   'real-time-chat-application': 'Web (PWA)',
+  'retro-lines': 'Android',
 };
 
 export function getProjectPlatform(slug: string) {
